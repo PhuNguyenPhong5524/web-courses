@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Nguyễn Phong Phú",
+      "role": "customer",
+      "email": "phu6257643@gmail.com",
+      "password": "05052004"
+    }
+  ],
+  "categories": [],
+  "courses": [
+    {
+      "id": "6471",
+      "course_title": "Học web",
+      "total_sections": 1,
+      "total_lectures": 2,
+      "sections": [
+        {
+          "chapter_title": "Giới thiệu bài học",
+          "lecture_count": 2,
+          "lectures": [
+            {
+              "title": "Lời chào đầu tiên",
+              "duration": "2:30",
+              "preview": false
+            },
+            {
+              "title": "",
+              "duration": "",
+              "preview": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

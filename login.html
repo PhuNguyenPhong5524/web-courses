@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4071fda5b5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/images/logo.png">
+    <title>Đăng nhập - EduPress</title>
+</head>
+<body>
+    <main>
+        <div class="bgr_login flex items-center justify-center min-h-screen group gap-[20px]">
+            <div class="">
+                <img src="/images/img_login.png" alt="login" 
+                    class="w-[350px] h-[300px] transform transition-transform duration-500 ease-in-out animate-[bounce_5s_infinite]"
+                >
+            </div>
+            <div>
+                <form id="loginForm" class="max-w-md w-[400px] mx-auto mt-10 bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-[30px] font-semibold text-gray-900 mb-6 text-center">Đăng nhập</h3>
+                    <!-- Email -->
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                placeholder="email123@gmail.com"
+                                required
+                                class="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                            />
+                        </div>
+                    <!-- Password -->
+                        <div class="mb-4">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="••••••••" 
+                                required
+                                class="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                            />
+                        </div>
+                    <!-- Ẩn mật khẩu -->
+                        <div class="flex items-center justify-between mb-6">
+                            <label class="flex items-center space-x-2">
+                                <input type="checkbox" class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-blue-500" id="showPassword">
+                                <span class="text-sm text-gray-700">Hiện mật khẩu</span>
+                            </label>
+                            <a href="#" class="text-sm text-blue-600 hover:underline">Lost Password?</a>
+                        </div>
+
+                    <!-- Button -->
+                        <button type="submit" class="w-full py-2.5 bg-[#FF782D] text-white font-medium rounded-lg cursor-pointer hover:opacity-80 hover:shadow-lg focus:ring-2 focus:ring-blue-500 focus:outline-none mb-4">
+                            Đăng nhập
+                        </button>
+
+                    <!-- Đăng ký -->
+                        <p class="text-center text-sm text-gray-600">
+                            Nếu bạn chưa có tài khoản? 
+                            <a href="#" class="text-blue-600 hover:underline">Đăng ký</a>
+                        </p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- Flowbite -->
+    <script src="/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>

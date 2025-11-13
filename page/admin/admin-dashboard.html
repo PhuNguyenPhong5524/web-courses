@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/4071fda5b5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../images/logo.png">
+    <title>EduPress</title>
+
+</head>
+<body>
+    <!-- Container -->
+        <div class=" lg:max-w-[1400px] mx-auto relative px-[20px] pb-[100px]">
+            <!-- Header -->
+                <header class= "flex justify-between items-center py-[10px] py-[20px] lg:py-[40px] ">
+                    <!-- Button -->
+                        <button 
+                            class="
+                                lg:hidden flex justify-center items-center bg-[#d081ff] text-[white] 
+                                text-[25px] w-[35px] h-[35px] md:w-[40px] md:h-[40px] rounded-[10px]
+                                transform transition-all duration-300 ease-in-out group
+                                hover:opacity-80 
+                            "
+                        >
+                            <i class="fa-solid fa-bars text-[20px] transform transition-all duration-300 ease-in-out group-hover:scale-90"></i>
+                        </button>
+                    <!-- Logo -->
+                        <div>
+                            <h1 class=" text-[20px] md:text-[28px] lg:text-[36px] font-bold text-[#000000]">Chief LA</h1>
+                        </div>
+                    <!-- Menu  -->
+                        <nav class="hidden lg:flex">
+                            <ul class="flex items-center gap-[45px]">
+                                <li class="group">
+                                    <a 
+                                        class="
+                                            text-[16px] text-[#000000] font-bold transform transition-all duration-300 
+                                            ease-in-out group-hover:underline group-hover:text-[#A717FE]
+                                        " 
+                                        href="#"
+                                    >   
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="group">
+                                    <a 
+                                        class="
+                                            text-[16px] text-[#000000] font-bold transform transition-all duration-300 
+                                            ease-in-out group-hover:underline group-hover:text-[#A717FE]
+                                        " 
+                                        href="#"
+                                    >   
+                                        About us
+                                    </a>
+                                </li>
+                                <li class="group">
+                                    <a 
+                                        class="
+                                            text-[16px] text-[#000000] font-bold transform transition-all duration-300 
+                                            ease-in-out group-hover:underline group-hover:text-[#A717FE]
+                                        " 
+                                        href="#"
+                                    >   
+                                        Service
+                                    </a>
+                                </li>
+                                <li class="group">
+                                    <a 
+                                        class="
+                                            text-[16px] text-[#000000] font-bold transform transition-all duration-300 
+                                            ease-in-out group-hover:underline group-hover:text-[#A717FE]
+                                        " 
+                                        href="#"
+                                    >   
+                                        Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    <!-- Infomation -->
+                        <div class="flex items-center gap-[10px] md:gap-[20px]">
+                            <i class="fa-regular fa-bell text-[18px] md:text-[22px] lg:text-[24px]"></i>
+                            <img class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] lg:w-[50px] lg:h-[50px] rounded-full object-cover" src="../../images/avatar.jpg" alt="">
+                            <p class="text-[18px] md:text-[22px] lg:text-[24px] font-bold text-[#7200B8] hidden lg:block">Kunle Ajayi</p>
+                        </div>
+                </header>
+            <!-- Aside và main -->
+                <div class="flex md:gap-[20px] lg:gap-[40px]">
+                    <!-- Sidebar -->
+                        <aside 
+                            class="
+                                hidden md:block md:flex flex-col md:justify-between lg:gap-[40px] md:w-[30%] lg:w-[22%] h-[100vh] bg-[#000000] py-[40px] pl-[20px] pr-[30px] shadow-md rounded-[10px]
+                            "
+                        >
+                            <div> 
+                                <nav>
+                                    <ul class="">
+                                        <li 
+                                            class="
+                                                px-[10px] py-[20px] my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                                duration-300 ease-in-out bg-[#A717FE] pl-[25px] hover:bg-[#A717FE] hover:pl-[25px]
+                                            "
+                                        >
+                                            <a class="text-[20px] text-[#ffffff] font-semibold" href="#">
+                                                <i class="fa-solid fa-house-chimney mr-[10px]"></i>  Dashboard
+                                            </a>
+                                        </li>
+                                        <li 
+                                            class="
+                                                px-[10px] py-[20px] my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                                duration-300 ease-in-out hover:bg-[#A717FE] hover:pl-[25px]
+                                            "
+                                        >
+                                            <a class="text-[20px] text-[#ffffff] font-semibold" href="#">
+                                            <i class="fa-solid fa-credit-card mr-[10px]"></i> Transaction
+                                            </a>
+                                        </li>
+                                        <li 
+                                            class="
+                                                px-[10px] py-[20px] my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                                duration-300 ease-in-out hover:bg-[#A717FE] hover:pl-[25px]
+                                            "
+                                        >
+                                            <a class="text-[20px] text-[#ffffff] font-semibold" href="#">
+                                            <i class="fa-solid fa-bell mr-[10px]"></i> Notifications
+                                            </a>
+                                        </li>
+                                        <li 
+                                            class="
+                                                px-[10px] py-[20px] my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                                duration-300 ease-in-out hover:bg-[#A717FE] hover:pl-[25px]
+                                            "
+                                        >
+                                            <a class="text-[20px] text-[#ffffff] font-semibold" href="#">
+                                                <i class="fa-regular fa-comment mr-[10px]"></i> Support
+                                            </a>
+                                        </li>
+                                        <li 
+                                            class="
+                                                px-[10px] py-[20px] my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                                duration-300 ease-in-out hover:bg-[#A717FE] hover:pl-[25px]
+                                            "
+                                        >
+                                            <a class="text-[20px] text-[#ffffff] font-semibold" href="#">
+                                                <i class="fa-solid fa-gear mr-[10px]"></i> Settings
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <a 
+                                href="#" 
+                                class="
+                                    text-[20px] text-[#ffffff] font-semibold px-[10px] py-[20px] rounded-[10px] cursor-pointer 
+                                    transform transition-all duration-300 ease-in-out hover:bg-[#A717FE] hover:pl-[25px]
+                                "
+                            >
+                                <i class="fa-solid fa-right-from-bracket mr-[10px]"></i> Logout
+                            </a>
+                        </aside>
+                    <!-- Main -->
+                        <main class="md:w-[70%] lg:w-[78%]">
+                            <!-- Title -->
+                                <div class="flex justify-between items-center">
+                                    <h2 class="text-[20px] md:text-[22px] lg:text-[24px] text-[#000000] font-bold">Dashboard</h2>
+                                    <p class="text-[14px] md:text-[14px] lg:text-[18px] font-medium p-2 boder border-[1px] border-[#7200B8] rounded-[10px]">REVIEWS & FEEDBACK</p>
+                                </div>
+                            <!-- Content -->
+                                <div class="mt-[20px]">
+                                    <!-- Box -->
+                                        <div class="flex gap-[10px] md:gap-[10px] lg:gap-[40px] flex-wrap lg:flex-nowrap">
+                                            <div class=" w-full md:w-auto p-[20px] text-center bg-[#000000] rounded-[10px]">
+                                                <p class="text-[20px] md:text-[22px] lg:text-[24px] font-semibold text-[#ffffff]">Loans Available</p>
+                                            </div>
+                                            <div class=" w-full md:w-auto p-[20px] text-center bg-[#000000] rounded-[10px]">
+                                                <p class="text-[20px] md:text-[22px] lg:text-[24px] font-semibold text-[#ffffff]">Repayment Options</p>
+                                            </div>
+                                            <div class=" w-full md:w-auto p-[20px] text-center bg-[#000000] rounded-[10px]">
+                                                <p class="text-[20px] md:text-[22px] lg:text-[24px] font-semibold text-[#ffffff]">percentage Calculator</p>
+                                            </div>
+                                        </div>
+                                    <!-- Box -->
+                                        <div class="flex flex-col lg:flex-row lg:justify-between mt-[20px] md:mt-[30px] lg:mt-[40px] items-center w-full gap-[40px]">
+                                            <div class="w-full lg:w-[70%] h-full flex flex-col gap-[40px] items-center">
+                                                <div class="flex flex-col md:flex-row gap-[20px] lg:gap-[20px] w-full ">
+                                                    <div style="box-shadow: 8px 6px 10px #454545aa" class="w-full h-[250px] md:h-[280px] lg:h-[321px] px-[20px] py-[30px] bg-[#000000] rounded-[15px] flex flex-col justify-center">
+                                                        <p class="text-[20px] md:text-[28px] lg:text-[38px] font-bold text-[#ffffff] text-center">REQUEST LOAN</p>
+                                                    </div>
+                                                    <div style="box-shadow: 8px 6px 10px #454545aa" class="w-full h-[250px] md:h-[280px] lg:h-[321px] px-[20px] py-[30px] bg-[#000000] rounded-[15px] flex flex-col justify-center">
+                                                        <p class="text-[20px] md:text-[28px] lg:text-[38px] font-bold text-[#ffffff] text-center">CHOOSE A REPAYMENT PLAN</p>
+                                                    </div>
+                                                </div>
+                                                <div style="box-shadow: 8px 6px 10px #454545aa" class= "w-[300px] md:w-[412px] h-[96px] bg-[#000000] rounded-[10px] flex flex-col justify-center ">
+                                                    <p class="text-[20px] md:text-[22px] lg:text-[24px] font-semibold text-[#ffffff] text-center">Loans Available </p>
+                                                </div>
+                                            </div>
+                                            <div style="box-shadow: 8px 6px 10px #454545aa" class="w-full lg:w-[30%] h-[400px] lg:h-[600px] px-[30px] py-[30px] bg-[#000000] rounded-[15px]">
+                                                <h3 class="text-[24px] font-bold text-[#ffffff] text-center">Latest Update</h3>
+                                                <p class="text-[10px] md:text-[12px] lg:text-[14px] font-regular text-[#ffffff] pt-[10px] leading-[30px]">
+                                                    Lorem ipsum dolor sit amet consectetur. Iaculis diam pretium sem porttitor nibh. 
+                                                </p>
+                                                <p class="text-[10px] md:text-[12px] lg:text-[14px] font-regular text-[#ffffff] pt-[10px] leading-[30px]">
+                                                    Lorem ipsum dolor sit amet consectetur. Iaculis diam pretium sem porttitor nibh.
+                                                </p>
+                                                <p class="text-[10px] md:text-[12px] lg:text-[14px] font-regular text-[#ffffff] pt-[10px] leading-[30px]">
+                                                    Lorem ipsum dolor sit amet consectetur. Iaculis diam pretium sem porttitor nibh.
+                                                </p>
+                                                <p class="text-[10px] md:text-[12px] lg:text-[14px] font-regular text-[#ffffff] pt-[30px] leading-[30px]">
+                                                    Lorem ipsum dolor sit amet consectetur. Iaculis diam pretium sem porttitor nibh.
+                                                </p>
+                                            </div>
+                                        </div>
+                                </div>
+                        </main>
+                </div>
+            <!-- Background --> 
+                <div class="absolute inset-0 flex justify-center items-center z-[-10] hidden md:block">
+                    <div class="bg-[#b8b6ff] w-[120px] h-[950px] absolute rotate-[49deg] top-[-110px] right-[45%] opacity-100"></div>
+                    <div class="bg-[#b8b6ff] w-[120px] h-[650px] absolute rotate-[-37deg] top-[210px] left-[40%] opacity-100"></div>
+                    <div class="bg-[#b8b6ff] w-[120px] h-[700px] absolute rotate-[53deg] top-[165px] right-[18%] opacity-100"></div>
+                </div>
+        </div>
+        <!-- Chat now -->
+            <div class="">
+                <div 
+                    class="
+                        fixed bottom-[60px] md:bottom-[20px] right-[10px] cursor-pointer flex justify-center flex-col items-center
+                        bg-[#ffffff] p-[10px] rounded-[10px] shadow-lg transform transition-all duration-300 
+                        ease-in-out hover:translate-y-[-10px] border border-[#7200B8] border-[0.5px] animate-bounce
+                    "
+                >
+                    <p class="text-[10px] md:text-[12px] lg:text-[14px] font-bold text-[#7200B8] pb-[5px] text-shadow">Chat Now!</p>
+                    <img class="w-[40px] h-[40px]" src="../../images/chatnow.png" alt="">
+                </div>
+            </div>
+        <!-- Sidebar mobile -->
+            <div class="fixed bottom-0 right-0 w-full h-auto flex md:hidden bg-white opacity-90 px-[20px]">
+                 <nav class="w-full h-[60px]">
+                    <ul class="flex justify-between items-center">
+                        <li 
+                            class="
+                                p-[10px] flex justify-center my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                duration-300 ease-in-out bg-[#A717FE] translate-y-[-10px]
+                            "
+                        >
+                            <a class="text-[22px] text-[#ffffff] font-semibold" href="#">
+                                <i class="fa-solid fa-house-chimney"></i> 
+                            </a>
+                        </li>
+                        <li 
+                            class="
+                                p-[10px] flex justify-center my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                duration-300 ease-in-out hover:bg-[#A717FE] hover:translate-y-[-10px] group
+                            "
+                        >
+                            <a 
+                                class="
+                                    text-[22px] text-[#000000] transform transition-all duration-300 ease-in-out 
+                                    group-hover:text-[#ffffff] font-semibold 
+                                " 
+                                href="#"
+                            >
+                                <i class="fa-solid fa-credit-card"></i> 
+                            </a>
+                        </li>
+                        <li 
+                            class="
+                                p-[10px] flex justify-center my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                duration-300 ease-in-out hover:bg-[#A717FE] hover:translate-y-[-10px] group
+                            "
+                        >
+                            <a 
+                                class="
+                                    text-[22px] text-[#000000] transform transition-all duration-300 ease-in-out 
+                                    group-hover:text-[#ffffff] font-semibold 
+                                " 
+                                href="#"
+                            >
+                                <i class="fa-solid fa-bell"></i> 
+                            </a>
+                        </li>
+                        <li 
+                            class="
+                                p-[10px] flex justify-center my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                duration-300 ease-in-out hover:bg-[#A717FE] hover:translate-y-[-10px] group
+                            "
+                        >
+                            <a 
+                                class="
+                                    text-[22px] text-[#000000] transform transition-all duration-300 ease-in-out 
+                                    group-hover:text-[#ffffff] font-semibold 
+                                " 
+                                href="#"
+                            >
+                                <i class="fa-regular fa-comment"></i>
+                            </a>
+                        </li>
+                        <li 
+                            class="
+                                p-[10px] flex justify-center my-2 rounded-[10px] cursor-pointer transform transition-all 
+                                duration-300 ease-in-out hover:bg-[#A717FE] hover:translate-y-[-10px] group
+                            "
+                        >
+                            <a 
+                                class="
+                                    text-[22px] text-[#000000] transform transition-all duration-300 ease-in-out 
+                                    group-hover:text-[#ffffff] font-semibold 
+                                " 
+                                href="#"
+                            >
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thêm khóa học (POST JSON)</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .chapter { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 6px; }
+    .lecture { margin-left: 20px; margin-top: 5px; }
+    button { margin-top: 5px; }
+    pre { background: #f6f6f6; padding: 10px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h2>🧩 Thêm khóa học mới</h2>
+
+  <label>Tên khóa học: <input type="text" id="courseTitle"></label>
+  <br><br>
+  <button onclick="addChapter()">➕ Thêm chương</button>
+  <div id="chapters"></div>
+
+  <button onclick="submitCourse()">🚀 Gửi lên JSON Server</button>
+  <pre id="output"></pre>
+
+  <script>
+    let chapterCount = 0;
+
+    function addChapter() {
+      chapterCount++;
+      const container = document.getElementById("chapters");
+      const div = document.createElement("div");
+      div.className = "chapter";
+      div.innerHTML = `
+        <h3>Chương ${chapterCount}</h3>
+        <label>Tiêu đề chương: <input type="text" class="chapter-title"></label><br>
+        <button onclick="addLecture(this)">+ Thêm bài giảng</button>
+        <div class="lectures"></div>
+      `;
+      container.appendChild(div);
+    }
+
+    function addLecture(button) {
+      const div = document.createElement("div");
+      div.className = "lecture";
+      div.innerHTML = `
+        <label>Tên bài: <input type="text" class="lecture-title"></label>
+        <label>Thời lượng: <input type="text" class="lecture-duration" placeholder="03:20"></label>
+        <label><input type="checkbox" class="lecture-preview"> Xem trước</label>
+      `;
+      button.nextElementSibling.appendChild(div);
+    }
+
+    async function submitCourse() {
+      const courseTitle = document.getElementById("courseTitle").value.trim();
+      if (!courseTitle) return alert("Nhập tên khóa học trước!");
+
+      // Tạo danh sách chương
+      const chapters = [];
+      document.querySelectorAll(".chapter").forEach(ch => {
+        const title = ch.querySelector(".chapter-title").value;
+        const lectures = [];
+        ch.querySelectorAll(".lecture").forEach(lec => {
+          lectures.push({
+            title: lec.querySelector(".lecture-title").value,
+            duration: lec.querySelector(".lecture-duration").value,
+            preview: lec.querySelector(".lecture-preview").checked
+          });
+        });
+        chapters.push({
+          chapter_title: title,
+          lecture_count: lectures.length,
+          lectures
+        });
+      });
+
+      // Dữ liệu hoàn chỉnh
+      const data = {
+        course_title: courseTitle,
+        total_sections: chapters.length,
+        total_lectures: chapters.reduce((t, c) => t + c.lecture_count, 0),
+        sections: chapters
+      };
+
+      // Gửi POST lên json-server
+      const response = await fetch("http://localhost:3000/courses", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      document.getElementById("output").textContent =
+        "✅ Đã gửi thành công:\n" + JSON.stringify(result, null, 2);
+    }
+  </script>
+</body>
+</html>

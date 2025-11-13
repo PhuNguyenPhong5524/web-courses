@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4071fda5b5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <title>EduPress</title>
+</head>
+<body>
+    <!-- Header -->
+        <header class="showHeader top-0 sticky shadow-md z-[1000]">
+            
+        </header>
+    <!-- Banner -->
+        <div class="bgr-banner flex justify-center items-center overflow-hidden">
+            <!-- Banner Background -->
+                <div class=" w-full h-[700px] relative group">
+                    <!-- Image Banner -->
+                        <div 
+                            class="
+                                absolute bottom-0 left-0 w-full h-auto transform translate-x-[-100px]
+                                transition-all duration-300 ease-in-out group-hover:translate-x-0
+                            "
+                        >
+                            <img src="images/img_banner4.png" alt="banner" class="">
+                        </div>
+                    <!-- Image Banner -->
+                        <div 
+                            class="
+                                absolute top-0 left-0 w-full h-auto transform translate-y-[-60px]
+                                transition-all duration-300 ease-in-out group-hover:translate-y-0
+                            "
+                        >
+                            <img src="images/img_banner1.png" alt="banner" class="">
+                        </div>
+                    <div 
+                        class="
+                            absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                            max-w-[1290px] w-full h-auto flex items-center z-50
+                        "
+                    >
+                        <!-- Content -->
+                            <div class="absolute left-0 flex flex-col gap-[24px] z-[60] w-[40%]">
+                                <h1 class="text-[48px] font-semibold w-[500px]">Học nhanh <br> Làm chủ kỹ năng!</h1>
+                                <p class="text-[18px] font-regular">
+                                    Xây dựng sự nghiệp vững chắc với các khóa học thực tiễn được biên soạn bởi chuyên gia hàng đầu trong từng lĩnh vực.
+                                </p>
+                                <button 
+                                    class="
+                                        bg-[#FF782D] rounded-[24px] w-[170px] h-[48px] transform transition-transform duration-300 ease-in-out
+                                        hover:opacity-80 hover:shadow-md hover:scale-110 animate-pulse
+                                    "
+                                >
+                                    <a class="text-[18px] font-medium text-white" href="#">
+                                        Xem lộ trình học
+                                    </a>
+                                </button>
+                                
+                            </div>
+                        <!-- Image Banner -->
+                            <div 
+                                class="
+                                    absolute right-[-40px] z-[52] scale-[90%] transform transition-all duration-300 ease-in-out
+                                    group-hover:scale-[95%]
+                                "
+                            >
+                                <img src="images/img_banner2.png" alt="banner" class="">
+                            </div>
+                        <!-- Image Banner -->
+                            <div 
+                                class="
+                                    absolute right-[-40px] z-[52] translate-x-[-70px] transform transition-all duration-300 ease-in-out
+                                    group-hover:translate-x-0
+                                "
+                            >
+                                <img src="images/img_banner6.png" alt="banner" class="">
+                            </div>
+                    </div>
+                    <!-- Image Banner -->
+                        <div 
+                            class="
+                                absolute right-0 bottom-0 -translate-y-[-70px] transform transition-all duration-300 ease-in-out
+                                group-hover:translate-y-0
+                            "
+                        >
+                            <img src="images/img_banner3.png" alt="banner" class="">
+                        </div>
+                    <!-- Image Banner -->
+                        <div 
+                            class="
+                                absolute right-0 -translate-x-[-70px] transform transition-all duration-300 ease-in-out
+                                group-hover:translate-x-0
+                            "
+                        >
+                            <img src="images/img_banner5.png" alt="banner" class="">
+                        </div>
+                </div>
+        </div>
+    <main class="max-w-[1290px] mx-auto pb-[60px] relative">
+        <!-- Section danh mục-->
+            <section>
+                <!-- Title -->
+                    <div class="py-[50px] flex justify-between items-center">
+                            <div class="flex flex-col gap-[10px]">
+                                <h2 class="text-[32px] font-semibold text-[#000000]">Danh mục khóa học</h2>
+                                <p class="text-[18px] font-regular text-[#555555]">Khám phá tất cả danh mục của chúng tôi</p>
+                            </div>
+                        <!-- Button -->
+                            <button 
+                                class="
+                                    border border-[2px] border-[#9D9D9D] rounded-[24px] w-[161px] h-[48px] group
+                                    transform transition-transform duration-300 ease-in-out
+                                    hover:shadow-md hover:scale-110
+                                "
+                            >
+                                <a class="text-[18px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
+                            </button>
+                    </div>
+                <!-- Box Category -->
+                    <div id="showCategory" class="flex flex-wrap gap-[30px] relative">
+                        <!-- Box -->
+                            
+                    </div>
+            </section>
+        <!-- Section Khóa học nổi bật -->
+            <section>
+                <!-- Title -->
+                    <div class="py-[50px] flex justify-between items-center">
+                            <div class="flex flex-col gap-[10px]">
+                                <h2 class="text-[32px] font-semibold text-[#000000]">Khóa học nổi bật</h2>
+                                <p class="text-[18px] font-regular text-[#555555]">Khám phá các khóa học phổ biến</p>
+                            </div>
+                        <!-- Button -->
+                            <button 
+                                class="
+                                    border border-[2px] border-[#9D9D9D] rounded-[24px] w-[161px] h-[48px] group
+                                    transform transition-transform duration-300 ease-in-out
+                                    hover:shadow-md hover:scale-110
+                                "
+                            >
+                                <a class="text-[18px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
+                            </button>
+                    </div>
+                <!-- Box course featured -->
+                    <div id="boxCourses" class="flex flex-wrap gap-[30px]">
+                        <!-- Box show -->
+
+                    </div>
+            </section>
+        <!-- Section banner môn học-->
+            <section class="py-[60px]">
+                <div class="bgr_banner_small1 w-full h-[324px] rounded-[20px] relative grid grid-cols-[1fr_1.3fr] gap-[20px] items-center overflow-hidden">
+                    <!-- Content -->
+                        <div class=" flex flex-col gap-[5px] pl-[50px] w-full">     
+                            <p class="text-[16px] font-semibold ">KHÁM PHÁ KIẾN THỨC MỖI NGÀY</p>
+                            <h2 class="text-[32px] font-semibold ">Học tốt - Chuẩn bị tương lai</h2>
+                            <p class="text-[18px] font-regular pb-[15px] pt-[5px] text-[#555555] w-full">
+                                Hệ thống bài giảng, bài tập và đề luyện cho Toán, Lý, Hóa, Sinh, Văn, Anh, Sử, Địa.  
+                                Học mọi lúc, tiến bộ mỗi ngày cùng giáo viên giàu kinh nghiệm.
+                            </p>
+                            <button 
+                                class="
+                                    bg-[#FF782D] rounded-[24px] w-[200px] h-[48px] transform transition-transform duration-300 ease-in-out
+                                    hover:opacity-80 hover:shadow-md hover:scale-110 group
+                                "
+                            >
+                                <a 
+                                    class="
+                                        text-[18px] font-medium text-white transform transition-transform duration-300 
+                                        ease-in-out group-hover:underline
+                                    " 
+                                    href="#"
+                                >
+                                  Khám phá khóa học
+                                </a>
+                            </button>
+                        </div>
+                    <!-- Images app-->
+                        <div class="w-full h-full relative">
+                            <div
+                                class="
+                                    absolute top-[35%] left-[-1%] transform -translate-x-[-1%] -translate-y-[35%] 
+                                    w-[96px] h-[96px] bg-[#4A90E2] rounded-[20px] p-[15px] rotate-[26deg] flex items-center justify-center
+                                "
+                            >
+                                <p class="text-[45px] text-[#ffffff] font-bold leading-[40px] text-center">
+                                    ∑ 
+                                    <span class="text-[#ffffff] text-[25px] text-center font-medium"></span>
+                                </p>
+                            </div>
+                            <div
+                                class="
+                                    absolute top-[70%] left-[-1%] transform -translate-x-[-1%] -translate-y-[70%] 
+                                    w-[70px] h-[70px] bg-[#9B51E0] rounded-[20px] p-[10px] rotate-[-15deg] z-[10] flex items-center justify-center
+                                "
+                            >
+                                <p class="text-[45px] text-[#ffffff] font-bold leading-[5px] text-center">
+                                    <i class="fa-brands fa-react text-[26px]"></i>
+                                    <span class="text-[#ffffff] text-[20px] text-center font-medium"></span>
+                                </p>
+                            </div>
+                            <img 
+                                src="images/Img_app3.png" 
+                                alt="app" 
+                                class="
+                                    absolute top-[25%] left-[25%] transform -translate-x-[25%] -translate-y-[35%] 
+                                    w-[100px] h-[100px] bg-[#5506FD] rounded-[20px] p-[15px] rotate-[-20deg]
+                                "
+                            >
+                            <img 
+                                src="images/Img_app4.png" 
+                                alt="app" 
+                                class="
+                                    absolute bottom-[5%] left-[35%] transform -translate-x-[35%] -translate-y-[5%] 
+                                    w-[80px] h-[80px] bg-[#37E954] rounded-[20px] p-[10px] rotate-[-10deg]
+                                "
+                            >
+                            <div 
+                                class="
+                                        absolute top-[55%] left-[50%] transform -translate-x-[35%] -translate-y-[55%] 
+                                        w-[80px] h-[80px] bg-[#F0D824] rounded-[20px] p-[10px] rotate-[10deg] flex items-center justify-center
+                                    "
+                            >
+                                <img 
+                                    src="images/Img_app5.png" 
+                                    alt="app" 
+                                    class="
+                                        rotate-[-10deg]
+                                    "
+                                >
+                            </div>
+                            <div
+                                class="
+                                    absolute bottom-[-1%] right-[25%] transform -translate-x-[25%] -translate-y-[-1%] 
+                                    w-[94px] h-[94px] bg-[#CB37FF] rotate-[20deg] rounded-[20px] p-[15px] flex items-center justify-center
+                                "
+                            >
+                                <img 
+                                    src="images/Img_app7.png" 
+                                    alt="app" 
+                                    class="rotate-[-20deg]"
+                                >
+                            </div>
+                            <img 
+                                src="images/Img_app6.png" 
+                                alt="app" 
+                                class="
+                                    absolute top-[20%] left-[60%] transform -translate-x-[60%] -translate-y-[20%] 
+                                    w-[100px] h-[100px] bg-[#34CEFF] rotate-[-20deg] rounded-[20px] p-[15px] 
+                                "
+                            >
+                            <div
+                                class="
+                                    absolute bottom-[-1%] right-[25%] transform -translate-x-[25%] -translate-y-[-1%] 
+                                    w-[94px] h-[94px] bg-[#CB37FF] rotate-[20deg] rounded-[20px] p-[15px] flex items-center justify-center
+                                "
+                            >
+                                <img 
+                                    src="images/Img_app7.png" 
+                                    alt="app" 
+                                    class="rotate-[-20deg]"
+                                >
+                            </div>
+                            <div
+                                class="
+                                    absolute bottom-[10%] right-[-1%] transform -translate-x-[-1%] -translate-y-[10%] 
+                                    w-[120px] h-[130px] bg-[#FF2727] rotate-[-40deg] rounded-[20px] p-[15px] flex items-center justify-center
+                                "
+                            >
+                                <img 
+                                    src="images/Img_app9.png" 
+                                    alt="app" 
+                                    class="rotate-[37deg]"
+                                >
+                            </div>
+                            <div
+                                class="
+                                    absolute top-[-1%] right-[20%] transform -translate-x-[20%] -translate-y-[-1%] 
+                                    w-[64px] h-[64px] bg-[#FFA53C] rotate-[40deg] rounded-[15px] p-[10px] flex items-center justify-center
+                                "
+                            >
+                                <img 
+                                    src="images/img_app9.png" 
+                                    alt="app" 
+                                    class="rotate-[37deg]"
+                                >
+                            </div>
+                        </div>
+                </div>
+            </section>
+        <!-- Tổng quan -->
+            <section>
+                <!-- Box tổng quan -->
+                    <div class="flex gap-[20px]">
+                        <div class="bg-[#F5F5F5] w-full h-[180px] rounded-[20px] flex flex-col justify-center items-center">
+                            <h2 class="text-[#FF782D] text-[32px] font-semibold">🎓50.000+</h2>
+                            <p class="text-[#000000] text-[18px] font-medium">Học sinh</p>
+                        </div>
+                        <div class="bg-[#F5F5F5] w-full h-[180px] rounded-[20px] flex flex-col justify-center items-center">
+                            <h2 class="text-[#FF782D] text-[32px] font-semibold">📚120+</h2>
+                            <p class="text-[#000000] text-[18px] font-medium">Khóa học</p>
+                        </div>
+                        <div class="bg-[#F5F5F5] w-full h-[180px] rounded-[20px] flex flex-col justify-center items-center">
+                            <h2 class="text-[#FF782D] text-[32px] font-semibold">👨‍🏫35+</h2>
+                            <p class="text-[#000000] text-[18px] font-medium">Giáo viên giỏi</p>
+                        </div>
+                        <div class="bg-[#F5F5F5] w-full h-[180px] rounded-[20px] flex flex-col justify-center items-center">
+                            <h2 class="text-[#FF782D] text-[32px] font-semibold">🌟100%</h2>
+                            <p class="text-[#000000] text-[18px] font-medium">Hài lòng học viên</p>
+                        </div>
+                    </div>
+                <!-- Box nội dung -->
+                    <div class="flex gap-[20px] mt-[60px]">
+                        <div class="w-full h-full"><img src="images/img_banner_tongquan.png" alt=""></div>
+                        <div>
+                            <h2 class="text-[32px] text-[#000000] font-semibold w-[70%]">Phát triển kỹ năng học tập cùng EduPress</h2>
+                            <p class="text-[18px] text-[#555555] font-regular py-[20px]">Edupress mang đến nền tảng học trực tuyến hiện đại, giúp học sinh THPT rèn luyện kiến thức, 
+                                phát triển tư duy và đạt kết quả học tập tốt nhất.
+                            </p>
+                            <div class="leading-[50px]">
+                                <p class="text-[18px] text-[#000000] font-regular">✅ Bài giảng chất lượng từ giáo viên uy tín.</p>
+                                <p class="text-[18px] text-[#000000] font-regular">✅ Cập nhật nội dung theo chương trình mới.</p>
+                                <p class="text-[18px] text-[#000000] font-regular">✅ Học mọi lúc, mọi nơi trên mọi thiết bị.</p>
+                                <p class="text-[18px] text-[#000000] font-regular">✅ Nhận chứng nhận hoàn thành khóa học.</p>
+                            </div>
+                            <button 
+                                class="
+                                    bg-[#FF782D] rounded-[24px] w-[200px] h-[48px] transform transition-transform duration-300 ease-in-out
+                                    hover:opacity-80 hover:shadow-md hover:scale-110 group mt-[10px]
+                                "
+                            >
+                                <a 
+                                    class="
+                                        text-[18px] font-medium text-white transform transition-transform duration-300 
+                                        ease-in-out group-hover:underline
+                                    " 
+                                    href="#"
+                                >
+                                  Khám phá khóa học
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+            </section>
+        <!-- Slide khóa học -->
+            <section class="py-8 bg-gray-50">
+                <div class="container mx-auto">
+                    <h2 class="text-2xl font-bold mb-6">Khóa phát triển web</h2>
+                    
+                    <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Các sản phẩm -->
+                            
+                    </div>
+                    <!-- Nút điều hướng -->
+                        <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <!-- Footer -->
+        <footer class="showFooter bg-[#F5F5F5]">
+
+        </footer> 
+    <!-- Flowbite -->
+    <script src="js/headerAndFooter.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/userLoad.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>
