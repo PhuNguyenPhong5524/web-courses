@@ -1,6 +1,6 @@
 // Header
 async function showHeader() {
-    const res = await fetch("/layout/header.html");
+    const res = await fetch("./layout/header.html");
     const headerHtml = await res.text();
     document.querySelector(".showHeader").innerHTML = headerHtml;
 }
