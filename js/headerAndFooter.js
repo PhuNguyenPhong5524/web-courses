@@ -6,11 +6,10 @@ async function showHeader() {
 }
 showHeader();
 
-// Footer 
+// Footer
 async function showFooter() {
     const res = await fetch("./layout/footer.html");
     const footerHtml = await res.text();
     document.querySelector(".showFooter").innerHTML = footerHtml;
 }
 showFooter();
-
