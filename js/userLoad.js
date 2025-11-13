@@ -8,7 +8,7 @@ window.onload = () => {
   // Nếu có user => đã đăng nhập
   if (user && user.id) {
     avatar.innerHTML =`
-        <img class="w-[30px] h-[30px] rounded-full" src="/images/avatar.jpg" alt="" />
+        <img class="w-[30px] h-[30px] rounded-full" src="./images/avatar.jpg" alt="" />
     `
     userMenu.innerHTML += `
         <li 
@@ -79,7 +79,7 @@ window.onload = () => {
             border-l-[2px] border-[#ffffff] hover:border-l-[2px] hover:border-[#FFAC2D] 
             hover:bg-[#ffffff] hover:text-[#FF782D] hover:pl-[30px]
         ">
-            <a class="text-[16px] font-semibold " href="/login.html">
+            <a class="text-[16px] font-semibold " href="./login.html">
                 Đăng Nhập
             </a>
         </li>
