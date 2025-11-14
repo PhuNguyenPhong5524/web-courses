@@ -1,8 +1,7 @@
 function getBasePath() {
-    const path = window.location.pathname;
-    const segments = path.split("/").filter(Boolean); // bỏ phần rỗng
-    const depth = segments.length - 1; // bỏ tên file
-    return depth === 0 ? "layout/" : "../".repeat(depth) + "layout/";
+    // Lấy base URL của site (bao gồm repo-name nếu có)
+    const base = window.location.origin + "/" + window.location.pathname.split("/")[1] + "/";
+    return base + "layout/";
 }
 
 async function showHeader() {
