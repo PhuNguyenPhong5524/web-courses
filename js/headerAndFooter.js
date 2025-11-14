@@ -37,37 +37,37 @@ function getBaseURL() {
 
 const BASE_URL = getBaseURL();
 
+// Sửa tất cả link trong header/footer
+function fixLinks() {
+    document.querySelectorAll("a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && !href.startsWith("http") && !href.startsWith("#")) {
+            link.setAttribute("href", BASE_URL + href.replace(/^\//, ""));
+        }
+    });
+}
 
-// Hàm sửa tất cả link trong header/footer
-    function fixLinks() {
-        document.querySelectorAll("a").forEach(link => {
-            const href = link.getAttribute("href");
-            if (href && !href.startsWith("http") && !href.startsWith("#")) {
-                link.setAttribute("href", BASE_URL + href.replace(/^\//, ""));
-            }
-        });
-    }
-
-
+// Load Header
 async function showHeader() {
     try {
         const res = await fetch(BASE_URL + "layout/header.html");
         if (!res.ok) throw new Error("Không tải được header");
         const headerHtml = await res.text();
         document.querySelector(".showHeader").innerHTML = headerHtml;
-        fixLinks(); // Sửa tất cả link sau khi tải header
+        fixLinks();
     } catch (err) {
         console.error(err);
     }
 }
 
+// Load Footer
 async function showFooter() {
     try {
         const res = await fetch(BASE_URL + "layout/footer.html");
         if (!res.ok) throw new Error("Không tải được footer");
         const footerHtml = await res.text();
         document.querySelector(".showFooter").innerHTML = footerHtml;
-        fixLinks(); // Sửa tất cả link sau khi tải footer   
+        fixLinks();
     } catch (err) {
         console.error(err);
     }
