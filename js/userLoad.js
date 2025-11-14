@@ -79,7 +79,7 @@ window.onload = () => {
             border-l-[2px] border-[#ffffff] hover:border-l-[2px] hover:border-[#FFAC2D] 
             hover:bg-[#ffffff] hover:text-[#FF782D] hover:pl-[30px]
         ">
-            <a class="text-[16px] font-semibold " href="../login.html">
+            <a class="text-[16px] font-semibold " href="./login.html">
                 Đăng Nhập
             </a>
         </li>
