@@ -1,7 +1,7 @@
 function getBasePath() {
     // Lấy base URL của site (bao gồm repo-name nếu có)
     const base = window.location.origin + "/" + window.location.pathname.split("/")[1] + "/";
-    return base + "layout/";
+    return base + "../layout/";
 }
 
 async function showHeader() {
