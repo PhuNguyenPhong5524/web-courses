@@ -39,16 +39,38 @@ const BASE_URL = getBaseURL();
 
 // Sửa tất cả link trong header/footer
 function fixLinks() {
+    // Sửa các link <a>
     document.querySelectorAll("a").forEach(link => {
         const href = link.getAttribute("href");
-        if (href && !href.startsWith("http") && !href.startsWith("#")) {
-            // Nếu href đã chứa BASE_URL thì bỏ qua
-            if (!href.startsWith(BASE_URL)) {
-                link.setAttribute("href", BASE_URL + href.replace(/^\//, ""));
-            }
+        if (href && !href.startsWith("http") && !href.startsWith("#") && !href.startsWith(BASE_URL)) {
+            link.setAttribute("href", BASE_URL + href.replace(/^\/?/, "")); // thêm BASE_URL
+        }
+    });
+
+    // Sửa các link <img>
+    document.querySelectorAll("img").forEach(img => {
+        const src = img.getAttribute("src");
+        if (src && !src.startsWith("http") && !src.startsWith(BASE_URL)) {
+            img.setAttribute("src", BASE_URL + src.replace(/^\/?/, ""));
+        }
+    });
+
+    // Tương tự với <script> và <link>
+    document.querySelectorAll("script").forEach(script => {
+        const src = script.getAttribute("src");
+        if (src && !src.startsWith("http") && !src.startsWith(BASE_URL)) {
+            script.setAttribute("src", BASE_URL + src.replace(/^\/?/, ""));
+        }
+    });
+
+    document.querySelectorAll("link").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && !href.startsWith("http") && !href.startsWith(BASE_URL)) {
+            link.setAttribute("href", BASE_URL + href.replace(/^\/?/, ""));
         }
     });
 }
+
 
 // Load Header
 async function showHeader() {
@@ -57,6 +79,9 @@ async function showHeader() {
         if (!res.ok) throw new Error("Không tải được header");
         const headerHtml = await res.text();
         document.querySelector(".showHeader").innerHTML = headerHtml;
+        if (typeof loadUserMenu === "function") {
+            loadUserMenu();
+        }
         fixLinks();
     } catch (err) {
         console.error(err);
