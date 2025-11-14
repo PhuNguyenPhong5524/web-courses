@@ -5,11 +5,13 @@ function loadUserMenu() {
 
   if (!avatar || !userMenu) return;   
   const menuItemClass = `
-    text-black px-3 py-2 border-l-2 border-l-[#ffffff] cursor-pointer
-    transition-all duration-300
-    hover:border-[#FFAC2D] hover:bg-white hover:text-[#FF782D] hover:pl-5
-    text-[16px] font-semibold
+      text-black px-3 py-2 border-l-2 border-l-[#ffffff] cursor-pointer
+      transition-all duration-300 ease-in-out
+      hover:border-[#FFAC2D] hover:bg-white hover:text-[#FF782D] hover:pl-5
+      text-[16px] font-semibold
+      whitespace-nowrap overflow-hidden
   `;
+
 
   avatar.innerHTML = "";
   userMenu.innerHTML = "";
