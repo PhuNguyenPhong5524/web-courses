@@ -42,7 +42,10 @@ function fixLinks() {
     document.querySelectorAll("a").forEach(link => {
         const href = link.getAttribute("href");
         if (href && !href.startsWith("http") && !href.startsWith("#")) {
-            link.setAttribute("href", BASE_URL + href.replace(/^\//, ""));
+            // Nếu href đã chứa BASE_URL thì bỏ qua
+            if (!href.startsWith(BASE_URL)) {
+                link.setAttribute("href", BASE_URL + href.replace(/^\//, ""));
+            }
         }
     });
 }

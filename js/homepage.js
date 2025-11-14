@@ -55,7 +55,7 @@ const showCourse = () => {
                             "
                         >
                             <a 
-                                href="page/user/cart.html"
+                                href="/page/user/cart.html"
                                 class="
                                     absolute top-[80%] right-1/2 translate-x-1/2 w-[50px] h-[50px] bg-[#FF782D]/70 opacity-0 rounded-full flex 
                                     justify-center items-center text-[#ffffff] transform transition-transform duration-400 ease-in-out 
@@ -78,7 +78,7 @@ const showCourse = () => {
                         <!-- Title -->
                             <h4 class="text-[20px] pr-[20px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] line-clamp-2">
                             <a 
-                                href="page/user/courses-detail.html"
+                                href="/page/user/courses-detail.html"
                                 class="" 
                             >
                                 ${courArr[id].title}

@@ -27,7 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 
         if (user) {
             localStorage.setItem('user', JSON.stringify(user));
-            window.location.href = './index.html';
+            window.location.href = '/index.html';
         } else {
             alert('Email hoặc password không đúng!');
         }

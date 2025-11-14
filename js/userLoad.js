@@ -8,7 +8,7 @@ window.onload = () => {
   // Nếu có user => đã đăng nhập
   if (user && user.id) {
     avatar.innerHTML =`
-        <img class="w-[30px] h-[30px] rounded-full" src="images/avatar.jpg" alt="" />
+        <img class="w-[30px] h-[30px] rounded-full" src="/images/avatar.jpg" alt="" />
     `
     userMenu.innerHTML += `
         <li 
