@@ -1,9 +1,8 @@
 function getBasePath() {
     const path = window.location.pathname;
-    if (path.includes("/page/")) {
-        return "/layout/";
-    }
-    return "layout/";
+    const segments = path.split("/").filter(Boolean); // bỏ phần rỗng
+    const depth = segments.length - 1; // bỏ tên file
+    return depth === 0 ? "layout/" : "../".repeat(depth) + "layout/";
 }
 
 async function showHeader() {
