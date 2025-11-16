@@ -82,7 +82,10 @@
                     >
                         <img class="w-[400px] h-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AcRC1bv-NCjZaHXI8aSaLDzq8kvT-h_8iw&s" alt="thumb"
                             class="rounded-md mb-3 w-full object-cover">
-                        <div class="text-lg font-bold mb-2">1.349.000 ₫</div>
+                        <div class="text-[30px] text-red-600 font-bold py-[10px]">
+                            1.349.000 
+                            <span class="text-[20px] underline align-super">đ</span>
+                        </div>
                         <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
                             Thêm giỏ hàng
                         </button>
@@ -101,13 +104,157 @@
         <section class="max-w-[1290px] mx-auto grid grid-cols-[2fr_1fr] gap-8 py-10 ">
             <!-- Box Left -->
                 <div>
-                    <h2 class="text-xl font-bold mb-4">Nội dung khóa học</h2>
-                    <p class="mb-6">Giới thiệu chi tiết các chương, nội dung, bài học...</p>
-                    <div class="space-y-20">
-                    <div class="h-[600px] bg-gray-100 rounded-md"></div>
-                    <div class="h-[600px] bg-gray-100 rounded-md"></div>
-                    <div class="h-[600px] bg-gray-100 rounded-md"></div>
-                    </div>
+                    <!-- Tab Content -->
+                        <section>
+                            <ul class="flex items-center" role="tablist">
+                                <li class="w-full">
+                                    <button 
+                                        class="
+                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                            last:border-r-0 last:rounded-tl-[15px] hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                        " 
+                                        data-target="#profile"
+                                    >
+                                        Tổng quan
+                                    </button>
+                                </li>
+                                <li class="w-full">
+                                    <button 
+                                        class="
+                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                            last:border-r-0 hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                        " 
+                                        data-target="#dashboard"
+                                    >
+                                        Nội dung Khóa học
+                                    </button>
+                                </li>
+                                <li class="w-full">
+                                    <button 
+                                        class="
+                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                            last:border-r-0 hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                        " 
+                                        data-target="#settings"
+                                    >
+                                        Mô tả
+                                    </button>
+                                </li>
+                                <li class="w-full">
+                                    <button 
+                                        class="
+                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                            last:rounded-tr-[15px] hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                        " 
+                                        data-target="#contacts"
+                                    >
+                                        Yêu cầu
+                                    </button>
+                                </li>
+                            </ul>
+
+                            <div id="profile" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                <div class="border border-gray-300 px-[20px] py-[10px]">
+                                    <h2 class="text-[#000000] text-[22px] font-bold mb-[10px]">Nội dung bài học</h2>
+                                    <div class="grid grid-cols-2 gap-5">
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                        <p class="py-1 flex gap-2">
+                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="dashboard" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                
+                                <div id="accordion-collapse" data-accordion="collapse" 
+                                    class="border border-gray-300 overflow-hidden shadow-xs">
+
+                                    <!-- Heading 1 -->
+                                    <h2 id="accordion-collapse-heading-1">
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
+                                                bg-gray-200 border-b border-gray-300 hover:text-heading hover:bg-neutral-secondary-medium gap-3"
+                                            data-accordion-target="#accordion-collapse-body-1"
+                                            aria-expanded="true"
+                                            aria-controls="accordion-collapse-body-1"
+                                        >
+                                            <div class="flex items-center gap-3">
+                                                <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="m5 15 7-7 7 7" />
+                                                </svg>
+                                                <span class="uppercase text-black font-bold">Các tính năng hot</span>
+                                            </div>
+                                            <div>
+                                                <span>6 bài giảng</span>
+                                                <i class="fa-regular fa-clock text-[#FF782D] ml-2"></i>
+                                                <span>30 phút</span>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="accordion-collapse-body-1" class="hidden border-b border-gray-300"
+                                        aria-labelledby="accordion-collapse-heading-1">
+                                        <div class="p-4 md:p-5">
+                                            <p class="mb-2 text-body">Flowbite is an open-source library...</p>
+                                            <p class="text-body">Check out this guide...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="settings" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                <p class="text-[#000000] text-[16px] font-regular">• NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners 
+                                    có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và 
+                                    framework Express.
+                                </p>
+                            </div>
+                            <div id="contacts" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                <ol class="text-[#000000] text-[16px] font-regular list-disc list-inside leading-[30px]">
+                                    <li>
+                                        <span>Có hiểu cơ bản về HTML, CSS và JavaScript.</span>
+                                    </li>
+                                    <li>
+                                        <span>Có hiểu biết về TypeScript.</span>
+                                    </li>
+                                    <li>
+                                        <span>Có hiểu biết về React (Frontend) là một lợi thế.</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                    <!-- Section Khóa học liên quan -->
+                        <section class="mt-5">
+                            <h2 class="text-[#000000] text-[24px] font-bold mb-3">Các khóa học khác của <span class="text-[#FF782D]">Hỏi Dân IT với ERic.</span></h2>
+                                <div class="showCourses grid grid-cols-3 gap-4 ">
+                                    <!-- Các sản phẩm -->
+                                        
+                                </div>
+                        </section>
                 </div>
 
             <!-- Box Right  -->
@@ -143,6 +290,7 @@
     <script src="../../js/headerAndFooter.js" ></script>
     <script src="../../js/courses-detail.js"></script>
     <script src="../../js/userLoad.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 </html>
