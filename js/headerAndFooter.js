@@ -98,7 +98,7 @@ async function showFooter() {
 const showMenuCategory = () => {
     return cateArrr.map(cat => `
         <li class="group text-black px-[20px] py-[10px] cursor-pointer transform transition-all ease-in-out duration-300 border-[2px] border-[#ffffff] hover:border-l-[2px] hover:border-l-[#FF782D] hover:bg-[#ffffff] hover:text-[#FF782D] hover:pl-[30px]">
-            <a class="text-[16px] font-semibold" href="${getBaseURL()}category/${cat.id}">
+            <a class="text-[16px] font-semibold" href="${getBaseURL()}page/user/courses-category.html">
                 ${cat.cate_name}
             </a>
         </li>
