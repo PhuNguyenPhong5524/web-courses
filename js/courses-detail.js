@@ -65,20 +65,22 @@ const initTabs = () => {
 initTabs();
 
 const courArr = [
-    {id:1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
-    {id:2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
-    {id:3, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
-    {id:4, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
-    {id:5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
-    {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
+    {id:1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:158},
+    {id:2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:290},
+    {id:3, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:432},
+    {id:4, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:365},
+    {id:5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:150},
+    {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:90},
 ];
 
 // swiper khóa học liên quan
-const renderSwiperCourses = () => {
-  let showSwiper = "";
-  for (let id = 0; id < 3; id++) {
-    showSwiper += `
-            <div 
+
+const showCoursesOfProvider = () => {
+  let showCoPrv = "";
+  const courFilter = courArr.sort((a, b) => b.qua_student - a.qua_student).slice(0, 3);
+  courFilter.map((item)=>{
+    showCoPrv += `
+         <div 
                 class="
                     flex flex-col justify-start group relative rounded-[15px]
                     w-full h-auto border border-[2px] border-[#EAEAEA]
@@ -89,7 +91,7 @@ const renderSwiperCourses = () => {
                 <!-- Image -->
                     <div class="relative overflow-hidden h-auto">
                         <img 
-                            src="${courArr[id].img}" 
+                            src="${item.img}" 
                             alt="img_category1" 
                             class="
                                 w-full h-auto object-fit-cover transform transition-transform duration-300 
@@ -98,7 +100,7 @@ const renderSwiperCourses = () => {
                         >
                         <span 
                             class="
-                                text-[14px] font-semibold text-[#ffffff] px-[10px] rounded-[8px] py-[5px] absolute top-4 left-4
+                                text-[12px] font-semibold text-[#ffffff] px-[10px] rounded-[8px] py-[5px] absolute top-4 left-4
                                 bg-[#FF782D] z-[30]
                             "
                         >
@@ -115,7 +117,7 @@ const renderSwiperCourses = () => {
                                 class="
                                     absolute top-[80%] right-1/2 translate-x-1/2 w-[50px] h-[50px] bg-[#FF782D]/70 opacity-0 rounded-full flex 
                                     justify-center items-center text-[#ffffff] transform transition-transform duration-400 ease-in-out 
-                                    group-hover:opacity-100 group-hover:translate-y-[-150%] z-[30] cursor-pointer hover:scale-110 hover:bg-[#FF782D]
+                                    group-hover:opacity-100 group-hover:translate-y-[-120%] z-[30] cursor-pointer hover:scale-110 hover:bg-[#FF782D]
                                     group-hover:
                                 ">
                                 <i class="fa-solid fa-cart-plus text-[20px]"></i>
@@ -137,7 +139,7 @@ const renderSwiperCourses = () => {
                                 href="/page/user/courses-detail.html"
                                 class="" 
                             >
-                                ${courArr[id].title}
+                                ${item.title}
                             </a>
                             </h4>
                         <!-- Info -->
@@ -150,7 +152,7 @@ const renderSwiperCourses = () => {
                                     <div class="overflow-hidden">
                                         <i class="fa-solid fa-graduation-cap transform scale-x-[-1] text-[#FF782D]"></i>
                                     </div>
-                                    <p class="text-[16px] font-regular text-[#555555]">156 Students</p>
+                                    <p class="text-[16px] font-regular text-[#555555]">${item.qua_student} Students</p>
                                 </div>
                             </div>
                         <!-- Line -->
@@ -158,7 +160,7 @@ const renderSwiperCourses = () => {
                         <!--  -->
                             <div class="flex items-center justify-between">
                                 <div class="text-[18px]">
-                                    <del class="text-[#9D9D9D] font-regular">$${courArr[id].price}</del> 
+                                    <del class="text-[#9D9D9D] font-regular">$${item.price}</del> 
                                     <span class="text-[#55BE24] font-semibold">Free</span>
                                 </div>
                                 <div class="text-[16px] text-black/40 font-regular">
@@ -168,9 +170,9 @@ const renderSwiperCourses = () => {
                     </div>
             </div>
     `;
-  }
-  document.querySelector(".showCourses").innerHTML = showSwiper;
+  });
+  
+  document.querySelector(".showCourses").innerHTML = showCoPrv;
 };
 
-renderSwiperCourses();
-
+showCoursesOfProvider();
