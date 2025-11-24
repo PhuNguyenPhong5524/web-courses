@@ -64,11 +64,48 @@ async function showFooter() {
 }
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    const contactBtns = document.getElementById("contactBtns");
+    const header = document.querySelector(".showHeader");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            // Hiện scroll-to-top
+            scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+            scrollBtn.classList.add("opacity-100");
+
+            // Dịch container Phone/Zalo lên mượt
+            contactBtns.style.transform = "translateY(-45px)";
+
+            // Ẩn header trượt lên
+            header.style.transform = "translateY(-100%)";
+        } else {
+            // Ẩn scroll-to-top
+            scrollBtn.classList.add("opacity-0", "pointer-events-none");
+            scrollBtn.classList.remove("opacity-100");
+
+            // Trả container Phone/Zalo về vị trí ban đầu
+            contactBtns.style.transform = "translateY(0)";
+
+            // Hiện header lại
+            header.style.transform = "translateY(0)";
+        }
+    });
+
+    // Scroll to top
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+
+
 
 const showMenuCategory = () => {
     return cateArrr.map(cat => `
         <li class="group text-black px-[20px] py-[10px] cursor-pointer transform transition-all ease-in-out duration-300 border-[2px] border-[#ffffff] hover:border-l-[2px] hover:border-l-[#FF782D] hover:bg-[#ffffff] hover:text-[#FF782D] hover:pl-[30px]">
-            <a class="text-[16px] font-semibold" href="${getBaseURL()}page/user/courses-category.html">
+            <a class="text-[16px] font-semibold" href="/page/user/courses-category.html">
                 ${cat.cate_name}
             </a>
         </li>

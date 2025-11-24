@@ -12,279 +12,313 @@
 </head>
 <body>
     <!-- Header -->
-        <header class="showHeader top-0 sticky w-full shadow-md z-[1000]">
+        <header class="showHeader top-0 fixed transition-transform ease-in-out duration-300 w-full shadow-md z-[1000]">
             
         </header>
-    <!--   -->
-        <div class="bg-[#F5F5F5] w-full h-auto">
-            <div class="max-w-[1290px] mx-auto py-[15px] relative">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                        <li class="inline-flex items-center">
-                            <a href="/" class="inline-flex items-center text-sm font-medium text-body hover:text-fg-brand hover:underline hover:text-[#FF782D]">
-                                <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/></svg>
-                                Trang chủ
-                            </a>
-                        </li>
-                        <li class="inline-flex items-center">
-                            <div class="flex items-center space-x-1.5">
-                                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-                                <span class="inline-flex items-center text-sm font-medium text-body-subtle">Phát triển web</span>
-                            </div>
-                        </li>
-                        <li aria-current="page">
-                            <div class="flex items-center space-x-1.5">
-                                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-                                <span class="inline-flex items-center text-[#9D9D9D] text-sm font-medium text-body-subtle">NodeJS Pro - Tự Học từ số 0</span>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    <!-- Section -->
-        <section class="w-full bg-[#000000] text-white py-10">
-            <div class="max-w-[1290px] mx-auto grid grid-cols-[2fr_1fr] gap-8 relative w-full">
-                <!-- Box Left -->
-                <div class="w-full">
-                    <h1 class="text-[38px] font-semibold">
-                        NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)
-                    </h1>
-                    <div class="flex items-center gap-4 mt-5">
-                        <div>
-                          <i class="text-[#FF782D] fa-solid fa-clock"></i>
-                          <span class="ml-2">2 Weeks</span>  
-                        </div>
-                        <div>
-                            <i class="text-[#FF782D] fa-solid fa-graduation-cap"></i>
-                            <span class="ml-2">156 học viên</span>
-                        </div>
-                        <div>
-                            <i class="text-[#FF782D] fa-solid fa-book"></i>
-                            <span class="ml-2">16 bài học</span>
-                        </div>
-                        <div>
-                            <i class="text-[#FF782D] fa-solid fa-signal"></i>
-                            <span class="ml-2">Tất cả mức độ</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Box Right -->
-                <div class="w-full">
-                    <div
-                        id="priceCardHero"
-                        class="
-                            absolute top-0 bg-white text-gray-800 rounded-[10px] shadow-xl p-4 transition-all duration-500
-                            border border-[0.5px] border-[#EAEAEA]    
-                        "
-                    >
-                        <img class="w-[400px] h-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AcRC1bv-NCjZaHXI8aSaLDzq8kvT-h_8iw&s" alt="thumb"
-                            class="rounded-md mb-3 w-full object-cover">
-                        <div class="text-[30px] text-red-600 font-bold py-[10px]">
-                            1.349.000 
-                            <span class="text-[20px] underline align-super">đ</span>
-                        </div>
-                        <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
-                            Thêm giỏ hàng
-                        </button>
-                        <button class="w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md">
-                            Đăng ký khóa học
-                        </button>
-                        <p class="text-xs text-gray-500 mt-2">
-                            <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · 55.5 giờ video · Chứng nhận
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <!-- PHẦN NỘI DUNG KHÓA HỌC (CÓ BOX GIÁ DẠNG STICKY) -->
-        <section class="max-w-[1290px] mx-auto grid grid-cols-[2fr_1fr] gap-8 py-10 ">
-            <!-- Box Left -->
-                <div>
-                    <!-- Tab Content -->
-                        <section>
-                            <ul class="flex items-center" role="tablist">
-                                <li class="w-full">
-                                    <button 
-                                        class="
-                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
-                                            last:border-r-0 last:rounded-tl-[15px] hover:bg-[#F5F5F5] hover:text-[#FF782D]
-                                        " 
-                                        data-target="#profile"
-                                    >
-                                        Tổng quan
-                                    </button>
-                                </li>
-                                <li class="w-full">
-                                    <button 
-                                        class="
-                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
-                                            last:border-r-0 hover:bg-[#F5F5F5] hover:text-[#FF782D]
-                                        " 
-                                        data-target="#dashboard"
-                                    >
-                                        Nội dung Khóa học
-                                    </button>
-                                </li>
-                                <li class="w-full">
-                                    <button 
-                                        class="
-                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
-                                            last:border-r-0 hover:bg-[#F5F5F5] hover:text-[#FF782D]
-                                        " 
-                                        data-target="#settings"
-                                    >
-                                        Mô tả
-                                    </button>
-                                </li>
-                                <li class="w-full">
-                                    <button 
-                                        class="
-                                            tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
-                                            last:rounded-tr-[15px] hover:bg-[#F5F5F5] hover:text-[#FF782D]
-                                        " 
-                                        data-target="#contacts"
-                                    >
-                                        Yêu cầu
-                                    </button>
-                                </li>
-                            </ul>
-
-                            <div id="profile" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
-                                <div class="border border-gray-300 px-[20px] py-[10px]">
-                                    <h2 class="text-[#000000] text-[22px] font-bold mb-[10px]">Nội dung bài học</h2>
-                                    <div class="grid grid-cols-2 gap-5">
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                        <p class="py-1 flex gap-2">
-                                            <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                                            <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
-                                        </p>
-                                    </div>
+    <!-- Main -->
+        <main class="mt-[80px]">
+            <div class="bg-[#F5F5F5] w-full h-auto">
+                <div class="max-w-[1290px] mx-auto py-[15px] relative">
+                    <nav class="flex" aria-label="Breadcrumb">
+                        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                            <li class="inline-flex items-center">
+                                <a href="/" class="inline-flex items-center text-sm font-medium text-body hover:text-fg-brand hover:underline hover:text-[#FF782D]">
+                                    <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/></svg>
+                                    Trang chủ
+                                </a>
+                            </li>
+                            <li class="inline-flex items-center">
+                                <div class="flex items-center space-x-1.5">
+                                    <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+                                    <span class="inline-flex items-center text-sm font-medium text-body-subtle">Phát triển web</span>
                                 </div>
+                            </li>
+                            <li aria-current="page">
+                                <div class="flex items-center space-x-1.5">
+                                    <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
+                                    <span class="inline-flex items-center text-[#9D9D9D] text-sm font-medium text-body-subtle">NodeJS Pro - Tự Học từ số 0</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        <!-- Section -->
+            <section class="w-full bg-[#000000] text-white py-10">
+                <div class="max-w-[1290px] mx-auto grid grid-cols-[2fr_1fr] gap-8 relative w-full">
+                    <!-- Box Left -->
+                    <div class="w-full">
+                        <h1 class="text-[38px] font-semibold">
+                            NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)
+                        </h1>
+                        <div class="flex items-center gap-4 mt-5">
+                            <div>
+                            <i class="text-[#FF782D] fa-solid fa-clock"></i>
+                            <span class="ml-2">2 Weeks</span>  
                             </div>
-                            <div id="dashboard" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
-                                
-                                <div id="accordion-collapse" data-accordion="collapse" 
-                                    class="border border-gray-300 overflow-hidden shadow-xs">
+                            <div>
+                                <i class="text-[#FF782D] fa-solid fa-graduation-cap"></i>
+                                <span class="ml-2">156 học viên</span>
+                            </div>
+                            <div>
+                                <i class="text-[#FF782D] fa-solid fa-book"></i>
+                                <span class="ml-2">16 bài học</span>
+                            </div>
+                            <div>
+                                <i class="text-[#FF782D] fa-solid fa-signal"></i>
+                                <span class="ml-2">Tất cả mức độ</span>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <!-- Heading 1 -->
-                                    <h2 id="accordion-collapse-heading-1">
-                                        <button type="button"
-                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
-                                                bg-gray-200 border-b border-gray-300 hover:text-heading hover:bg-neutral-secondary-medium gap-3"
-                                            data-accordion-target="#accordion-collapse-body-1"
-                                            aria-expanded="true"
-                                            aria-controls="accordion-collapse-body-1"
+                    <!-- Box Right -->
+                    <div class="w-full">
+                        <div
+                            id="priceCardHero"
+                            class="
+                                absolute top-0 bg-white text-gray-800 rounded-[10px] shadow-xl p-4 transition-all duration-500
+                                border border-[0.5px] border-[#EAEAEA]    
+                            "
+                        >
+                            <img class="w-[400px] h-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AcRC1bv-NCjZaHXI8aSaLDzq8kvT-h_8iw&s" alt="thumb"
+                                class="rounded-md mb-3 w-full object-cover">
+                            <div class="text-[30px] text-red-600 font-bold py-[10px]">
+                                1.349.000 
+                                <span class="text-[20px] underline align-super">đ</span>
+                            </div>
+                            <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
+                                Thêm giỏ hàng
+                            </button>
+                            <button class="w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md">
+                                Đăng ký khóa học
+                            </button>
+                            <p class="text-xs text-gray-500 mt-2">
+                                <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · 55.5 giờ video · Chứng nhận
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- PHẦN NỘI DUNG KHÓA HỌC (CÓ BOX GIÁ DẠNG STICKY) -->
+            <section class="max-w-[1290px] mx-auto grid grid-cols-[2fr_1fr] gap-8 py-10 ">
+                <!-- Box Left -->
+                    <div>
+                        <!-- Tab Content -->
+                            <section>
+                                <ul class="flex items-center" role="tablist">
+                                    <li class="w-full">
+                                        <button 
+                                            class="
+                                                tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                                last:border-r-0 last:rounded-tl-[15px] hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                            " 
+                                            data-target="#profile"
                                         >
-                                            <div class="flex items-center gap-3">
-                                                <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
-                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                                    viewBox="0 0 24 24">
-                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="m5 15 7-7 7 7" />
-                                                </svg>
-                                                <span class="uppercase text-black font-bold">Các tính năng hot</span>
-                                            </div>
-                                            <div>
-                                                <span>6 bài giảng</span>
-                                                <i class="fa-regular fa-clock text-[#FF782D] ml-2"></i>
-                                                <span>30 phút</span>
-                                            </div>
+                                            Tổng quan
                                         </button>
-                                    </h2>
-                                    <div id="accordion-collapse-body-1" class="hidden border-b border-gray-300"
-                                        aria-labelledby="accordion-collapse-heading-1">
-                                        <div class="p-4 md:p-5">
-                                            <p class="mb-2 text-body">Flowbite is an open-source library...</p>
-                                            <p class="text-body">Check out this guide...</p>
+                                    </li>
+                                    <li class="w-full">
+                                        <button 
+                                            class="
+                                                tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                                last:border-r-0 hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                            " 
+                                            data-target="#dashboard"
+                                        >
+                                            Nội dung Khóa học
+                                        </button>
+                                    </li>
+                                    <li class="w-full">
+                                        <button 
+                                            class="
+                                                tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                                last:border-r-0 hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                            " 
+                                            data-target="#settings"
+                                        >
+                                            Mô tả
+                                        </button>
+                                    </li>
+                                    <li class="w-full">
+                                        <button 
+                                            class="
+                                                tab-btn inline-block py-4 w-full border-r border-gray cursor-pointer font-semibold text-[18px]
+                                                last:rounded-tr-[15px] hover:bg-[#F5F5F5] hover:text-[#FF782D]
+                                            " 
+                                            data-target="#contacts"
+                                        >
+                                            Yêu cầu
+                                        </button>
+                                    </li>
+                                </ul>
+
+                                <div id="profile" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                    <div class="border border-gray-300 px-[20px] py-[10px]">
+                                        <h2 class="text-[#000000] text-[22px] font-bold mb-[10px]">Nội dung bài học</h2>
+                                        <div class="grid grid-cols-2 gap-5">
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
+                                            <p class="py-1 flex gap-2">
+                                                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                                                <span>Học Tư Duy Xây Dựng Backend Server Cho Website</span> 
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="settings" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
-                                <p class="text-[#000000] text-[16px] font-regular">• NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners 
-                                    có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và 
-                                    framework Express.
-                                </p>
-                            </div>
-                            <div id="contacts" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
-                                <ol class="text-[#000000] text-[16px] font-regular list-disc list-inside leading-[30px]">
-                                    <li>
-                                        <span>Có hiểu cơ bản về HTML, CSS và JavaScript.</span>
-                                    </li>
-                                    <li>
-                                        <span>Có hiểu biết về TypeScript.</span>
-                                    </li>
-                                    <li>
-                                        <span>Có hiểu biết về React (Frontend) là một lợi thế.</span>
-                                    </li>
-                                </ol>
-                            </div>
-                        </section>
-                    <!-- Section Khóa học liên quan -->
-                        <section class="mt-5">
-                            <h2 class="text-[#000000] text-[24px] font-bold mb-3">Các khóa học khác của <span class="text-[#FF782D]">Hỏi Dân IT với ERic.</span></h2>
-                                <div class="showCourses grid grid-cols-3 gap-4 ">
-                                    <!-- Các sản phẩm -->
-                                        
-                                </div>
-                        </section>
-                </div>
+                                <div id="dashboard" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                    
+                                    <div id="accordion-collapse" data-accordion="collapse" 
+                                        class="border border-gray-300 overflow-hidden shadow-xs">
 
-            <!-- Box Right  -->
-                <div>
-                    <div
-                        id="priceCard"
-                        class="
-                            bg-white text-gray-800 rounded-[10px] shadow-xl p-4 w-full sticky top-[100px] 
-                            opacity-0 pointer-events-none transition-all duration-500 border border-[0.5px] border-[#EAEAEA]
-                        "
-                    >
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AcRC1bv-NCjZaHXI8aSaLDzq8kvT-h_8iw&s" alt="thumb"
-                            class="rounded-md mb-3 w-full object-cover"
-                        >
-                        <div class="text-lg font-bold mb-2">1.349.000 ₫</div>
-                        <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
-                            Thêm giỏ hàng
-                        </button>
-                        <button class="w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md">
-                            Đăng ký khóa học
-                        </button>
-                        <p class="text-xs text-gray-500 mt-2">
-                            <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · 55.5 giờ video · Chứng nhận
-                        </p>
+                                        <!-- Heading 1 -->
+                                        <h2 id="accordion-collapse-heading-1">
+                                            <button type="button"
+                                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
+                                                    bg-gray-200 border-b border-gray-300 hover:text-heading hover:bg-neutral-secondary-medium gap-3"
+                                                data-accordion-target="#accordion-collapse-body-1"
+                                                aria-expanded="true"
+                                                aria-controls="accordion-collapse-body-1"
+                                            >
+                                                <div class="flex items-center gap-3">
+                                                    <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="m5 15 7-7 7 7" />
+                                                    </svg>
+                                                    <span class="uppercase text-black font-bold">Các tính năng hot</span>
+                                                </div>
+                                                <div>
+                                                    <span>6 bài giảng</span>
+                                                    <i class="fa-regular fa-clock text-[#FF782D] ml-2"></i>
+                                                    <span>30 phút</span>
+                                                </div>
+                                            </button>
+                                        </h2>
+                                        <div id="accordion-collapse-body-1" class="hidden border-b border-gray-300"
+                                            aria-labelledby="accordion-collapse-heading-1">
+                                            <div class="p-4 md:p-5">
+                                                <p class="mb-2 text-body">Flowbite is an open-source library...</p>
+                                                <p class="text-body">Check out this guide...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="settings" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                    <p class="text-[#000000] text-[16px] font-regular">• NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners 
+                                        có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và 
+                                        framework Express.
+                                    </p>
+                                </div>
+                                <div id="contacts" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
+                                    <ol class="text-[#000000] text-[16px] font-regular list-disc list-inside leading-[30px]">
+                                        <li>
+                                            <span>Có hiểu cơ bản về HTML, CSS và JavaScript.</span>
+                                        </li>
+                                        <li>
+                                            <span>Có hiểu biết về TypeScript.</span>
+                                        </li>
+                                        <li>
+                                            <span>Có hiểu biết về React (Frontend) là một lợi thế.</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </section>
+                        <!-- Section Khóa học liên quan -->
+                            <section class="mt-5">
+                                <h2 class="text-[#000000] text-[24px] font-bold mb-3">Các khóa học khác của <span class="text-[#FF782D]">Hỏi Dân IT với ERic.</span></h2>
+                                    <div class="showCourses grid grid-cols-3 gap-4 ">
+                                        <!-- Các sản phẩm -->
+                                            
+                                    </div>
+                            </section>
                     </div>
-                </div>
-        </section>
+
+                <!-- Box Right  -->
+                    <div>
+                        <div
+                            id="priceCard"
+                            class="
+                                bg-white text-gray-800 rounded-[10px] shadow-xl p-4 w-full sticky top-[100px] 
+                                opacity-0 pointer-events-none transition-all duration-500 border border-[0.5px] border-[#EAEAEA]
+                            "
+                        >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8AcRC1bv-NCjZaHXI8aSaLDzq8kvT-h_8iw&s" alt="thumb"
+                                class="rounded-md mb-3 w-full object-cover"
+                            >
+                            <div class="text-lg font-bold mb-2">1.349.000 ₫</div>
+                            <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
+                                Thêm giỏ hàng
+                            </button>
+                            <button class="w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md">
+                                Đăng ký khóa học
+                            </button>
+                            <p class="text-xs text-gray-500 mt-2">
+                                <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · 55.5 giờ video · Chứng nhận
+                            </p>
+                        </div>
+                    </div>
+            </section>
+        </main>
     <!-- Footer -->
         <footer class="showFooter bg-[#F5F5F5]">
 
         </footer>
+    <!-- Floating Buttons Container -->
+        <div id="contactBtns" class="fixed bottom-5 right-4 flex flex-col items-center gap-1 z-50 transition-transform duration-500">
+            
+            <!-- Phone Button -->
+            <button
+                class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg 
+                    animate-pulse border-2 border-white hover:bg-green-600 transition-all duration-300 hover:scale-110 cursor-pointer"
+                title="Call us"
+            >
+                <i class="fa-solid fa-phone"></i>
+            </button>
+
+            <!-- Chat Zalo -->
+            <button
+                class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg 
+                    animate-pulse border-2 border-white hover:bg-blue-600 transition-all duration-300 hover:scale-110 cursor-pointer"
+                title="Chat Zalo"
+            >
+                <p class="text-[12px] font-semibold text-[#ffffff]">Zalo</p>
+            </button>
+        </div>
+
+        <!-- Scroll to Top Button -->
+
+        <button 
+            id="scrollTopBtn" 
+            class="fixed bottom-5 right-5 w-10 h-10 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-lg opacity-0
+                pointer-events-none transition-all duration-300 cursor-pointer hover:bg-orange-600 hover:scale-110"
+            title="Scroll to top"
+        >
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
     <script src="https://kit.fontawesome.com/4071fda5b5.js" crossorigin="anonymous"></script>
     <script src="../../js/courses-detail.js"></script>
     <script src="../../js/userLoad.js"></script>
