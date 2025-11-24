@@ -69,28 +69,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactBtns = document.getElementById("contactBtns");
     const header = document.querySelector(".showHeader");
 
+    let lastScrollY = window.scrollY; // lưu vị trí scroll trước
+
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 400) {
-            // Hiện scroll-to-top
+        const currentScrollY = window.scrollY;
+
+        // Scroll down -> ẩn header, scroll-to-top hiện
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            header.style.transform = "translateY(-100%)"; // ẩn header
+        }
+        // Scroll up -> hiện header
+        else if (currentScrollY < lastScrollY) {
+            header.style.transform = "translateY(0)"; // hiện header
+        }
+
+        // Hiện/ẩn scroll-to-top
+        if (currentScrollY > 400) {
             scrollBtn.classList.remove("opacity-0", "pointer-events-none");
             scrollBtn.classList.add("opacity-100");
 
-            // Dịch container Phone/Zalo lên mượt
+            // Dịch container Phone/Zalo lên
             contactBtns.style.transform = "translateY(-45px)";
-
-            // Ẩn header trượt lên
-            header.style.transform = "translateY(-100%)";
         } else {
-            // Ẩn scroll-to-top
             scrollBtn.classList.add("opacity-0", "pointer-events-none");
             scrollBtn.classList.remove("opacity-100");
 
-            // Trả container Phone/Zalo về vị trí ban đầu
             contactBtns.style.transform = "translateY(0)";
-
-            // Hiện header lại
-            header.style.transform = "translateY(0)";
         }
+
+        lastScrollY = currentScrollY; // cập nhật vị trí scroll trước
     });
 
     // Scroll to top
@@ -98,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
+
 
 
 
