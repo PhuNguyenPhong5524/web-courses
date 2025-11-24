@@ -10,55 +10,25 @@ const cateArrr = [
     {id:8, cate_name:"Kỹ thuật mềm", icon_name:"fa-solid fa-users", quantity:38} 
 ];
 
-function getBaseURL() {
-    const hostname = window.location.hostname;
+// Tính BASE_URL
+const BASE_URL = (() => {
+  const host = window.location.hostname;
+  if (host === "localhost" || host === "127.0.0.1") return "/";
+  return "/" + window.location.pathname.split("/")[1] + "/";
+})();
 
-    // Nếu chạy local (127.0.0.1 hoặc localhost)
-    if (hostname === "127.0.0.1" || hostname === "localhost") {
-        return "/"; // Gốc là root của Live Server
-    }
-
-    // Nếu chạy GitHub Pages
-    const repoName = window.location.pathname.split("/")[1]; // lấy tên repo
-    return "/" + repoName + "/";
-}
-
-const BASE_URL = getBaseURL();
-
-// Sửa tất cả link trong header/footer
+// Hàm fix link cho bất kỳ thẻ nào có attribute 'src' hoặc 'href'
 function fixLinks() {
-    // Sửa các link <a>
-    document.querySelectorAll("a").forEach(link => {
-        const href = link.getAttribute("href");
-        if (href && !href.startsWith("http") && !href.startsWith("#") && !href.startsWith(BASE_URL)) {
-            link.setAttribute("href", BASE_URL + href.replace(/^\/?/, "")); // thêm BASE_URL
-        }
+  const ATTRS = ["href", "src"];
+  ATTRS.forEach(attr => {
+    document.querySelectorAll(`[${attr}]`).forEach(el => {
+      const val = el.getAttribute(attr);
+      if (val && !val.startsWith("http") && !val.startsWith("#") && !val.startsWith(BASE_URL)) {
+        el.setAttribute(attr, BASE_URL + val.replace(/^\/?/, ""));
+      }
     });
-
-    // Sửa các link <img>
-    document.querySelectorAll("img").forEach(img => {
-        const src = img.getAttribute("src");
-        if (src && !src.startsWith("http") && !src.startsWith(BASE_URL)) {
-            img.setAttribute("src", BASE_URL + src.replace(/^\/?/, ""));
-        }
-    });
-
-    // Tương tự với <script> và <link>
-    document.querySelectorAll("script").forEach(script => {
-        const src = script.getAttribute("src");
-        if (src && !src.startsWith("http") && !src.startsWith(BASE_URL)) {
-            script.setAttribute("src", BASE_URL + src.replace(/^\/?/, ""));
-        }
-    });
-
-    document.querySelectorAll("link").forEach(link => {
-        const href = link.getAttribute("href");
-        if (href && !href.startsWith("http") && !href.startsWith(BASE_URL)) {
-            link.setAttribute("href", BASE_URL + href.replace(/^\/?/, ""));
-        }
-    });
+  });
 }
-
 
 // Load Header
 async function showHeader() {
