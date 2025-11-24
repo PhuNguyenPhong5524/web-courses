@@ -20,12 +20,13 @@ function loadUserMenu() {
   if (user?.id) {
     avatar.innerHTML = `
       <img src="/images/avatar.jpg" 
-           class="w-[30px] h-[30px] rounded-full object-cover" />
+           class="w-[30px] h-[30px] rounded-full object-cover" 
+      />
     `;
 
     userMenu.innerHTML = `
       <li class="${menuItemClass}">
-        <a><i class="fa-regular fa-user"></i> ${user.name}</a>
+        <a href="/page/user/profile.html"><i class="fa-regular fa-user"></i> ${user.name}</a>
       </li>
 
       <li class="${menuItemClass}">
