@@ -27,7 +27,7 @@ const showCourse = () => {
                     flex flex-col justify-start group relative rounded-[22px]
                     w-[410px] h-auto boder border-[2px] border-[#EAEAEA]
                     transform transition-transform duration-300 ease-in-out
-                    hover:shadow-2xl overflow-hidden 
+                    hover:shadow-2xl hover:translate-y-[-15px] overflow-hidden
                 "
             >
                 <!-- Image -->
@@ -174,8 +174,8 @@ const renderSwiperCourses = () => {
                 class="
                     flex flex-col justify-start group relative rounded-[22px]
                     w-full h-auto border border-[2px] border-[#EAEAEA]
-                    transform transition-transform duration-300 ease-in-out
-                    hover:shadow-2xl overflow-hidden 
+                    transform transition-transform duration-300 ease-in-out 
+                     hover:border-gray-300 overflow-hidden 
                 "
             >
                 <!-- Image -->
@@ -205,7 +205,7 @@ const renderSwiperCourses = () => {
                             <a 
                                 href="/page/user/cart.html"
                                 class="
-                                    absolute top-[80%] right-1/2 translate-x-1/2 w-[50px] h-[50px] bg-[#FF782D]/70 opacity-0 rounded-full flex 
+                                    absolute top-[85%] right-1/2 translate-x-1/2 w-[50px] h-[50px] bg-[#FF782D]/70 opacity-0 rounded-full flex 
                                     justify-center items-center text-[#ffffff] transform transition-transform duration-400 ease-in-out 
                                     group-hover:opacity-100 group-hover:translate-y-[-150%] z-[30] cursor-pointer hover:scale-110 hover:bg-[#FF782D]
                                     group-hover:
