@@ -62,20 +62,21 @@
         <!-- Cart & Account -->
             <div class="flex items-center gap-[25px]">
                 <ul class="flex items-center overflow-visible leading-[30px]">
-                    <li class="text-[#000000] py-[25px] px-[15px] hover:text-[#FF782D] hover:bg-[#F5F5F5] cursor-pointer">
+                    <li class="text-[#000000] text-[18px] py-[25px] px-[15px] hover:text-[#FF782D] hover:bg-[#F5F5F5] cursor-pointer">
                         <i class="fa-solid fa-search"></i>
                     </li>
-                    <li class="text-[#000000] py-[25px] px-[15px] hover:text-[#FF782D] hover:bg-[#F5F5F5] cursor-pointer">
+                    <li class="text-[#000000] text-[18px] py-[25px] px-[15px] hover:text-[#FF782D] hover:bg-[#F5F5F5] cursor-pointer">
                         <i class="fa-solid fa-bell"></i>
                     </li>
                     <li class="relative group overflow-visible">
                         <!-- Nút giỏ hàng -->
                             <a
                                 href="#"
-                                class="flex items-center text-[16px] font-semibold gap-2 px-[15px] py-[25px] 
-                                    group-hover:bg-[#F5F5F5] group-hover:text-[#FF782D]"
+                                class="flex items-center text-[18px] font-semibold gap-2 px-[15px] py-[25px] 
+                                    group-hover:bg-[#F5F5F5] group-hover:text-[#FF782D] relative z-1" 
                             >
                                 <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="absolute top-[15px] right-[10px] w-[15px] h-[15px] text-[10px] text-white bg-red-500 rounded-full z-2 flex justify-center items-center">0</span>
                             </a>
                             <div 
                                 class="absolute h-[10px] right-0 top-full w-[300px] 
@@ -120,7 +121,7 @@
                                             <p class="text-[20px] font-semibold text-center">
                                                 Tổng: 
                                                 <span class="text-[#FF782D] text-[20px] font-semibold">200.000 đ</span> 
-                                                <del class="text-gray-400 text-[18px] font-normal">200.000 đ</del>
+                                                <del class="text-gray-400 text-[16px] font-normal">200.000 đ</del>
                                             </p>
                                             <p class="text-[14px] text-[#555555] text-center">2 Khóa học</p>
                                             <button 
