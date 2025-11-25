@@ -175,7 +175,7 @@ const renderSwiperCourses = () => {
                     flex flex-col justify-start group relative rounded-[22px]
                     w-full h-auto border border-[2px] border-[#EAEAEA]
                     transform transition-transform duration-300 ease-in-out 
-                     hover:border-gray-300 overflow-hidden 
+                    hover:border-gray-300 overflow-hidden 
                 "
             >
                 <!-- Image -->
@@ -279,8 +279,8 @@ const showSwiperCourses = () => {
     },
     slidesPerGroup: 1,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".btnNext",
+      prevEl: ".btnPrev",
     },
     pagination: {
       el: ".swiper-pagination",

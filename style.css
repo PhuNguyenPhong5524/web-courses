@@ -10,3 +10,54 @@
 .bgr_login{
     background: linear-gradient(to right,#FEB6B6,#B7E1FF);
 }
+
+/* Home page - section   */
+
+.mySwiper .btnNext,
+.mySwiper .btnPrev{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.mySwiper .btnNext{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0, -50%);
+    background-color: rgba(179, 179, 179, 0.726);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.mySwiper .btnNext:hover,
+.mySwiper .btnPrev:hover{
+    background-color: rgba(97, 96, 96, 0.726);
+    color: #ffffff;
+    scale: 0.9;
+}
+.mySwiper .btnPrev{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+    background-color: rgba(179, 179, 179, 0.726);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.mySwiper:hover .btnNext,
+.mySwiper:hover .btnPrev{
+    opacity: 100;
+}
+    

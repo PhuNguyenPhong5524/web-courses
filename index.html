@@ -106,7 +106,7 @@
             <section>
                 <!-- Title -->
                     <div class="py-[50px] flex justify-between items-center">
-                            <div class="flex flex-col gap-[10px]">
+                            <div class="flex flex-col gap-[5px] border-l-4 border-[#FF782D] pl-4">
                                 <h2 class="text-[32px] font-semibold text-[#000000]">Danh mục khóa học</h2>
                                 <p class="text-[18px] font-regular text-[#555555]">Khám phá tất cả danh mục của chúng tôi</p>
                             </div>
@@ -131,7 +131,7 @@
             <section>
                 <!-- Title -->
                     <div class="py-[50px] flex justify-between items-center">
-                            <div class="flex flex-col gap-[10px]">
+                            <div class="flex flex-col gap-[5px] border-l-4 border-[#FF782D] pl-4">
                                 <h2 class="text-[32px] font-semibold text-[#000000]">Khóa học nổi bật</h2>
                                 <p class="text-[18px] font-regular text-[#555555]">Khám phá các khóa học phổ biến</p>
                             </div>
@@ -247,25 +247,48 @@
                         </div>
                     </div>
             </section>
-        <!-- Slide khóa học -->
-            <section class="py-8 bg-gray-50">
+        <!-- Course  -->
+            <section class="py-8">
                 <div class="container mx-auto">
-                    <h2 class="text-2xl font-bold mb-6">Khóa phát triển web</h2>
-                    
-                    <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <!-- Các sản phẩm -->
-                            
-                    </div>
-                    <!-- Nút điều hướng -->
-                        <!-- <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div> -->
-                    <!-- Pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- Title -->
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-[32px] font-semibold text-[#000000] mb-6 border-l-4 border-[#FF782D] pl-4">Khóa phát triển web</h2>
+                            <!-- Button -->
+                                <button 
+                                    class="
+                                        border border-[2px] border-[#9D9D9D] rounded-[24px] w-[161px] h-[48px] group
+                                        transform transition-transform duration-300 ease-in-out
+                                        hover:shadow-md hover:scale-110
+                                    "
+                                >
+                                    <a class="text-[18px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
+                                </button>
+                        </div>
+                    <div class="swiper mySwiper mt-[10px]">
+                        <div class="swiper-wrapper">
+                            <!-- Các sản phẩm -->
+                                
+                        </div>
+                        <!-- Nút điều hướng -->
+                            <div 
+                                class="
+                                    btnNext
+                                "
+                            >
+                                <i class="fa-solid fa-chevron-right text-[30px]"></i>
+                            </div>
+                            <div 
+                                class="
+                                    btnPrev
+                                "
+                            >
+                                <i class="fa-solid fa-chevron-left text-[30px]"></i>
+                            </div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
-
     </main>
     <!-- Footer -->
         <footer class="showFooter bg-[#F5F5F5]">
