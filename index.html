@@ -106,19 +106,19 @@
             <section>
                 <!-- Title -->
                     <div class="py-[50px] flex justify-between items-center">
-                            <div class="flex flex-col gap-[5px] border-l-4 border-[#FF782D] pl-4">
-                                <h2 class="text-[32px] font-semibold text-[#000000]">Danh mục khóa học</h2>
-                                <p class="text-[18px] font-regular text-[#555555]">Khám phá tất cả danh mục của chúng tôi</p>
+                            <div class="flex flex-col leading-[30px] border-l-4 border-[#FF782D] pl-4">
+                                <h2 class="text-[28px] font-semibold text-[#000000]">Danh mục khóa học</h2>
+                                <p class="text-[16px] font-regular text-[#555555]">Khám phá tất cả danh mục của chúng tôi</p>
                             </div>
                         <!-- Button -->
                             <button 
                                 class="
-                                    border border-[2px] border-[#9D9D9D] rounded-[24px] w-[161px] h-[48px] group
+                                    border border-[1px] border-[#9D9D9D] rounded-[24px] w-[150px] h-[45px] group
                                     transform transition-transform duration-300 ease-in-out
                                     hover:shadow-md hover:scale-110
                                 "
                             >
-                                <a class="text-[18px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
+                                <a class="text-[16px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
                             </button>
                     </div>
                 <!-- Box Category -->
@@ -131,19 +131,19 @@
             <section>
                 <!-- Title -->
                     <div class="py-[50px] flex justify-between items-center">
-                            <div class="flex flex-col gap-[5px] border-l-4 border-[#FF782D] pl-4">
-                                <h2 class="text-[32px] font-semibold text-[#000000]">Khóa học nổi bật</h2>
-                                <p class="text-[18px] font-regular text-[#555555]">Khám phá các khóa học phổ biến</p>
+                            <div class="flex flex-col leading-[30px] border-l-4 border-[#FF782D] pl-4">
+                                <h2 class="text-[28px] font-semibold text-[#000000]">Khóa học nổi bật</h2>
+                                <p class="text-[16px] font-regular text-[#555555]">Khám phá các khóa học phổ biến</p>
                             </div>
                         <!-- Button -->
                             <button 
                                 class="
-                                    border border-[2px] border-[#9D9D9D] rounded-[24px] w-[161px] h-[48px] group
+                                    border border-[1px] border-[#9D9D9D] rounded-[24px] w-[150px] h-[48px] group
                                     transform transition-transform duration-300 ease-in-out
                                     hover:shadow-md hover:scale-110
                                 "
                             >
-                                <a class="text-[18px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
+                                <a class="text-[16px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
                             </button>
                     </div>
                 <!-- Box course featured -->
@@ -237,7 +237,7 @@
                                 <a 
                                     class="
                                         text-[18px] font-medium text-white transform transition-transform duration-300 
-                                        ease-in-out group-hover:underline
+                                        ease-in-out
                                     " 
                                     href="#"
                                 >
@@ -252,16 +252,16 @@
                 <div class="container mx-auto">
                     <!-- Title -->
                         <div class="flex justify-between items-center">
-                            <h2 class="text-[32px] font-semibold text-[#000000] mb-6 border-l-4 border-[#FF782D] pl-4">Khóa phát triển web</h2>
+                            <h2 class="text-[28px] font-semibold text-[#000000] mb-6 border-l-4 border-[#FF782D] pl-4">Khóa phát triển web</h2>
                             <!-- Button -->
                                 <button 
                                     class="
-                                        border border-[2px] border-[#9D9D9D] rounded-[24px] w-[161px] h-[48px] group
+                                        border border-[1px] border-[#9D9D9D] rounded-[24px] w-[150px] h-[48px] group
                                         transform transition-transform duration-300 ease-in-out
                                         hover:shadow-md hover:scale-110
                                     "
                                 >
-                                    <a class="text-[18px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
+                                    <a class="text-[16px] font-medium text-[#000000] group-hover:text-[#FF782D]" href="#"> Xem tất cả </a>
                                 </button>
                         </div>
                     <div class="swiper mySwiper mt-[10px]">
@@ -289,6 +289,7 @@
                     </div>
                 </div>
             </section>
+            
     </main>
     <!-- Footer -->
         <footer class="showFooter bg-[#F5F5F5]">
@@ -296,27 +297,29 @@
         </footer> 
 
     <!-- Floating Buttons Container -->
-        <div id="contactBtns" class="fixed bottom-5 right-4 flex flex-col items-center gap-1 z-50 transition-transform duration-500">
+        <div id="contactBtns" class="fixed bottom-5 right-4 flex flex-col items-center gap-2 z-50 transition-transform duration-500">
             
             <!-- Phone Button -->
             <button
-                class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg 
+                class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg relative
                     animate-pulse border-2 border-white hover:bg-green-600 transition-all duration-300 hover:scale-110 cursor-pointer"
                 title="Call us"
             >
+                <span class="absolute inline-flex h-9 w-9 animate-ping rounded-full bg-green-400 opacity-75"></span>
                 <i class="fa-solid fa-phone"></i>
             </button>
 
             <!-- Chat Zalo -->
             <button
-                class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg 
+                class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg relative
                     animate-pulse border-2 border-white hover:bg-blue-600 transition-all duration-300 hover:scale-110 cursor-pointer"
                 title="Chat Zalo"
             >
+                <span class="absolute inline-flex h-9 w-9 animate-ping rounded-full bg-sky-400 opacity-75"></span>
                 <p class="text-[12px] font-semibold text-[#ffffff]">Zalo</p>
             </button>
         </div>
-
+        
         <!-- Scroll to Top Button -->
 
         <button 

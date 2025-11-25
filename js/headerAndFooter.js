@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollBtn.classList.add("opacity-100");
 
             // Dịch container Phone/Zalo lên
-            contactBtns.style.transform = "translateY(-45px)";
+            contactBtns.style.transform = "translateY(-50px)";
         } else {
             scrollBtn.classList.add("opacity-0", "pointer-events-none");
             scrollBtn.classList.remove("opacity-100");
