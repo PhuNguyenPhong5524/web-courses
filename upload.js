@@ -1,5 +1,5 @@
 const api = "http://localhost:3000/providers";
-    
+const user = "http://localhost:3000/users";
 const registerProvi = async (e) =>{
     e.preventDefault();
     const name = document.getElementById("name").value.trim();
@@ -10,11 +10,12 @@ const registerProvi = async (e) =>{
     const res = await fetch(api);
     const data = await res.json();
     const newID = data.length? data[data.length - 1].id + 1 : 0;
-
+    const user = JSON.parse(localStorage.getItem("user"));
     // ⚡ Dữ liệu gửi lên
     const newProvider = {
         id: newID,
-        name,
+        user_id: Number(user.id),
+        provider_name: name,
         career,
         email,
         images: imagePaths,
@@ -47,7 +48,7 @@ const showProviders = async () => {
                 ${provider.images.map(img => `
                     <img src="${img}" alt="${provider.name}" />
                 `).join("")}
-                <h3>${provider.name}</h3>
+                <h3>${provider.provider_name}</h3>
                 <p>${provider.career}</p>
                 <p>${provider.email}</p>
                 <p>${provider.status}</p>

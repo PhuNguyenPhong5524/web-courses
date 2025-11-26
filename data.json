@@ -1,123 +1,512 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 0,
       "name": "Nguyễn Phong Phú",
       "role": "customer",
       "email": "phu6257643@gmail.com",
       "password": "05052004"
+    },
+    {
+      "id": 1,
+      "name": "Hỏi dân IT với ERic",
+      "role": "provider",
+      "email": "danit12@gmail.com",
+      "password": "05052004"
+    },
+    {
+      "id": 2,
+      "name": "Đỗ Tấn Thành",
+      "role": "provider",
+      "email": "dtt12@gmail.com",
+      "password": "05052004"
+    },
+    {
+      "id": 3,
+      "name": "Khánh Nguyễn",
+      "role": "provider",
+      "email": "kn123@gmail.com",
+      "password": "05052004"
+    },
+    {
+      "id": 4,
+      "name": "Lam Nguyen",
+      "role": "provider",
+      "email": "ln123@gmail.com",
+      "password": "05052004"
+    }
+  ],
+  "providers": [
+    {
+      "id": 0,
+      "user_id": 1,
+      "provider_id": "Hỏi dân IT với Eric",
+      "career": "Lập trình",
+      "email": "hoidanit123@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": 1,
+      "user_id": 1,
+      "provider_id": "Đỗ Tấn Thành",
+      "career": "Lập trình",
+      "email": "dtt12@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "provider_id": "Khánh Nguyễn",
+      "career": "Lập trình",
+      "email": "kn123@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "provider_id": "Lam Nguyen",
+      "career": "Nghiên cứu với Khoa học dữ liệu",
+      "email": "kn123@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
     }
   ],
   "categories": [
     {
-        "id":1, 
-        "cate_name":"Phát triển web", 
-        "icon_name":"fa-solid fa-globe", 
-        "quantity":10
+      "id": 1,
+      "cate_name": "Phát triển web",
+      "icon_name": "fa-solid fa-globe",
+      "quantity": 10
     },
     {
-        "id":2, 
-        "cate_name":"Khoa học dữ liệu", 
-        "icon_name":"fa-solid fa-brain", 
-        "quantity":4
+      "id": 2,
+      "cate_name": "Khoa học dữ liệu",
+      "icon_name": "fa-solid fa-brain",
+      "quantity": 4
     },
     {
-        "id":3, 
-        "cate_name":"Ứng dụng di động", 
-        "icon_name":"fa-solid fa-mobile-screen-button", 
-        "quantity":4
+      "id": 3,
+      "cate_name": "Ứng dụng di động",
+      "icon_name": "fa-solid fa-mobile-screen-button",
+      "quantity": 4
     },
     {
-        "id":4, 
-        "cate_name":"Ngôn ngữ lập trình", 
-        "icon_name":"fa-solid fa-code",
-        "quantity":6
+      "id": 4,
+      "cate_name": "Ngôn ngữ lập trình",
+      "icon_name": "fa-solid fa-code",
+      "quantity": 6
     },
     {
-        "id":5, 
-        "cate_name":"Phát triển trò chơi", 
-        "icon_name":"fa-solid fa-gamepad", 
-        "quantity":9
+      "id": 5,
+      "cate_name": "Phát triển trò chơi",
+      "icon_name": "fa-solid fa-gamepad",
+      "quantity": 9
     },
     {
-        "id":6, 
-        "cate_name":"Thiết kế & cơ sở dữ liệu", 
-        "icon_name":"fa-solid fa-palette", 
-        "quantity":5
+      "id": 6,
+      "cate_name": "Thiết kế & cơ sở dữ liệu",
+      "icon_name": "fa-solid fa-palette",
+      "quantity": 5
     },
     {
-        "id":7, 
-        "cate_name":"Kiểm tra phần mềm", 
-        "icon_name":"fa-solid fa-shield-halved", 
-        "quantity":9
+      "id": 7,
+      "cate_name": "Kiểm tra phần mềm",
+      "icon_name": "fa-solid fa-shield-halved",
+      "quantity": 9
     },
     {
-        "id":8, 
-        "cate_name":"Kỹ thuật mềm", 
-        "icon_name":"fa-solid fa-users", 
-        "quantity":3
+      "id": 8,
+      "cate_name": "Kỹ thuật mềm",
+      "icon_name": "fa-solid fa-users",
+      "quantity": 3
     }
   ],
   "courses": [
     {
-      "id": 1,
+      "id": 0,
+      "category_id": 1,
       "course_title": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)",
-      "provider_name": "Hỏi Dân IT với ERic.",
-      "price": "Free",
-      "image_url":"https://img-c.udemycdn.com/course/240x135/4947234_f0db_5.jpg",
-      "video_url":"https://www.youtube.com/embed/edaPZoqNgSA?si=89uoUc_A2hBmGMBJ",
-      "description":"NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và framework Express",
+      "provider_id": 0,
+      "price": "1349000",
+      "image_url": "https://img-c.udemycdn.com/course/240x135/4947234_f0db_5.jpg",
+      "video_url": "https://www.youtube.com/embed/edaPZoqNgSA?si=89uoUc_A2hBmGMBJ",
+      "description": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và framework Express",
       "total_sections": 33,
       "total_lectures": 30,
       "students": 200,
-      "duration":"55giờ 36phút",
+      "duration": "55giờ 36phút",
       "request": [
-        { "id": 1, "request_name":"Có hiểu cơ bản về HTML, CSS và JavaScript" },
-        { "id": 2, "request_name":"Có hiểu biết về TypeScript" },
-        { "id": 3, "request_name":"Có hiểu biết về React (Frontend) là một lợi thế" }
+        {"id": 0,"request_name": "Có hiểu cơ bản về HTML, CSS và JavaScript"},
+        {"id": 1,"request_name": "Có hiểu biết về TypeScript"},
+        {"id": 2,"request_name": "Có hiểu biết về React (Frontend) là một lợi thế"}
       ],
       "overview": [
-        { "id": 1, "overview_name":"Học Tư Duy Xây Dựng Backend Server Cho Website" },
-        { "id": 2, "overview_name":"Hiểu & Làm Chủ Server Backend Node.JS Từ Con Số 0" },
-        { "id": 3, "overview_name":"Thực Hành Các Ví Dụ Server Backend Từ Cơ Bản Tới Nâng Cao" },
-        { "id": 4, "overview_name":"Xây Dựng Ứng Dụng Fullstack React/Node.js với TypeScript" },
-        { "id": 5, "overview_name":"Xây Dựng RESTful APIs Server với ExpressJS Framework (TypeScript)" },
-        { "id": 6, "overview_name":"Thực hành database SQL (MySQL) và NoSQL (MongoDB)" },
-        { "id": 7, "overview_name":"Thực hành Coding, Debugging Node.js với TypeScript" },
-        { "id": 8, "overview_name":"Thực hành ORM (Prisma) và ODM (Mongoose)" }
+        {"id": 0,"overview_name": "Học Tư Duy Xây Dựng Backend Server Cho Website"},
+        {"id": 1,"overview_name": "Hiểu & Làm Chủ Server Backend Node.JS Từ Con Số 0"},
+        {"id": 2,"overview_name": "Thực Hành Các Ví Dụ Server Backend Từ Cơ Bản Tới Nâng Cao"},
+        {"id": 3,"overview_name": "Xây Dựng Ứng Dụng Fullstack React/Node.js với TypeScript"},
+        {"id": 4,"overview_name": "Xây Dựng RESTful APIs Server với ExpressJS Framework (TypeScript)"},
+        {"id": 5,"overview_name": "Thực hành database SQL (MySQL) và NoSQL (MongoDB)"},
+        {"id": 6,"overview_name": "Thực hành Coding, Debugging Node.js với TypeScript"},
+        {"id": 7,"overview_name": "Thực hành ORM (Prisma) và ODM (Mongoose)"}
       ],
       "sections": [
         {
-          "id": 1,
+          "id": 0,
           "chapter_title": "Các tính năng HOT",
           "lecture_count": 3,
-          "duration":"36phút",
+          "duration": "36phút",
           "lectures": [
-            { "id": 1, "title": "Dự án thực hành 01 (mô hình MVC/SSR/Express/Prisma)", "duration": "05:22", "preview": false },
-            { "id": 2, "title": "Dự án thực hành 02 (RESTful API với SQL/Prisma, FullStack React/Express)", "duration": "01:48", "preview": false },
-            { "id": 3, "title": "Dự án thực hành 03 (RESTful API với MongoDB/Mongoose)", "duration": "01:47", "preview": false }
+            {"id": 0,"title": "Dự án thực hành 01 (mô hình MVC/SSR/Express/Prisma)","duration": "05:22","preview": false},
+            {"id": 1,"title": "Dự án thực hành 02 (RESTful API với SQL/Prisma, FullStack React/Express)","duration": "01:48","preview": false},
+            {"id": 2,"title": "Dự án thực hành 03 (RESTful API với MongoDB/Mongoose)","duration": "01:47","preview": false}
           ]
         },
         {
-          "id": 2,
+          "id": 1,
           "chapter_title": "Ôn tập JavaScript/ TypeScript",
           "lecture_count": 3,
-          "duration":"1giờ 7phút",
+          "duration": "1giờ 7phút",
           "lectures": [
-            { "id": 1, "title": "Tổng quan về chapter", "duration": "05:22", "preview": false },
-            { "id": 2, "title": "Sử dụng Var/Let/Const", "duration": "1:47", "preview": false },
-            { "id": 3, "title": "JavaScript DataType", "duration": "03:35", "preview": false }
+            {"id": 0,"title": "Tổng quan về chapter","duration": "05:22","preview": false},
+            {"id": 1,"title": "Sử dụng Var/Let/Const","duration": "1:47","preview": false},
+            {"id": 2,"title": "JavaScript DataType","duration": "03:35","preview": false}
           ]
         },
         {
           "id": 3,
           "chapter_title": "Chapter 1: Bắt buộc xem - Không bỏ qua chương học này",
           "lecture_count": 3,
-          "duration":"15phút",
+          "duration": "15phút",
           "lectures": [
-            { "id": 1, "title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả", "duration": "05:21", "preview": false },
-            { "id": 2, "title": "#2 + #3 + #4 : Tài Liệu Khóa Học", "duration": "1:47", "preview": false },
-            { "id": 3, "title": "#5. Demo kết quả đạt được", "duration": "06:07", "preview": false }
+            {"id": 1,"title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả","duration": "05:21","preview": false},
+            {"id": 2,"title": "#2 + #3 + #4 : Tài Liệu Khóa Học","duration": "1:47","preview": false},
+            {"id": 3,"title": "#5. Demo kết quả đạt được",
+              "duration": "06:07",
+              "preview": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "category_id": 1,
+      "course_title": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)",
+      "provider_id": 1,
+      "price": "699000",
+      "image_url": "https://img-c.udemycdn.com/course/240x135/6765689_723e_2.jpg",
+      "video_url": "https://www.youtube.com/embed/ofbqK5SBFJM?si=FpTvzn1z9PNUG4sy",
+      "description": "Khóa học hướng dẫn bạn xây dựng hệ thống Hóa đơn điện tử (E-Invoice) chuẩn doanh nghiệp với NestJS Microservices. Bạn sẽ học kiến trúc microservices, giao tiếp qua TCP, gRPC, Kafka, tích hợp Keycloak, Docker, Redis, Stripe, và triển khai production-ready, đảm bảo hiệu năng và khả năng mở rộng cao.Trong dự án thực tế, bạn sẽ phát triển các service: Invoice, Media, PDF Generator, Mail, Payment, Authorizer, và BFF. Hệ thống áp dụng các pattern hiện đại như API Gateway, Event-Driven Architecture, Saga Pattern, kèm theo logging & monitoring bằng Grafana, Loki, Promtail để đảm bảo tính ổn định.",
+      "total_sections": 12,
+      "total_lectures": 124,
+      "students": 110,
+      "duration": "24giờ 13phút",
+      "request": [
+        {"id": 0,"request_name": "Backend Developer muốn nâng cao kỹ năng với NestJS Microservices"},
+        {"id": 1,"request_name": "Fullstack Developer cần hiểu và triển khai kiến trúc microservices trong thực tế"},
+        {"id": 2,"request_name": "Sinh viên / Lập trình viên muốn học các công nghệ như Kafka, Keycloak, Redis, Stripe, Docker"},
+        {"id": 3,"request_name": "Người đang tìm hiểu Event-Driven Architecture và Saga Pattern"},
+        {"id": 4,"request_name": "Developer muốn triển khai hệ thống production-ready với logging & monitoring chuyên nghiệp"}
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "Thiết kế và triển khai kiến trúc Microservices với NestJS và TypeScript"},
+        {"id": 1,"overview_name": "Nắm vững cách thiết kế và implement API Gateway Pattern (BFF)"},
+        {"id": 2,"overview_name": "Xây dựng và kết nối các service qua Apache Kafka theo mô hình event-driven"},
+        {"id": 3,"overview_name": "Áp dụng được các Design Patterns: Repository, DI, Factory"},
+        {"id": 4,"overview_name": "Implement được Error Handling, Logging, Validation trong microservices"},
+        {"id": 5,"overview_name": "Thiết kế database với MongoDB và PostgreSQL"},
+        {"id": 6,"overview_name": "Tích hợp Keycloak cho authentication và authorization"},
+        {"id": 7,"overview_name": "Thiết lập dashboard giám sát bằng Grafana"}
+      ],
+      "sections": [
+        {
+          "id": 0,
+          "chapter_title": "Giới thiệu khóa học & định hướng",
+          "lecture_count": 3,
+          "duration": "46phút",
+          "lectures": [
+            {"id": 0,"title": "Giới thiệu khoá học","duration": "10:45","preview": false},
+            {"id": 1,"title": "Mua khoá học với giá ưu đãi như nào ?","duration": "01:24","preview": false},
+            {"id": 2,"title": "Lời cảm ơn","duration": "02:04","preview": false}
+          ]
+        },
+        {
+          "id": 1,
+          "chapter_title": "Giới thiệu Microservices & NestJS",
+          "lecture_count": 3,
+          "duration": "1giờ 7phút",
+          "lectures": [
+            {"id": 0,"title": "Giới thiệu tổng quan về Microservices & Monolithic","duration": "10:50","preview": false},
+            {"id": 1,"title": "Các kiểu giao tiếp trong Microservices","duration": "06:34","preview": false},
+            {"id": 2,"title": "Security trong Microservices","duration": "12:05","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Cài đặt Tool, Setup Environment & Project Structure",
+          "lecture_count": 3,
+          "duration": "1giờ 7phút",
+          "lectures": [
+            {"id": 0,"title": "Chuẩn bị môi trường phát triển dự án thực chiến","duration": "07:20","preview": false},
+            {"id": 1,"title": "Monorepo trong Microservices: Ưu nhược điểm & So sánh với Multirepo","duration": "11:30","preview": false},
+            {"id": 2,"title": "Nx Monorepo","duration": "07:09","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "course_title": "Khóa học NextJS 14-ReactJS-Typescript thực chiến 2024 PRO",
+      "provider_id": 2,
+      "price": "1699000",
+      "image_url": "https://img-c.udemycdn.com/course/240x135/5712300_b951_5.jpg",
+      "video_url": "https://www.youtube.com/embed/sKmqpoSCzCM?si=QXM7p9MjmwzlnFaF",
+      "description": "Khoá học này cung cấp một phương pháp thực hành cho những người muốn trở thành nhà phát triển frontend. Qua các dự án thực hành, người tham gia sẽ đối mặt với các tình huống thực tế, học các kỹ thuật giải quyết vấn đề từ cơ bản đến nâng cao. Cụ thể, khóa học tập trung vào phát triển web sử dụng các công nghệ frontend tiên tiến như: TypeScript, ReactJS 18, Next.js 14, Material UI, Redux Toolkit, Next Auth, Yup, CI-CD, tối ưu SEO, Redux thunks, SocketIo, React Query, Firebase, Storybook, Jest ... Đặc biệt sau khi kết thúc khóa học , mấy bạn sẽ biết được cách tìm ra nguyên nhân của lỗi và biết cách research để giải quyết vấn đề",
+      "total_sections": 32,
+      "total_lectures": 342,
+      "students": 458,
+      "duration": "126giờ 2phút",
+      "request": [
+        {"id": 0,"request_name": "Những bạn muốn trở thành lập trình viên Frontend"},
+        {"id": 1,"request_name": "Những sinh viên mới ra trường, hoặc người chuyển ngành muốn có kinh nghiệm thực tế, hoặc project để apply CV"}
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "Nắm vững các kiến thức của ReactJS"},
+        {"id": 1,"overview_name": "Thành thạo sử dụng Redux (Redux thunk, Redux toolkit)"},
+        {"id": 2,"overview_name": "Nắm vững và thành thạo sử dụng NextJS 14 - NextAuth"},
+        {"id": 3,"overview_name": "Sử dụng thư viện Material UI để xây dựng giao diện nhanh hơn"},
+        {"id": 4,"overview_name": "Biết cách tối ưu code và tăng performance"},
+        {"id": 5,"overview_name": "Biết cách phân quyền cho hệ thống trong thực tế"},
+        {"id": 6,"overview_name": "Có một dự án chất lượng như dự án thực tế"},
+        {"id": 7,"overview_name": "Xây dựng dự với CI-CD như khi đi làm"}
+      ],
+      "sections": [
+        {
+          "id": 0,
+          "chapter_title": "Giới thiệu về dự án",
+          "lecture_count": 3,
+          "duration": "37phút",
+          "lectures": [
+            {"id": 0,"title": "Demo kiến thức đạt được khi kết thúc khóa học","duration": "04:59","preview": false},
+            {"id": 1,"title": "Demo danh sách API trong dự án thực chiến","duration": "19:10","preview": false},
+            {"id": 2,"title": "Demo dự án thực chiến website bán hàng","duration": "12:50","preview": false}
+          ]
+        },
+        {
+          "id": 1,
+          "chapter_title": "Những kiến thức JavaScript cần thiết cho khóa học",
+          "lecture_count": 3,
+          "duration": "1giờ 39phút",
+          "lectures": [
+            {"id": 0,"title": "Biến, kiểu dữ liệu và sự khác nhau giữa let, const, var trong javascript","duration": "15:36","preview": false},
+            {"id": 1,"title": "Toán tử so sánh, câu điều kiện, và kiểu dữ liệu undefined, null","duration": "08:50","preview": false},
+            {"id": 2,"title": "Hàm và tham số trong javascript","duration": "06:23","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Tìm hiểu ReactJS",
+          "lecture_count": 3,
+          "duration": "giờ phút",
+          "lectures": [
+            {"id": 0,"title": "Khởi tạo dự án ReactJS và phân tích structure trong ReactJS","duration": "10:49","preview": false},
+            {"id": 1,"title": "JSX là gì? Hoạt động như nào?","duration": "04:25","preview": false},
+            {"id": 2,"title": "Dom và Virtual Dom là gì?","duration": "03:53","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category_id": 1,
+      "course_title": "React Pro Max với Next.JS - Làm Chủ React.JS Hiện Đại",
+      "provider_id": 0,
+      "price": "1349000",
+      "image_url": "https://img-c.udemycdn.com/course/240x135/5496590_a9c4_3.jpg",
+      "video_url": "https://www.youtube.com/embed/dsha7HgqMhI?si=TAP_52N7ATzaUQN4",
+      "description": "Next.JS là một framework javascript chuyên làm frontend, tích hợp sẵn thư viện React để code giao diện UI một cách hiệu quả. Lợi thế của Next.js so với việc sử dụng React thuần túy, chính là việc cung cấp bộ khung framework, giải quyết các vấn đề thường gặp của React mà bấy lâu nay chúng ta cần tự xử lý, ví dụng như routing, nested route. Ngoài ra, với lợi thế server, Next.js có thể pre-render giao diện, giúp tốc độ load website nhanh hơn, và có ưu thế trong SEO so với việc dùng client side rendering của React thông thường.",
+      "total_sections": 27,
+      "total_lectures": 290,
+      "students": 1055,
+      "duration": "44giờ 28phút",
+      "request": [
+        {"id": 0,"request_name": "Các bạn theo đuổi lộ trình trở thành fullstack developer"},
+        {"id": 1,"request_name": "Cần học framework Nextjs để xây dựng frontend chuyên nghiệp"},
+        {"id": 2,"request_name": "Cần SEO website với React"}
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "Làm Chủ React Toàn Diện Với Typescript"},
+        {"id": 1,"overview_name": "Xây dựng giao diện Admin React với Antd Design/Vite"},
+        {"id": 2,"overview_name": "Hiểu rõ cơ chế render React ở Client và Server"},
+        {"id": 3,"overview_name": "Rèn luyện tư duy phân tích, tích hợp thư viện javascript với React"},
+        {"id": 4,"overview_name": "Nắm vững kiến thức cốt lõi của NextJS và React"},
+        {"id": 5,"overview_name": "Thực hành NextJS kết hợp với MUI"}
+      ],
+      "sections": [
+        {
+          "id": 0,
+          "chapter_title": "Các tính năng HOT",
+          "lecture_count": 3,
+          "duration": "51phút",
+          "lectures": [
+            {"id": 0,"title": "Demo Kết quả đạt được","duration": "24:38","preview": false},
+            {"id": 1,"title": "Hướng Dẫn Sử Dụng Udemy Dành Cho Người Mới Bắt Đầu","duration": "09:44","preview": false},
+            {"id": 2,"title": "Cách Hỗ Trợ/Support Trong Quá Trình Học (Bắt Buộc Xem)","duration": "16:42","preview": false}
+          ]
+        },
+        {
+          "id": 1,
+          "chapter_title": "Next.JS 16 (NEW)",
+          "lecture_count": 3,
+          "duration": "1giờ 29phút",
+          "lectures": [
+            {"id": 0,"title": "Tài liệu của Next.js 16","duration": "00:02","preview": false},
+            {"id": 1,"title": "Tổng Quan Về Chapter","duration": "01:13","preview": false},
+            {"id": 2,"title": "Next.js 16 Có Gì Hot ?","duration": "09:57","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Chapter 0: Bắt buộc xem - Không bỏ qua chương học này",
+          "lecture_count": 3,
+          "duration": "19phút",
+          "lectures": [
+            {"id": 0,"title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả","duration": "05:21","preview": false},
+            {"id": 1,"title": "#2. Tài liệu khóa học","duration": "00:01","preview": false},
+            {"id": 2,"title": "#3. Yêu cầu của khóa học","duration": "05:08","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category_id": 1,
+      "course_title": "React Ultimate - React.JS Cơ Bản Từ Z Đến A Cho Beginners",
+      "provider_id": 0,
+      "price": "699000",
+      "image_url": "https://img-c.udemycdn.com/course/240x135/4467252_61d1_3.jpg",
+      "video_url": "https://www.youtube.com/embed/oCdbonBg6_s?si=7wsnyB6pkwyRjsx-",
+      "description": "Khóa học React (phiên bản 18 & 19) tập trung giúp học viên hiểu đúng tư duy ban đầu của React – một thư viện UI với cơ chế Client Side Rendering (CSR). Nội dung chính bao gồm thiết kế giao diện bằng Component, quản lý render/re-render với Props và State (useState), điều hướng bằng React Router DOM, gọi API qua useEffect, chia sẻ dữ liệu bằng Context API, sử dụng mô hình Stateless với access_token, và tối ưu hóa re-render bằng Uncontrolled Component. Học viên sẽ thực hành xây dựng giao diện chuyên nghiệp với Ant Design (antd). Backend được cung cấp sẵn bằng NestJS (không chỉnh sửa) và cơ sở dữ liệu MongoDB Atlas miễn phí. Cuối khóa, dự án sẽ được triển khai thực tế: Frontend trên Vercel, Backend trên Render, và Database trên MongoDB Atlas. Khóa học phù hợp cho người đã nắm vững HTML, CSS và cú pháp JavaScript.",
+      "total_sections": 15,
+      "total_lectures": 129,
+      "students": 1920,
+      "duration": "20giờ 49phút",
+      "request": [
+        {"id": 0,"request_name": "Tất cả những bạn mới bắt đầu, những bạn muốn học lập trình với React, đang muốn học và làm chủ React thì đây chính là khóa học các bạn tìm. React Ultimate, chỉ một là đủ."}
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "HỌC đi đôi với THỰC HÀNH, xây dựng ĐAM MÊ về lập trình với REACT"},
+        {"id": 1,"overview_name": "Tự tin LÀM CHỦ, NẮM VỮNG những KIẾN THỨC cơ bản, cốt lõi nhất của REACT"},
+        {"id": 2,"overview_name": "Có được TƯ DUY lập trình với React, biết cách SEARCH Google khi gặp lỗi"},
+        {"id": 3,"overview_name": "HIỂU và LÀM CHỦ React, XÂY DƯNG được các SẢN PHẨM website THỰC TẾ phục vụ mục đích học tập và đi làm"},
+        {"id": 4,"overview_name": "Hiểu rõ Lịch Sử Phát Triển của React và Công Nghệ sử dụng với React"},
+        {"id": 5,"overview_name": "Cập nhật kiến thức mới nhất với React 18 và React 19"}
+      ],
+      "sections": [
+        {
+          "id": 1,
+          "chapter_title": "Chapter 0: Các Tính Năng HOT",
+          "lecture_count": 3,
+          "duration": "36phút",
+          "lectures": [
+            {"id": 0,"title": "Demo kết quả đạt được sau khi kết thúc khóa học","duration": "03:41","preview": false},
+            {"id": 1,"title": "Tổng quan về các kiến thức sẽ học","duration": "05:32","preview": false},
+            {"id": 2,"title": "Hướng Dẫn Sử Dụng Udemy Dành Cho Người Mới Bắt Đầu","duration": "09:44","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Chapter 1: Bắt buộc xem",
+          "lecture_count": 3,
+          "duration": "giờ phút",
+          "lectures": [
+            {"id": 0,"title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả","duration": "05:21","preview": false},
+            {"id": 1,"title": "#2. Hướng dẫn tải tài liệu khóa học","duration": "00:01","preview": false},
+            {"id": 2,"title": "#3. Yêu cầu để học được khóa học này","duration": "01:38","preview": false}
+          ]
+        },
+        {
+          "id": 3,
+          "chapter_title": "Chapter 2: Setup Environment",
+          "lecture_count": 3,
+          "duration": "giờ phút",
+          "lectures": [
+            {"id": 0,"title": "#7. Cài đặt NodeJS","duration": "07:38","preview": false},
+            {"id": 1,"title": "#8. Cài đặt Visual Studio Code","duration": "01:30","preview": false},
+            {"id": 2,"title": "#9. Cấu hình Visual Studio Code","duration": "08:29","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category_id": 2,
+      "course_title": "Phân tích dữ liệu bằng R cho người mới bắt đầu",
+      "provider_id": 3,
+      "price": "209000",
+      "image_url": "https://img-c.udemycdn.com/course/240x135/5534420_9a20_5.jpg",
+      "video_url": "https://www.youtube.com/embed/CkreAh5KOx0?si=em_2vjY7VZQcfo0_",
+      "description": "Khóa học này được thiết kế nhằm giúp người học xây dựng nền tảng vững chắc trong phân tích dữ liệu bằng phần mềm R – một công cụ mạnh mẽ và phổ biến trong nghiên cứu khoa học và phân tích dữ liệu. Sau khi hoàn thành khóa học, học viên sẽ biết cách cài đặt R và RStudio trên Windows và Mac, hiểu rõ giao diện làm việc của RStudio và thao tác hiệu quả trong môi trường này. Người học sẽ làm chủ các bước cơ bản về phân tích dữ liệu, nắm vững các khái niệm cốt lõi và phương pháp phân tích, tự tin viết và áp dụng các câu lệnh cơ bản trong R thông qua ví dụ thực tế. Ngoài ra, học viên sẽ thành thạo các thao tác biến đổi dữ liệu như lọc, kết hợp, đổi tên biến, chuyển đổi kiểu dữ liệu, xử lý dữ liệu ngày tháng; thực hiện phân tích thống kê mô tả, kiểm định phân phối chuẩn, xử lý giá trị ngoại lai, tính toán các chỉ số thống kê, vẽ đồ thị và biểu đồ. Khóa học cũng giúp hiểu bản chất và ứng dụng các phương pháp thống kê suy luận cơ bản trong R, đồng thời chuẩn bị báo cáo kết quả phân tích một cách khoa học và trình bày chuyên nghiệp.",
+      "total_sections": 16,
+      "total_lectures": 183,
+      "students": 293,
+      "duration": "giờ phút",
+      "request": [
+        {"id": 0,"request_name": "Người tìm hiểu về phân tích dữ liệu, sinh viên, học viên và người làm nghiên cứu"} 
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "Các bước cần làm trong phân tích dữ liệu"},
+        {"id": 1,"overview_name": "Ngôn ngữ R cơ bản"},
+        {"id": 2,"overview_name": "Biến đổi dữ liệu"},
+        {"id": 3,"overview_name": "Phân tích thống kê mô tả"},
+        {"id": 4,"overview_name": "Phân tích thống kê suy luận: kiểm định t, phân tích ANOVA, phân tích tương quan"},
+        {"id": 5,"overview_name": "Vẽ đồ thị và biểu đồ"}
+      ],
+      "sections": [
+        {
+          "id": 1,
+          "chapter_title": "",
+          "lecture_count": 3,
+          "duration": "phút",
+          "lectures": [
+            {"id": 0,"title": "","duration": "","preview": false},
+            {"id": 1,"title": "","duration": "","preview": false},
+            {"id": 2,"title": "","duration": "","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "",
+          "lecture_count": 3,
+          "duration": "giờ phút",
+          "lectures": [
+            {"id": 0,"title": "","duration": "","preview": false},
+            {"id": 1,"title": "","duration": "","preview": false},
+            {"id": 2,"title": "","duration": "","preview": false}
+          ]
+        },
+        {
+          "id": 3,
+          "chapter_title": "",
+          "lecture_count": 3,
+          "duration": "giờ phút",
+          "lectures": [
+            {"id": 0,"title": "","duration": "","preview": false},
+            {"id": 1,"title": "","duration": "","preview": false},
+            {"id": 2,"title": "","duration": "","preview": false}
           ]
         }
       ]
