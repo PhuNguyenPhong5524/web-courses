@@ -207,7 +207,7 @@ const renderSwiperCourses = () => {
   let showSwiper = "";
   for (let id = 0; id < courArr.length; id++) {
     showSwiper += `
-        <div class="swiper-slide">
+        <div class="swiper-slide pb-[30px]">
             <div 
                 class="
                     flex flex-col justify-start group relative rounded-[22px]
@@ -306,11 +306,12 @@ const renderSwiperCourses = () => {
 renderSwiperCourses();
 
 // Section Swiper Courses
-const showSwiperCourses = () => {
+
+document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
-    loop: true,
+    rewind: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -330,10 +331,20 @@ const showSwiperCourses = () => {
       768: { slidesPerView: 2 },
       1024: { slidesPerView: 4 },
     },
+    // Fix lỗi prev khi loop
+    on: {
+      init() {
+        console.log("Swiper initialized");
+      },
+      slideChange() {
+        console.log("Slide changed");
+      }
+    }
   });
-};
 
-document.addEventListener("DOMContentLoaded", showSwiperCourses);
+  swiper.update();
+});
+
 
 
 
