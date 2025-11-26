@@ -64,6 +64,20 @@ const initTabs = () => {
 // GỌI HÀM
 initTabs();
 
+// Stop video when change click
+
+const modal = document.getElementById('default-modal');
+const iframe = modal.querySelector('iframe');
+
+document.addEventListener('click', (e) => {
+    // Nếu click ra ngoài modal hoặc nút đóng
+    if (e.target === modal) {
+        modal.classList.add('hidden'); // Ẩn modal
+        iframe.src = iframe.src; // Reset src => dừng video
+    }
+});
+
+
 const courArr = [
     {id:1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:158},
     {id:2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:290},
