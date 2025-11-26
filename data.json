@@ -8,28 +8,116 @@
       "password": "05052004"
     }
   ],
-  "categories": [],
+  "categories": [
+    {
+        "id":1, 
+        "cate_name":"Phát triển web", 
+        "icon_name":"fa-solid fa-globe", 
+        "quantity":10
+    },
+    {
+        "id":2, 
+        "cate_name":"Khoa học dữ liệu", 
+        "icon_name":"fa-solid fa-brain", 
+        "quantity":4
+    },
+    {
+        "id":3, 
+        "cate_name":"Ứng dụng di động", 
+        "icon_name":"fa-solid fa-mobile-screen-button", 
+        "quantity":4
+    },
+    {
+        "id":4, 
+        "cate_name":"Ngôn ngữ lập trình", 
+        "icon_name":"fa-solid fa-code",
+        "quantity":6
+    },
+    {
+        "id":5, 
+        "cate_name":"Phát triển trò chơi", 
+        "icon_name":"fa-solid fa-gamepad", 
+        "quantity":9
+    },
+    {
+        "id":6, 
+        "cate_name":"Thiết kế & cơ sở dữ liệu", 
+        "icon_name":"fa-solid fa-palette", 
+        "quantity":5
+    },
+    {
+        "id":7, 
+        "cate_name":"Kiểm tra phần mềm", 
+        "icon_name":"fa-solid fa-shield-halved", 
+        "quantity":9
+    },
+    {
+        "id":8, 
+        "cate_name":"Kỹ thuật mềm", 
+        "icon_name":"fa-solid fa-users", 
+        "quantity":3
+    }
+  ],
   "courses": [
     {
-      "id": "6471",
-      "course_title": "Học web",
-      "total_sections": 1,
-      "total_lectures": 2,
+      "id": 1,
+      "course_title": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)",
+      "provider_name": "Hỏi Dân IT với ERic.",
+      "price": "Free",
+      "image_url":"https://img-c.udemycdn.com/course/240x135/4947234_f0db_5.jpg",
+      "video_url":"https://www.youtube.com/embed/edaPZoqNgSA?si=89uoUc_A2hBmGMBJ",
+      "description":"NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và framework Express",
+      "total_sections": 33,
+      "total_lectures": 30,
+      "students": 200,
+      "duration":"55giờ 36phút",
+      "request": [
+        { "id": 1, "request_name":"Có hiểu cơ bản về HTML, CSS và JavaScript" },
+        { "id": 2, "request_name":"Có hiểu biết về TypeScript" },
+        { "id": 3, "request_name":"Có hiểu biết về React (Frontend) là một lợi thế" }
+      ],
+      "overview": [
+        { "id": 1, "overview_name":"Học Tư Duy Xây Dựng Backend Server Cho Website" },
+        { "id": 2, "overview_name":"Hiểu & Làm Chủ Server Backend Node.JS Từ Con Số 0" },
+        { "id": 3, "overview_name":"Thực Hành Các Ví Dụ Server Backend Từ Cơ Bản Tới Nâng Cao" },
+        { "id": 4, "overview_name":"Xây Dựng Ứng Dụng Fullstack React/Node.js với TypeScript" },
+        { "id": 5, "overview_name":"Xây Dựng RESTful APIs Server với ExpressJS Framework (TypeScript)" },
+        { "id": 6, "overview_name":"Thực hành database SQL (MySQL) và NoSQL (MongoDB)" },
+        { "id": 7, "overview_name":"Thực hành Coding, Debugging Node.js với TypeScript" },
+        { "id": 8, "overview_name":"Thực hành ORM (Prisma) và ODM (Mongoose)" }
+      ],
       "sections": [
         {
-          "chapter_title": "Giới thiệu bài học",
-          "lecture_count": 2,
+          "id": 1,
+          "chapter_title": "Các tính năng HOT",
+          "lecture_count": 3,
+          "duration":"36phút",
           "lectures": [
-            {
-              "title": "Lời chào đầu tiên",
-              "duration": "2:30",
-              "preview": false
-            },
-            {
-              "title": "",
-              "duration": "",
-              "preview": false
-            }
+            { "id": 1, "title": "Dự án thực hành 01 (mô hình MVC/SSR/Express/Prisma)", "duration": "05:22", "preview": false },
+            { "id": 2, "title": "Dự án thực hành 02 (RESTful API với SQL/Prisma, FullStack React/Express)", "duration": "01:48", "preview": false },
+            { "id": 3, "title": "Dự án thực hành 03 (RESTful API với MongoDB/Mongoose)", "duration": "01:47", "preview": false }
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Ôn tập JavaScript/ TypeScript",
+          "lecture_count": 3,
+          "duration":"1giờ 7phút",
+          "lectures": [
+            { "id": 1, "title": "Tổng quan về chapter", "duration": "05:22", "preview": false },
+            { "id": 2, "title": "Sử dụng Var/Let/Const", "duration": "1:47", "preview": false },
+            { "id": 3, "title": "JavaScript DataType", "duration": "03:35", "preview": false }
+          ]
+        },
+        {
+          "id": 3,
+          "chapter_title": "Chapter 1: Bắt buộc xem - Không bỏ qua chương học này",
+          "lecture_count": 3,
+          "duration":"15phút",
+          "lectures": [
+            { "id": 1, "title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả", "duration": "05:21", "preview": false },
+            { "id": 2, "title": "#2 + #3 + #4 : Tài Liệu Khóa Học", "duration": "1:47", "preview": false },
+            { "id": 3, "title": "#5. Demo kết quả đạt được", "duration": "06:07", "preview": false }
           ]
         }
       ]

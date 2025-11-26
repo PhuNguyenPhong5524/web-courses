@@ -1,17 +1,20 @@
 const courArr = [
-    {id:1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:158},
-    {id:2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:290},
-    {id:3, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:432},
-    {id:4, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:365},
-    {id:5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:150},
-    {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:90},
+    {id:1, cate_id: 1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:158},
+    {id:2, cate_id: 2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:290},
+    {id:3, cate_id: 3, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:432},
+    {id:4, cate_id: 4, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:365},
+    {id:5, cate_id: 5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:150},
+    {id:6, cate_id: 5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:90}
 ];
 
 // swiper khóa học liên quan
 
 const showCoursesCat = () => {
+
+  const categoryId = localStorage.getItem("cate_id");
+  const list = courArr.filter(item => item.cate_id == categoryId);
   let showCoPrv = "";
-  courArr.map((item)=>{
+  list.map((item)=>{
     showCoPrv += `
          <div 
                 class="
@@ -177,4 +180,6 @@ btnGridView.addEventListener('click', () => changeBtnLayout('grid'));
 
 // Active mặc định: List View
 changeBtnLayout('list');
+
+
 
