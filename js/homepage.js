@@ -6,62 +6,22 @@ const courArr = [
     {id:5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
     {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
 ];
-const cateArr = [
-    {
-        id:1, 
-        cate_name:"Phát triển web", 
-        icon_name:"fa-solid fa-globe", 
-        quantity:38
-    },
-    {
-        id:2, 
-        cate_name:"Khoa học dữ liệu", 
-        icon_name:"fa-solid fa-brain", 
-        quantity:38
-    },
-    {
-        id:3, 
-        cate_name:"Ứng dụng di động", 
-        icon_name:"fa-solid fa-mobile-screen-button", 
-        quantity:38
-    },
-    {
-        id:4, 
-        cate_name:"Ngôn ngữ lập trình", 
-        icon_name:"fa-solid fa-code",
-        quantity:38
-    },
-    {
-        id:5, 
-        cate_name:"Phát triển trò chơi", 
-        icon_name:"fa-solid fa-gamepad", 
-        quantity:38
-    },
-    {
-        id:6, 
-        cate_name:"Thiết kế & cơ sở dữ liệu", 
-        icon_name:"fa-solid fa-palette", 
-        quantity:38
-    },
-    {
-        id:7, 
-        cate_name:"Kiểm tra phần mềm", 
-        icon_name:"fa-solid fa-shield-halved", 
-        quantity:98
-    },
-    {
-        id:8, 
-        cate_name:"Kỹ thuật mềm", 
-        icon_name:"fa-solid fa-users", 
-        quantity:38
-    }
-];
 
 
+const courses = "http://localhost:3000/courses";
+
+const btnCourseDetail = (id) =>{
+    localStorage.setItem('course_id', id);
+    window.location.href = "/page/user/courses-detail.html";
+}
 
 const showCourse = async () => {
+    const res = await fetch(courses);
+    const data = await res.json();
     let show = "";
-    for (let id = 0; id < courArr.length; id++) {
+    const stCoursesHot = data.sort((a,b) => b.students - a.students);
+
+    stCoursesHot.slice(0,6).map((item)=>{
         show += `
             <div 
                 class="
@@ -74,8 +34,8 @@ const showCourse = async () => {
                 <!-- Image -->
                     <div class="relative overflow-hidden h-[250px]">
                         <img 
-                            src="${courArr[id].img}" 
-                            alt="img_category1" 
+                            src="${item.image_url}" 
+                            alt="${item.title}" 
                             class="
                                 w-full h-full object-cover transform transition-transform duration-300 
                                 ease-in-out rounded-t-[20px] group-hover:scale-110
@@ -117,12 +77,12 @@ const showCourse = async () => {
                                 </span>
                             </p>
                         <!-- Title -->
-                            <h4 class="text-[20px] pr-[20px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] line-clamp-2">
+                            <h4 class="text-[20px] pr-[20px] h-[48px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] cursor-pointer line-clamp-2">
                             <a 
-                                href="/page/user/courses-detail.html"
+                                onclick="btnCourseDetail(${item.id})"
                                 class="" 
                             >
-                                ${courArr[id].title}
+                                ${item.course_title}
                             </a>
                             </h4>
                         <!-- Info -->
@@ -135,7 +95,7 @@ const showCourse = async () => {
                                     <div class="overflow-hidden">
                                         <i class="fa-solid fa-graduation-cap transform scale-x-[-1] text-[#FF782D]"></i>
                                     </div>
-                                    <p class="text-[16px] font-regular text-[#555555]">156 Students</p>
+                                    <p class="text-[16px] font-regular text-[#555555]">${item.students} Students</p>
                                 </div>
                             </div>
                         <!-- Line -->
@@ -143,17 +103,22 @@ const showCourse = async () => {
                         <!--  -->
                             <div class="flex items-center justify-between">
                                 <div class="text-[18px]">
-                                    <del class="text-[#9D9D9D] font-regular">$${courArr[id].price}</del> 
-                                    <span class="text-[#55BE24] font-semibold">Free</span>
+                                    <span class="text-[#FF782D] font-semibold">
+                                        ${ item.price === 0 
+                                            ? `<span class="text-green-400 font-semibold">Free</span>` 
+                                            : `${Number(item.price).toLocaleString('vi-VN')} VND`
+                                        }
+
+                                    </span>
                                 </div>
                                 <div class="text-[16px] text-black/40 font-regular">
-                                    <a class="text-[#000000] hover:text-[#FF782D] hover:underline" href="#">Chi tiết</a>
+                                    <a class="text-[#000000] hover:text-[#FF782D] hover:underline cursor-pointer" onclick="btnOnclickDetail(${item.id})">Chi tiết</a>
                                 </div>
                             </div>
                     </div>
-            </div>           
+            </div>   
         `
-    }
+    }).join("");
     document.getElementById("boxCourses").innerHTML = show;
 }
 
@@ -164,7 +129,7 @@ const apiCategories = "http://localhost:3000/categories";
 
 const btnOnclickCate = (id) => {
     localStorage.setItem("cate_id", id);
-    window.location.href = "page/user/courses-category.html";
+    window.location.href = "/page/user/courses-category.html";
 }
 
 const showCategory = async () => {

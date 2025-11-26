@@ -48,6 +48,27 @@
       "role": "provider",
       "email": "hiep13@gmail.com",
       "password": "05052004"
+    },
+    {
+      "id": 7,
+      "name": "Phạm Đình Thiện",
+      "role": "provider",
+      "email": "pdth12@gmail.com",
+      "password": "05052004"
+    },
+    {
+      "id": 8,
+      "name": "Colt Steele",
+      "role": "provider",
+      "email": "colt22@gmail.com",
+      "password": "05052004"
+    },
+    {
+      "id": 9,
+      "name": "Brad Schiff",
+      "role": "provider",
+      "email": "brad11@gmail.com",
+      "password": "05052004"
     }
   ],
   "providers": [
@@ -116,6 +137,39 @@
         "images/sigma_180.png"
       ],
       "status": "approved"
+    },
+    {
+      "id": 6,
+      "user_id": 7,
+      "provider_id": "Thiện Phạm Đình",
+      "career": "Lập trình web",
+      "email": "pdth12@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": 7,
+      "user_id": 8,
+      "provider_id": "Colt Steele",
+      "career": "Lập trình web",
+      "email": "colt22@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": 8,
+      "user_id": 9,
+      "provider_id": "Brad Schiff",
+      "career": "Development Web",
+      "email": "brad11@gmail.com",
+      "images": [
+        "images/sigma_180.png"
+      ],
+      "status": "approved"
     }
   ],
   "categories": [
@@ -174,7 +228,7 @@
       "category_id": 1,
       "course_title": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)",
       "provider_id": 0,
-      "price": "1349000",
+      "price": 1349000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/4947234_f0db_5.jpg",
       "video_url": "https://www.youtube.com/embed/edaPZoqNgSA?si=89uoUc_A2hBmGMBJ",
       "description": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB) là một khóa học giúp các bạn beginners có thể học, hiểu và thực hành xây backend website từ số 0, bằng cách sử dụng platform Node.js và framework Express",
@@ -241,7 +295,7 @@
       "category_id": 1,
       "course_title": "NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)",
       "provider_id": 1,
-      "price": "699000",
+      "price": 699000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/6765689_723e_2.jpg",
       "video_url": "https://www.youtube.com/embed/ofbqK5SBFJM?si=FpTvzn1z9PNUG4sy",
       "description": "Khóa học hướng dẫn bạn xây dựng hệ thống Hóa đơn điện tử (E-Invoice) chuẩn doanh nghiệp với NestJS Microservices. Bạn sẽ học kiến trúc microservices, giao tiếp qua TCP, gRPC, Kafka, tích hợp Keycloak, Docker, Redis, Stripe, và triển khai production-ready, đảm bảo hiệu năng và khả năng mở rộng cao.Trong dự án thực tế, bạn sẽ phát triển các service: Invoice, Media, PDF Generator, Mail, Payment, Authorizer, và BFF. Hệ thống áp dụng các pattern hiện đại như API Gateway, Event-Driven Architecture, Saga Pattern, kèm theo logging & monitoring bằng Grafana, Loki, Promtail để đảm bảo tính ổn định.",
@@ -307,7 +361,7 @@
       "category_id": 1,
       "course_title": "Khóa học NextJS 14-ReactJS-Typescript thực chiến 2024 PRO",
       "provider_id": 2,
-      "price": "1699000",
+      "price": 1699000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/5712300_b951_5.jpg",
       "video_url": "https://www.youtube.com/embed/sKmqpoSCzCM?si=QXM7p9MjmwzlnFaF",
       "description": "Khoá học này cung cấp một phương pháp thực hành cho những người muốn trở thành nhà phát triển frontend. Qua các dự án thực hành, người tham gia sẽ đối mặt với các tình huống thực tế, học các kỹ thuật giải quyết vấn đề từ cơ bản đến nâng cao. Cụ thể, khóa học tập trung vào phát triển web sử dụng các công nghệ frontend tiên tiến như: TypeScript, ReactJS 18, Next.js 14, Material UI, Redux Toolkit, Next Auth, Yup, CI-CD, tối ưu SEO, Redux thunks, SocketIo, React Query, Firebase, Storybook, Jest ... Đặc biệt sau khi kết thúc khóa học , mấy bạn sẽ biết được cách tìm ra nguyên nhân của lỗi và biết cách research để giải quyết vấn đề",
@@ -370,7 +424,7 @@
       "category_id": 1,
       "course_title": "React Pro Max với Next.JS - Làm Chủ React.JS Hiện Đại",
       "provider_id": 0,
-      "price": "1349000",
+      "price": 1349000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/5496590_a9c4_3.jpg",
       "video_url": "https://www.youtube.com/embed/dsha7HgqMhI?si=TAP_52N7ATzaUQN4",
       "description": "Next.JS là một framework javascript chuyên làm frontend, tích hợp sẵn thư viện React để code giao diện UI một cách hiệu quả. Lợi thế của Next.js so với việc sử dụng React thuần túy, chính là việc cung cấp bộ khung framework, giải quyết các vấn đề thường gặp của React mà bấy lâu nay chúng ta cần tự xử lý, ví dụng như routing, nested route. Ngoài ra, với lợi thế server, Next.js có thể pre-render giao diện, giúp tốc độ load website nhanh hơn, và có ưu thế trong SEO so với việc dùng client side rendering của React thông thường.",
@@ -432,7 +486,7 @@
       "category_id": 1,
       "course_title": "React Ultimate - React.JS Cơ Bản Từ Z Đến A Cho Beginners",
       "provider_id": 0,
-      "price": "699000",
+      "price": 0,
       "image_url": "https://img-c.udemycdn.com/course/240x135/4467252_61d1_3.jpg",
       "video_url": "https://www.youtube.com/embed/oCdbonBg6_s?si=7wsnyB6pkwyRjsx-",
       "description": "Khóa học React (phiên bản 18 & 19) tập trung giúp học viên hiểu đúng tư duy ban đầu của React – một thư viện UI với cơ chế Client Side Rendering (CSR). Nội dung chính bao gồm thiết kế giao diện bằng Component, quản lý render/re-render với Props và State (useState), điều hướng bằng React Router DOM, gọi API qua useEffect, chia sẻ dữ liệu bằng Context API, sử dụng mô hình Stateless với access_token, và tối ưu hóa re-render bằng Uncontrolled Component. Học viên sẽ thực hành xây dựng giao diện chuyên nghiệp với Ant Design (antd). Backend được cung cấp sẵn bằng NestJS (không chỉnh sửa) và cơ sở dữ liệu MongoDB Atlas miễn phí. Cuối khóa, dự án sẽ được triển khai thực tế: Frontend trên Vercel, Backend trên Render, và Database trên MongoDB Atlas. Khóa học phù hợp cho người đã nắm vững HTML, CSS và cú pháp JavaScript.",
@@ -492,7 +546,7 @@
       "category_id": 2,
       "course_title": "Phân tích dữ liệu bằng R cho người mới bắt đầu",
       "provider_id": 3,
-      "price": "209000",
+      "price": 209000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/5534420_9a20_5.jpg",
       "video_url": "https://www.youtube.com/embed/CkreAh5KOx0?si=em_2vjY7VZQcfo0_",
       "description": "Khóa học này được thiết kế nhằm giúp người học xây dựng nền tảng vững chắc trong phân tích dữ liệu bằng phần mềm R – một công cụ mạnh mẽ và phổ biến trong nghiên cứu khoa học và phân tích dữ liệu. Sau khi hoàn thành khóa học, học viên sẽ biết cách cài đặt R và RStudio trên Windows và Mac, hiểu rõ giao diện làm việc của RStudio và thao tác hiệu quả trong môi trường này. Người học sẽ làm chủ các bước cơ bản về phân tích dữ liệu, nắm vững các khái niệm cốt lõi và phương pháp phân tích, tự tin viết và áp dụng các câu lệnh cơ bản trong R thông qua ví dụ thực tế. Ngoài ra, học viên sẽ thành thạo các thao tác biến đổi dữ liệu như lọc, kết hợp, đổi tên biến, chuyển đổi kiểu dữ liệu, xử lý dữ liệu ngày tháng; thực hiện phân tích thống kê mô tả, kiểm định phân phối chuẩn, xử lý giá trị ngoại lai, tính toán các chỉ số thống kê, vẽ đồ thị và biểu đồ. Khóa học cũng giúp hiểu bản chất và ứng dụng các phương pháp thống kê suy luận cơ bản trong R, đồng thời chuẩn bị báo cáo kết quả phân tích một cách khoa học và trình bày chuyên nghiệp.",
@@ -552,7 +606,7 @@
       "category_id": 2,
       "course_title": "Phân tích và trực quan hóa dữ liệu với Tableau",
       "provider_id": 4,
-      "price": "199000",
+      "price": 199000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/6747975_541f_3.jpg",
       "video_url": "https://www.youtube.com/embed/AiVagIEdIOs?si=v7sAzU5vTAdZNh9J",
       "description": "Khóa học này giúp người học phát triển tư duy phân tích và kỹ năng sử dụng dữ liệu hiệu quả, đặc biệt trong trực quan hóa và ra quyết định dựa trên dữ liệu. Sau khi hoàn thành, học viên sẽ hiểu rõ tầm quan trọng của phân tích và trực quan hóa dữ liệu, làm chủ các thao tác tiền xử lý, làm sạch và kết nối dữ liệu từ nhiều nguồn. Học viên sẽ biết cách tạo biểu đồ từ cơ bản đến nâng cao để truyền đạt thông tin hiệu quả, sử dụng Tableau để phân tích mô tả và đánh giá dữ liệu, phân loại các loại Dashboard phổ biến và nắm quy trình xây dựng Dashboard. Ngoài ra, học viên sẽ có khả năng xây dựng Dashboard tương tác, chuyên nghiệp bằng Tableau, áp dụng storytelling bằng dữ liệu để truyền tải insight, triển khai dự án phân tích và trực quan hóa dữ liệu qua Capstone Project, và sẵn sàng cho các vai trò như phân tích kinh doanh, tài chính, marketing hoặc khách hàng.",
@@ -611,7 +665,7 @@
       "category_id": 1,
       "course_title": "Java Web dễ hiểu - Tự làm Website với AI (2025)",
       "provider_id": 5,
-      "price": "199000",
+      "price": 199000,
       "image_url": "https://img-c.udemycdn.com/course/240x135/6634255_ba17_4.jpg",
       "video_url": "https://www.youtube.com/embed/4kvyMXRdylo?si=tAw8KcPLSLVtKIMu",
       "description": "Bạn sẽ học cách tạo giao diện website bằng HTML, JSP, EL và JSTL, đồng thời xây dựng các phần xử lý backend với Servlet, thao tác đến database qua DAO, SQL. Ngoài ra, khóa học còn trang bị cho bạn kỹ năng sử dụng Annotation, RegEx và Lambda trong Java, giúp bạn viết code gọn, hiệu quả. Điểm đặc biệt của khóa học là sự tích hợp và hướng dẫn sử dụng các công cụ AI hiện đại như ChatGPT, Claude và Cursor AI – những trợ thủ đắc lực giúp bạn tìm kiếm giải pháp, tối ưu mã nguồn, cũng như tự động hóa các tác vụ lập trình. Với sự hỗ trợ của AI, bạn sẽ tiết kiệm thời gian, nhanh chóng giải quyết các vấn đề phức tạp và nâng cao hiệu suất làm việc.",
@@ -631,13 +685,67 @@
       "sections": [
         {
           "id": 1,
-          "chapter_title": "",
+          "chapter_title": "Giới thiệu và Cài đặt",
           "lecture_count": 3,
-          "duration": "phút",
+          "duration": "18phút",
           "lectures": [
-            {"id": 0,"title": "","duration": "","preview": false},
-            {"id": 1,"title": "","duration": "","preview": false},
-            {"id": 2,"title": "","duration": "","preview": false}
+            {"id": 0,"title": "Giới thiệu về khóa học","duration": "01:26","preview": false},
+            {"id": 1,"title": "Tiện ích Từ điển ENVI - Tra cứu tiếng Anh ngay trong tài liệu","duration": "00:56","preview": false},
+            {"id": 2,"title": "Cài đặt Java Web: JDK, Tomcat, NetBeans","duration": "15:23","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Cấu trúc Java Web",
+          "lecture_count": 3,
+          "duration": "3phút",
+          "lectures": [
+            {"id": 0,"title": "Mô hình MVC","duration": "03:00","preview": false}
+          ]
+        },
+        {
+          "id": 3,
+          "chapter_title": "View",
+          "lecture_count": 3,
+          "duration": "1giờ 10phút",
+          "lectures": [
+            {"id": 0,"title": "HTML (HyperText Markup Language)","duration": "21:21","preview": false},
+            {"id": 1,"title": "JSP (Jakarta Server Pages)","duration": "19:37","preview": false},
+            {"id": 2,"title": "JSTL (Jakarta Standard Tag Library), EL (Expression Language)","duration": "29:06","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category_id": 1,
+      "course_title": "Optimize Frontend for Beginner (Vietnamese)",
+      "provider_id": 6,
+      "price": 199000,
+      "image_url": "https://img-c.udemycdn.com/course/240x135/6718707_1a8a_2.jpg",
+      "video_url": "https://www.youtube.com/embed/t72Iot7T16o?si=2IO0y-echdZUdY8K",
+      "description": "Khóa học 'Optimize Frontend for Beginner' được thiết kế dành cho những lập trình viên Frontend đang muốn củng cố kiến thức nền tảng về tối ưu hiệu suất web. Khóa học hướng dẫn từng bước các kỹ thuật và tư duy giúp trang web tải nhanh hơn, mượt hơn, và thân thiện với người dùng cũng như các công cụ hỗ trợ trong việc tối ưu hiệu năng web.",
+      "total_sections": 6,
+      "total_lectures": 24,
+      "students": 205,
+      "duration": "4giờ 2phút",
+      "request": [
+        {"id": 0,"request_name": "Lập trình viên Frontend mong muốn nâng cấp kỹ năng tối ưu"} 
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "Hiểu rõ các khái niệm cơ bản về tối ưu hóa Frontend"},
+        {"id": 1,"overview_name": "Xây dựng tư duy tối ưu"},
+        {"id": 2,"overview_name": "Biết cách sử dụng các kỹ thuật tối ưu phổ biến"},
+        {"id": 3,"overview_name": "Biết cách sử dụng các công cụ trong việc tối ưu"} 
+      ],
+      "sections": [
+        {
+          "id": 1,
+          "chapter_title": "Giới thiệu khóa học",
+          "lecture_count": 1,
+          "duration": "1phút",
+          "lectures": [
+            {"id": 0,"title": "Tổng quan khóa học","duration": "1:00","preview": false}
           ]
         },
         {
@@ -653,13 +761,133 @@
         },
         {
           "id": 3,
-          "chapter_title": "",
+          "chapter_title": "Chương 1: Gốc rễ tối ưu",
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "","duration": "","preview": false},
-            {"id": 1,"title": "","duration": "","preview": false},
-            {"id": 2,"title": "","duration": "","preview": false}
+            {"id": 0,"title": "Critical Rendering Path","duration": "17:40","preview": false},
+            {"id": 1,"title": "Blocking Resource - Render Blocking","duration": "06:36","preview": false},
+            {"id": 2,"title": "Blocking Resource - Parser Blocking","duration": "09:12","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category_id": 1,
+      "course_title": "The Web Developer Bootcamp 2025",
+      "provider_id": 7,
+      "price": 279000,
+      "image_url": "https://img-c.udemycdn.com/course/240x135/625204_436a_3.jpg",
+      "video_url": "https://www.youtube.com/embed/S7MyHChb8-E?si=k0PaZt15FPRgZygQ",
+      "description": "Hi! Welcome to the brand new version of The Web Developer Bootcamp, Udemy's most popular web development course.  This course was completely overhauled to prepare students for the current job market, now with over 70 hours of total content! This is the only course you need to learn web development. There are a lot of options for online developer training, but this course is without a doubt the most comprehensive and effective on the market.",
+      "total_sections": 74,
+      "total_lectures": 703,
+      "students": 400,
+      "duration": "74giờ 9phút",
+      "request": [
+        {"id": 0,"request_name": "This course is for anyone who wants to learn about web development, regardless of previous experience"},
+        {"id": 1,"request_name": "It's perfect for complete beginners with zero experience"},
+        {"id": 2,"request_name": "It's also great for anyone who does have some experience in a few of the technologies(like HTML and CSS) but not all"},
+        {"id": 3,"request_name": "If you want to take ONE COURSE to learn everything you need to know about web development, take this course"}
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "The ins and outs of HTML5, CSS3, and Modern JavaScript"},
+        {"id": 1,"overview_name": "Make REAL web applications using cutting-edge technologies"},
+        {"id": 2,"overview_name": "Create responsive, accessible, and beautiful layouts"},
+        {"id": 3,"overview_name": "Recognize and prevent common security exploits like SQL-Injection & XSS"},
+        {"id": 4,"overview_name": "Continue to learn and grow as a developer, long after the course ends"},
+        {"id": 5,"overview_name": "Create a blog application from scratch using Node, Express, and MongoDB."},
+        {"id": 6,"overview_name": "Create a complicated yelp-like application from scratch"},
+        {"id": 7,"overview_name": "Deploy your applications and work with cloud databases"}
+      ],
+      "sections": [
+        {
+          "id": 1,
+          "chapter_title": "Course Orentation",
+          "lecture_count": 3,
+          "duration": "31phút",
+          "lectures": [
+            {"id": 0,"title": "Welcome To The Course!","duration": "03:47","preview": false},
+            {"id": 1,"title": "Joining The Community Chat & Groups","duration": "00:27","preview": false},
+            {"id": 2,"title": "Curriculum Walkthrough","duration": "04:12","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "An Introduction To Web Development",
+          "lecture_count": 3,
+          "duration": "giờ phút",
+          "lectures": [
+            {"id": 0,"title": "What Matters In This Section?","duration": "03:28","preview": false},
+            {"id": 1,"title": "The Internet in 5 Minutes","duration": "05:42","preview": false},
+            {"id": 2,"title": "Intro to the Web","duration": "06:01","preview": false}
+          ]
+        },
+        {
+          "id": 3,
+          "chapter_title": "HTML: The Essentials",
+          "lecture_count": 3,
+          "duration": "1giờ 3phút",
+          "lectures": [
+            {"id": 0,"title": "What Matters In This Section","duration": "02:12","preview": false},
+            {"id": 1,"title": "Introduction to HTML","duration": "06:55","preview": false},
+            {"id": 2,"title": "Our Very First HTML Page","duration": "05:33","preview": false}
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category_id": 1,
+      "course_title": "Git a Web Developer Job: Mastering the Modern Workflow",
+      "provider_id": 88,
+      "price": 239000,
+      "image_url": "https://img-c.udemycdn.com/course/240x135/818990_57c0_3.jpg",
+      "video_url": "https://www.youtube.com/embed/JZRHieHs67k?si=GnsIsW-RyPsat4ru",
+      "description": "This course was updated in June of 2023 to match the demands and trends of the industry. You already understand the basics of HTML and CSS, but you don’t necessarily feel qualified for the web developer jobs you want. In this course we’ll bridge that gap by building a mobile-first responsive website, together, step-by-step. Along the way we’ll learn the modern skill-set that companies are looking for in developers.",
+      "total_sections": 23,
+      "total_lectures": 73,
+      "students": 239,
+      "duration": "15giờ 43phút",
+      "request": [
+        {"id": 0,"request_name": "You'll benefit from this course if you're looking to bridge the gap between what you currently know (HTML & CSS) and what hiring companies want you to know"}
+      ],
+      "overview": [
+        {"id": 0,"overview_name": "Build websites using the modern skills, tools, and best-practices that companies are looking for in developers"},
+        {"id": 1,"overview_name": "Write organized, well structured JavaScript and CSS that other developers can easily understand"},
+        {"id": 2,"overview_name": "Confidently apply for web developer jobs knowing you can jump into a dev team and immediately contribute to projects"}
+      ],
+      "sections": [
+        {
+          "id": 1,
+          "chapter_title": "Welcome!",
+          "lecture_count": 1,
+          "duration": "8phút",
+          "lectures": [
+            {"id": 0,"title": "Course Overview","duration": "07:44","preview": false}
+          ]
+        },
+        {
+          "id": 2,
+          "chapter_title": "Git Essentials",
+          "lecture_count": 3,
+          "duration": "54phút",
+          "lectures": [
+            {"id": 0,"title": "What is Git?","duration": "09:16","preview": false},
+            {"id": 1,"title": "See Git in Action","duration": "14:57","preview": false},
+            {"id": 2,"title": "Important Note About Text Editing Software","duration": "01:08","preview": false}
+          ]
+        },
+        {
+          "id": 3,
+          "chapter_title": "Intro to Node.js & NPM",
+          "lecture_count": 3,
+          "duration": "44phút",
+          "lectures": [
+            {"id": 0,"title": "The Need for Automation and Organization","duration": "07:14","preview": false},
+            {"id": 1,"title": "A Quick Note","duration": "00:44","preview": false},
+            {"id": 2,"title": "Node.js Introduction","duration": "19:56","preview": false}
           ]
         }
       ]

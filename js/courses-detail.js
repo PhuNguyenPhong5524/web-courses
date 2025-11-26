@@ -190,3 +190,30 @@ const showCoursesOfProvider = () => {
 };
 
 showCoursesOfProvider();
+
+
+const showCourseDetail = async () => {
+    const res = await fetch("http://localhost:3000/courses");
+    const data = await res.json();
+    const coursesId = localStorage.getItem("course_id");
+    return data.filter((item) => item.id == coursesId);
+}
+
+// Hiển thị tab Tổng quan bài học
+const showTabOverView = async () => {
+    const listCourses = await showCourseDetail();
+        let tabOverView = "";
+        listCourses.map((item)=>{
+            item.overview.map((ov)=>{
+                tabOverView += `
+                <p class="py-1 flex gap-2">
+                        <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                        <span>${ov.overview_name}</span> 
+                    </p>
+                `;
+            });
+        });
+        document.querySelector(".showOverView").innerHTML = tabOverView;
+}
+
+showTabOverView();
