@@ -164,7 +164,7 @@ const apiCategories = "http://localhost:3000/categories";
 
 const btnOnclickCate = (id) => {
     localStorage.setItem("cate_id", id);
-    window.location.href = "../page/user/courses-category.html";
+    window.location.href = "../../page/user/courses-category.html";
 }
 
 const showCategory = async () => {
