@@ -1,19 +1,13 @@
-const courArr = [
-    {id:1, cate_id: 1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:158},
-    {id:2, cate_id: 2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:290},
-    {id:3, cate_id: 3, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:432},
-    {id:4, cate_id: 4, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:365},
-    {id:5, cate_id: 5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:150},
-    {id:6, cate_id: 5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:90}
-];
 
 // swiper khóa học liên quan
 
-const showCoursesCat = () => {
-
-  const categoryId = localStorage.getItem("cate_id");
-  const list = courArr.filter(item => item.cate_id == categoryId);
+const showCoursesCat = async () => {
+  const res = await fetch("http://localhost:3000/courses");
+  const data = await res.json();
+  const categoryId = Number(localStorage.getItem("cate_id"));
+  const list = data.filter(item => item.category_id === categoryId); 
   let showCoPrv = "";
+
   list.map((item)=>{
     showCoPrv += `
          <div 
@@ -28,7 +22,7 @@ const showCoursesCat = () => {
                 <!-- Image -->
                     <div class="relative overflow-hidden h-auto">
                         <img 
-                            src="${item.img}" 
+                            src="${item.image_url}" 
                             alt="img_category1" 
                             class="
                                 imgCourses
@@ -36,14 +30,6 @@ const showCoursesCat = () => {
                                 ease-in-out rounded-t-[10px] group-hover:scale-110
                             " 
                         >
-                        <span 
-                            class="
-                                text-[12px] font-semibold text-[#ffffff] px-[10px] rounded-[8px] py-[5px] absolute top-4 left-4
-                                bg-[#FF782D] z-[30]
-                            "
-                        >
-                            Khóa học mới
-                        </span>
                         <div 
                             class="
                                 absolute w-full h-full top-0 left-0 z-[10] opacity-0 transform transition-opacity 
@@ -77,7 +63,7 @@ const showCoursesCat = () => {
                                 href="/page/user/courses-detail.html"
                                 class="" 
                             >
-                                ${item.title}
+                                ${item.course_title}
                             </a>
                             </h4>
                         <!-- Info -->
@@ -97,9 +83,11 @@ const showCoursesCat = () => {
                             <hr class=" border-[1px] border-[#EAEAEA] w-full">
                         <!--  -->
                             <div class="flex items-center justify-between">
-                                <div class="text-[18px]">
-                                    <del class="text-[#9D9D9D] font-regular">$${item.price}</del> 
-                                    <span class="text-[#55BE24] font-semibold">Free</span>
+                                <div class="text-[18px] text-[#FF782D] font-semibold">
+                                     ${ item.price === 0 
+                                            ? `<span class="text-green-400 font-semibold">Free</span>` 
+                                            : `${Number(item.price).toLocaleString('vi-VN')} VND`
+                                        }
                                 </div>
                                 <div class="text-[16px] text-black/40 font-regular">
                                     <a class="text-[#000000] hover:text-[#FF782D] hover:underline" href="#">Chi tiết</a>
