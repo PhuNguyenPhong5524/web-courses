@@ -78,22 +78,33 @@ document.addEventListener('click', (e) => {
 });
 
 
-const courArr = [
-    {id:1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:158},
-    {id:2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:290},
-    {id:3, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:432},
-    {id:4, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:365},
-    {id:5, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:150},
-    {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:90},
-];
-
-
 const showCourseDetail = async () => {
     const res = await fetch("http://localhost:3000/courses");
     const data = await res.json();
     const coursesId = localStorage.getItem("course_id");
     return data.find((item) => item.id == coursesId); // trả về 1 object 
 }
+
+// Hiển thị đường dẫn 
+const showPath = async () => {
+    const res = await fetch("http://localhost:3000/categories");
+    const data = await res.json();
+    const course = await showCourseDetail(); // đổi tên để tránh trùng
+
+    // Tìm category của course
+    const currentCate = data.find((cate) => cate.id === Number(course.category_id));
+
+    if(currentCate){
+    document.querySelector(".currentCate").innerHTML = currentCate.cate_name;
+    } else {
+        document.querySelector(".currentCate").innerHTML = "Không tìm thấy danh mục";
+    }
+
+    document.querySelector(".currentTitle").innerHTML = course.course_title || "Chưa có tiêu đề";
+
+}
+
+showPath();
 
 // Hiển thị tab Tổng quan bài học
 const showTabOverView = async () => {
@@ -144,10 +155,6 @@ showTabRequest();
 
 
 
-
-
-// swiper khóa học liên quan
-
 const showCoursesOfProvider = async () => {
   const [providers, courses] = await Promise.all(
     [
@@ -158,9 +165,20 @@ const showCoursesOfProvider = async () => {
   const currentCourses = await showCourseDetail();
   // Lây ra nhà cung cấp của khóa học   
   const provider = providers.find((item) => item.id == currentCourses.provider_id);
+  if(provider){
+    document.querySelector(".nameProvider").innerHTML = provider.provider_name + ".";
+  }
   let showCoPrv = "";
 
-  const courFilter = courses.filter((item) => item.provider_id == currentCourses.provider_id).sort((a, b) => b.students - a.students).slice(0, 4);
+  const courFilter = courses.
+        filter((item) => item.provider_id == currentCourses.provider_id && item.id != currentCourses.id).
+        sort((a, b) => b.students - a.students).
+        slice(0, 4);
+  if(courFilter.length == 0){
+    document.querySelector(".textContent").innerHTML = `
+        <p class="text-center text-[16px] font-semibold text-gray-300 py-[50px] border border-dashed border-gray-300 rounded-[10px]">Chưa có khóa học liên quan</p>
+    `
+  }
   courFilter.map((item)=>{
     showCoPrv += `
          <div 
