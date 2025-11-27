@@ -87,11 +87,80 @@ const courArr = [
     {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0, qua_student:90},
 ];
 
+
+const showCourseDetail = async () => {
+    const res = await fetch("http://localhost:3000/courses");
+    const data = await res.json();
+    const coursesId = localStorage.getItem("course_id");
+    return data.find((item) => item.id == coursesId); // trả về 1 object 
+}
+
+// Hiển thị tab Tổng quan bài học
+const showTabOverView = async () => {
+    const listCourses = await showCourseDetail();
+    let tabOverView = "";
+    listCourses.overview.map((ov)=>{
+        tabOverView += `
+            <p class="py-1 flex gap-2">
+                <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
+                <span>${ov.overview_name}</span> 
+            </p>
+        `;
+    });
+    document.querySelector(".showOverView").innerHTML = tabOverView;
+}
+
+showTabOverView();
+
+// Hiển thị tab Mô tả 
+
+const showTabDescription = async () => {
+    const item = await showCourseDetail();
+    document.getElementById("description").innerHTML = `
+        <p class="py-1 flex gap-2">
+            - <span>${item.description}</span> 
+        </p>
+    `;
+        
+     
+}
+showTabDescription();
+
+// Hiển thị tab Yêu cầu học viên
+const showTabRequest = async () => {
+    const listCourses = await showCourseDetail();
+    let tabReQuest = "";
+    listCourses.request.map((rq)=>{
+        tabReQuest += `
+            <li>
+                <span>${rq.request_name}.</span>
+            </li>
+        `;
+    });
+    document.querySelector(".showReQuest").innerHTML = tabReQuest;
+}
+
+showTabRequest();
+
+
+
+
+
 // swiper khóa học liên quan
 
-const showCoursesOfProvider = () => {
+const showCoursesOfProvider = async () => {
+  const [providers, courses] = await Promise.all(
+    [
+        fetch("http://localhost:3000/providers").then((res) => res.json()), 
+        fetch("http://localhost:3000/courses").then((res) => res.json())
+    ]
+  );
+  const currentCourses = await showCourseDetail();
+  // Lây ra nhà cung cấp của khóa học   
+  const provider = providers.find((item) => item.id == currentCourses.provider_id);
   let showCoPrv = "";
-  const courFilter = courArr.sort((a, b) => b.qua_student - a.qua_student).slice(0, 3);
+
+  const courFilter = courses.filter((item) => item.provider_id == currentCourses.provider_id).sort((a, b) => b.students - a.students).slice(0, 4);
   courFilter.map((item)=>{
     showCoPrv += `
          <div 
@@ -105,8 +174,8 @@ const showCoursesOfProvider = () => {
                 <!-- Image -->
                     <div class="relative overflow-hidden h-auto">
                         <img 
-                            src="${item.img}" 
-                            alt="img_category1" 
+                            src="${item.image_url}" 
+                            alt="${item.title}" 
                             class="
                                 w-full h-auto object-fit-cover transform transition-transform duration-300 
                                 ease-in-out rounded-t-[10px] group-hover:scale-110
@@ -114,11 +183,11 @@ const showCoursesOfProvider = () => {
                         >
                         <span 
                             class="
-                                text-[12px] font-semibold text-[#ffffff] px-[10px] rounded-[8px] py-[5px] absolute top-4 left-4
+                                text-[10px] font-semibold text-[#ffffff] px-[10px] rounded-[8px] py-[5px] absolute top-3 left-2
                                 bg-[#FF782D] z-[30]
                             "
                         >
-                            Khóa học mới
+                            Khóa học liên quan
                         </span>
                         <div 
                             class="
@@ -141,32 +210,29 @@ const showCoursesOfProvider = () => {
                 <!-- Content -->
                     <div class="p-[10px] flex flex-col gap-[16px]">
                         <!-- Author -->
-                            <p class="text-[16px] font-regular text-[#555555]">
-                                by 
-                                <span class="text-[#000000] font-regular">
-                                    Determined-Poitras
-                                </span>
+                            <p class="text-[14px] font-medium text-gray-400">
+                                 ${provider.provider_name}
                             </p>
                         <!-- Title -->
-                            <h4 class="text-[20px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] line-clamp-2">
+                            <h4 class="text-[20px] h-[48px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] line-clamp-2">
                             <a 
                                 href="/page/user/courses-detail.html"
                                 class="" 
                             >
-                                ${item.title}
+                                ${item.course_title}
                             </a>
                             </h4>
                         <!-- Info -->
-                            <div class="flex items-center gap-[30px]">
+                            <div class="flex items-center justify-between ">
                                 <div class="flex  items-center gap-2">
                                     <i class="fa-solid fa-clock text-[#FF782D]"></i>
-                                    <p class="text-[16px] font-regular text-[#555555]">2 weeks</p>
+                                    <p class="text-[14px] font-regular text-[#555555]">2 weeks</p>
                                 </div>
                                 <div class="flex items-center gap-2 relative">
                                     <div class="overflow-hidden">
                                         <i class="fa-solid fa-graduation-cap transform scale-x-[-1] text-[#FF782D]"></i>
                                     </div>
-                                    <p class="text-[16px] font-regular text-[#555555]">${item.qua_student} Students</p>
+                                    <p class="text-[14px] font-regular text-[#555555]">${item.students} Students</p>
                                 </div>
                             </div>
                         <!-- Line -->
@@ -174,8 +240,12 @@ const showCoursesOfProvider = () => {
                         <!--  -->
                             <div class="flex items-center justify-between">
                                 <div class="text-[18px]">
-                                    <del class="text-[#9D9D9D] font-regular">$${item.price}</del> 
-                                    <span class="text-[#55BE24] font-semibold">Free</span>
+                                    <span class="text-[#FF782D] font-semibold">
+                                        ${ item.price === 0 
+                                            ? `<span class="text-green-400 font-semibold">Free</span>` 
+                                            : `${Number(item.price).toLocaleString('vi-VN')} VND`
+                                        }
+                                    </span>
                                 </div>
                                 <div class="text-[16px] text-black/40 font-regular">
                                     <a class="text-[#000000] hover:text-[#FF782D] hover:underline" href="#">Chi tiết</a>
@@ -190,30 +260,3 @@ const showCoursesOfProvider = () => {
 };
 
 showCoursesOfProvider();
-
-
-const showCourseDetail = async () => {
-    const res = await fetch("http://localhost:3000/courses");
-    const data = await res.json();
-    const coursesId = localStorage.getItem("course_id");
-    return data.filter((item) => item.id == coursesId);
-}
-
-// Hiển thị tab Tổng quan bài học
-const showTabOverView = async () => {
-    const listCourses = await showCourseDetail();
-        let tabOverView = "";
-        listCourses.map((item)=>{
-            item.overview.map((ov)=>{
-                tabOverView += `
-                <p class="py-1 flex gap-2">
-                        <i class="fa-solid fa-check text-gray-400 pr-2 mt-[10px]"></i> 
-                        <span>${ov.overview_name}</span> 
-                    </p>
-                `;
-            });
-        });
-        document.querySelector(".showOverView").innerHTML = tabOverView;
-}
-
-showTabOverView();

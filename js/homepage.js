@@ -1,3 +1,5 @@
+
+
 const courArr = [
     {id:1, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
     {id:2, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
@@ -7,13 +9,9 @@ const courArr = [
     {id:6, title:"Create an LMS Website with ThimPress", img:"images/img_pro_cour_feat1.jpg", price:29.0},
 ];
 
-
+import { handleClickCourse } from "./handleClick.js";
 const courses = "http://localhost:3000/courses";
 
-const btnCourseDetail = (id) =>{
-    localStorage.setItem('course_id', id);
-    window.location.href = "./page/user/courses-detail.html";
-}
 
 const showCourse = async () => {
     const res = await fetch(courses);
@@ -79,8 +77,8 @@ const showCourse = async () => {
                         <!-- Title -->
                             <h4 class="text-[20px] pr-[20px] h-[48px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] cursor-pointer line-clamp-2">
                             <a 
-                                onclick="btnCourseDetail(${item.id})"
-                                class="" 
+                                class="btnCourseDetail"
+                                data-id="${item.id}"
                             >
                                 ${item.course_title}
                             </a>
@@ -112,7 +110,7 @@ const showCourse = async () => {
                                     </span>
                                 </div>
                                 <div class="text-[16px] text-black/40 font-regular">
-                                    <a  onclick="btnCourseDetail(${item.id})" class="text-[#000000] hover:text-[#FF782D] hover:underline cursor-pointer">Chi tiết</a>
+                                    <a  class="btnCourseDetail text-[#000000] hover:text-[#FF782D] hover:underline cursor-pointer" data-id="${item.id}">Chi tiết</a>
                                 </div>
                             </div>
                     </div>
@@ -120,6 +118,9 @@ const showCourse = async () => {
         `
     }).join("");
     document.getElementById("boxCourses").innerHTML = show;
+
+    const btnDetail = document.querySelectorAll(".btnCourseDetail");
+    btnDetail.forEach(btn => btn.addEventListener("click", handleClickCourse));
 }
 
 showCourse();
@@ -127,43 +128,36 @@ showCourse();
 
 const apiCategories = "http://localhost:3000/categories";
 
-const btnOnclickCate = (id) => {
-    localStorage.setItem("cate_id", id);
-    window.location.href = "./page/user/courses-category.html";
-}
+// Hàm xử lý click riêng
+import { handleClickCategory } from "./handleClick.js";
+
 
 const showCategory = async () => {
     const res = await fetch(apiCategories);
     const data = await res.json();
-    let showCate = "";
-    const sort = data.sort((a,b) => b.quantity - a.quantity);
+    const container = document.getElementById("showCate");
 
-    sort.map((c)=>{
-        
-        showCate += `
-            <button 
-                onclick ="btnOnclickCate(${c.id})" 
-                class="
-                    flex flex-col justify-center items-center gap-[12px] group
-                    w-[234px] h-[243px] boder border-[2px] border-[#EAEAEA] rounded-[20px]
-                    transform transition-transform duration-300 ease-in-out cursor-pointer
-                    hover:shadow-2xl hover:translate-y-[-10px]
-                "
-            >
-                <i 
-                    class="
-                        ${c.icon_name}
-                        text-[30px] text-[#FF782D] transform transition-transform duration-300 
-                        ease-in-out group-hover:scale-110
-                    "
-                ></i>
-                <h4 class="text-[20px] font-semibold text-[#000000] group-hover:text-[#FF782D] text-center">${c.cate_name}</h4>
-                <p class="text-[18px] font-regular text-[#555555]">${c.quantity} Courses</p>
-            </button>
-        `
+    const sort = data.sort((a, b) => b.quantity - a.quantity);
+
+    // Render HTML với data-id
+    container.innerHTML = sort.map(c => `
+        <button 
+            class="cate-btn flex flex-col justify-center items-center gap-[12px] group
+            w-[234px] h-[243px] border border-[2px] border-[#EAEAEA] rounded-[20px]
+            transform transition-transform duration-300 ease-in-out cursor-pointer
+            hover:shadow-2xl hover:translate-y-[-10px]"
+            data-id="${c.id}"
+        >
+            <i class="${c.icon_name} text-[30px] text-[#FF782D] group-hover:scale-110"></i>
+            <h4 class="text-[20px] font-semibold text-[#000000] group-hover:text-[#FF782D] text-center">${c.cate_name}</h4>
+            <p class="text-[18px] text-[#555555]">${c.quantity} Courses</p>
+        </button>
+    `).join("");
+    // Gắn sự kiện cho tất cả button sau khi render
+    document.querySelectorAll(".cate-btn").forEach(btn => {
+        btn.addEventListener("click", handleClickCategory);
     });
-    document.getElementById("showCategory").innerHTML = showCate;
-}
+};
 
 showCategory();
 
@@ -309,7 +303,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   swiper.update();
 });
-
-
 
 

@@ -17,7 +17,7 @@ function loadUserMenu() {
   userMenu.innerHTML = "";
 
   // Nếu đã đăng nhập
-  if (user?.id) {
+  if (user && user.id !== undefined && user.id !== null) {
     avatar.innerHTML = `
       <img src="/images/avatar.jpg" 
            class="w-[30px] h-[30px] rounded-full" 
@@ -87,3 +87,5 @@ function loadUserMenu() {
     `;
   }
 }
+
+loadUserMenu();

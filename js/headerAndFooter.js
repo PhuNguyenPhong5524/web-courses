@@ -1,15 +1,4 @@
 
-const cateArrr = [
-    {id:1, cate_name:"Phát triển web", icon_name:"fa-solid fa-globe", quantity:38},
-    {id:2, cate_name:"Khoa học dữ liệu", icon_name:"fa-solid fa-brain", quantity:38},
-    {id:3, cate_name:"Ứng dụng di động", icon_name:"fa-solid fa-mobile-screen-button", quantity:38},
-    {id:4, cate_name:"Ngôn ngữ lập trình", icon_name:"fa-solid fa-code", quantity:38},
-    {id:5, cate_name:"Phát triển trò chơi", icon_name:"fa-solid fa-gamepad", quantity:38},
-    {id:6, cate_name:"Thiết kế & cơ sở dữ liệu", icon_name:"fa-solid fa-palette", quantity:38},
-    {id:7, cate_name:"Kiểm tra phần mềm", icon_name:"fa-solid fa-shield-halved", quantity:98},
-    {id:8, cate_name:"Kỹ thuật mềm", icon_name:"fa-solid fa-users", quantity:38} 
-];
-
 // Tính BASE_URL
 const BASE_URL = (() => {
   const host = window.location.hostname;
@@ -30,25 +19,38 @@ function fixLinks() {
   });
 }
 
-// Load Header
-async function showHeader() {
+
+const showHeader = async () => {
     try {
         const res = await fetch(BASE_URL + "layout/header.html");
         if (!res.ok) throw new Error("Không tải được header");
+
         const headerHtml = await res.text();
-        document.querySelector(".showHeader").innerHTML = headerHtml;
-        if (typeof loadUserMenu === "function") {
-            loadUserMenu();
-        }
+        const headerEl = document.querySelector(".showHeader");
+        headerEl.innerHTML = headerHtml;
+
         fixLinks();
-        // ---- Gọi showMenuCategory sau khi #showCategory đã tồn tại ----
-        if(document.getElementById("showCategory")) {
-            document.getElementById("showCategory").innerHTML = showMenuCategory();
+
+        // Đợi DOM update xong rồi gọi loadUserMenu
+        setTimeout(() => {
+            if (typeof loadUserMenu === "function") {
+                loadUserMenu();
+            } else {
+                console.warn("Hàm loadUserMenu chưa sẵn sàng");
+            }
+        }, 0);
+
+        const showCategoryEl = document.getElementById("showCategory");
+        if (showCategoryEl) {
+            showCategoryEl.innerHTML = await showMenuCategory();
+        } else {
+            console.warn("#showCategory không tồn tại trong header");
         }
+
     } catch (err) {
         console.error(err);
     }
-}
+};
 
 // Load Footer
 async function showFooter() {
@@ -110,8 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const showMenuCategory = () => {
-    return cateArrr.map(cat => `
+const showMenuCategory = async () => {
+    const res = await fetch("http://localhost:3000/categories");
+    const data = await res.json();
+    return data.map(cat => `
         <li class="group text-black px-[20px] py-[10px] cursor-pointer transform transition-all ease-in-out duration-300 border-[2px] border-[#ffffff] hover:border-l-[2px] hover:border-l-[#FF782D] hover:bg-[#ffffff] hover:text-[#FF782D] hover:pl-[30px]">
             <a class="text-[16px] font-semibold" href="/page/user/courses-category.html">
                 ${cat.cate_name}
@@ -119,6 +123,7 @@ const showMenuCategory = () => {
         </li>
     `).join("");
 }
+
 
 
 showHeader();
