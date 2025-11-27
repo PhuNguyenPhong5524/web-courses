@@ -162,7 +162,7 @@ const renderSwiperCourses = async () => {
     let showSwiper = "";
     const courArr = courses.filter((c) => c.category_id == 1);
     courArr.map((it)=>{
-        const provider = providers.find((pv) => pv.id == it.provider_id);
+        const provider = providers.find((pv) => Number(pv.id) === Number(it.provider_id));
         showSwiper += `
             <div class="swiper-slide pb-[30px]">
                 <div 
@@ -189,7 +189,7 @@ const renderSwiperCourses = async () => {
                                     bg-[#FF782D] z-[30]
                                 "
                             >
-                                Khóa học mới
+                                Khóa học web
                             </span>
                             <div 
                                 class="
@@ -213,7 +213,7 @@ const renderSwiperCourses = async () => {
                         <div class="p-[20px] flex flex-col gap-[16px]">
                             <!-- Author -->
                                 <p class="text-[14px] font-medium text-gray-400">
-                                    ${provider.provider_name}
+                                    <span class="">${provider ? provider.provider_name : "Không rõ NCC"}</span>
                                 </p>
                             <!-- Title -->
                                 <h4 class="text-[20px] pr-[20px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] line-clamp-2 cursor-pointer">
@@ -247,7 +247,6 @@ const renderSwiperCourses = async () => {
                                                 ? `<span class="text-green-400 font-semibold">Free</span>` 
                                                 : `${Number(it.price).toLocaleString('vi-VN')} VND`
                                             }
-
                                         </span>
                                     </div>
                                     <div class="text-[16px] text-black/40 font-regular">
