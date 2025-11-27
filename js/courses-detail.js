@@ -268,7 +268,7 @@ const showBox = async () => {
         sp.innerHTML = `
             ${ item.price === 0 
                 ? `<span class="text-green-400 font-semibold">Free</span>` 
-                : `${Number(item.price).toLocaleString('vi-VN')}`
+                : `${Number(item.price).toLocaleString('vi-VN')} <span class="text-[20px] underline align-super">đ</span>`
             }
         `;
     });
