@@ -69,6 +69,20 @@
       "role": "provider",
       "email": "brad11@gmail.com",
       "password": "05052004"
+    },
+    {
+      "id": 10,
+      "email": "duc123@gmail.com",
+      "username": "Sun0505",
+      "password": "05052004",
+      "role": "customer"
+    },
+    {
+      "id": 11,
+      "email": "nnq123@gmail.com",
+      "username": "Phuaaut",
+      "password": "05052004",
+      "role": "customer"
     }
   ],
   "providers": [
@@ -237,19 +251,52 @@
       "students": 200,
       "duration": "55giờ 36phút",
       "request": [
-        {"id": 0,"request_name": "Có hiểu cơ bản về HTML, CSS và JavaScript"},
-        {"id": 1,"request_name": "Có hiểu biết về TypeScript"},
-        {"id": 2,"request_name": "Có hiểu biết về React (Frontend) là một lợi thế"}
+        {
+          "id": 0,
+          "request_name": "Có hiểu cơ bản về HTML, CSS và JavaScript"
+        },
+        {
+          "id": 1,
+          "request_name": "Có hiểu biết về TypeScript"
+        },
+        {
+          "id": 2,
+          "request_name": "Có hiểu biết về React (Frontend) là một lợi thế"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Học Tư Duy Xây Dựng Backend Server Cho Website"},
-        {"id": 1,"overview_name": "Hiểu & Làm Chủ Server Backend Node.JS Từ Con Số 0"},
-        {"id": 2,"overview_name": "Thực Hành Các Ví Dụ Server Backend Từ Cơ Bản Tới Nâng Cao"},
-        {"id": 3,"overview_name": "Xây Dựng Ứng Dụng Fullstack React/Node.js với TypeScript"},
-        {"id": 4,"overview_name": "Xây Dựng RESTful APIs Server với ExpressJS Framework (TypeScript)"},
-        {"id": 5,"overview_name": "Thực hành database SQL (MySQL) và NoSQL (MongoDB)"},
-        {"id": 6,"overview_name": "Thực hành Coding, Debugging Node.js với TypeScript"},
-        {"id": 7,"overview_name": "Thực hành ORM (Prisma) và ODM (Mongoose)"}
+        {
+          "id": 0,
+          "overview_name": "Học Tư Duy Xây Dựng Backend Server Cho Website"
+        },
+        {
+          "id": 1,
+          "overview_name": "Hiểu & Làm Chủ Server Backend Node.JS Từ Con Số 0"
+        },
+        {
+          "id": 2,
+          "overview_name": "Thực Hành Các Ví Dụ Server Backend Từ Cơ Bản Tới Nâng Cao"
+        },
+        {
+          "id": 3,
+          "overview_name": "Xây Dựng Ứng Dụng Fullstack React/Node.js với TypeScript"
+        },
+        {
+          "id": 4,
+          "overview_name": "Xây Dựng RESTful APIs Server với ExpressJS Framework (TypeScript)"
+        },
+        {
+          "id": 5,
+          "overview_name": "Thực hành database SQL (MySQL) và NoSQL (MongoDB)"
+        },
+        {
+          "id": 6,
+          "overview_name": "Thực hành Coding, Debugging Node.js với TypeScript"
+        },
+        {
+          "id": 7,
+          "overview_name": "Thực hành ORM (Prisma) và ODM (Mongoose)"
+        }
       ],
       "sections": [
         {
@@ -258,9 +305,24 @@
           "lecture_count": 3,
           "duration": "36phút",
           "lectures": [
-            {"id": 0,"title": "Dự án thực hành 01 (mô hình MVC/SSR/Express/Prisma)","duration": "05:22","preview": false},
-            {"id": 1,"title": "Dự án thực hành 02 (RESTful API với SQL/Prisma, FullStack React/Express)","duration": "01:48","preview": false},
-            {"id": 2,"title": "Dự án thực hành 03 (RESTful API với MongoDB/Mongoose)","duration": "01:47","preview": false}
+            {
+              "id": 0,
+              "title": "Dự án thực hành 01 (mô hình MVC/SSR/Express/Prisma)",
+              "duration": "05:22",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Dự án thực hành 02 (RESTful API với SQL/Prisma, FullStack React/Express)",
+              "duration": "01:48",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Dự án thực hành 03 (RESTful API với MongoDB/Mongoose)",
+              "duration": "01:47",
+              "preview": false
+            }
           ]
         },
         {
@@ -269,9 +331,24 @@
           "lecture_count": 3,
           "duration": "1giờ 7phút",
           "lectures": [
-            {"id": 0,"title": "Tổng quan về chapter","duration": "05:22","preview": false},
-            {"id": 1,"title": "Sử dụng Var/Let/Const","duration": "1:47","preview": false},
-            {"id": 2,"title": "JavaScript DataType","duration": "03:35","preview": false}
+            {
+              "id": 0,
+              "title": "Tổng quan về chapter",
+              "duration": "05:22",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Sử dụng Var/Let/Const",
+              "duration": "1:47",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "JavaScript DataType",
+              "duration": "03:35",
+              "preview": false
+            }
           ]
         },
         {
@@ -280,9 +357,21 @@
           "lecture_count": 3,
           "duration": "15phút",
           "lectures": [
-            {"id": 1,"title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả","duration": "05:21","preview": false},
-            {"id": 2,"title": "#2 + #3 + #4 : Tài Liệu Khóa Học","duration": "1:47","preview": false},
-            {"id": 3,"title": "#5. Demo kết quả đạt được",
+            {
+              "id": 1,
+              "title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả",
+              "duration": "05:21",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "#2 + #3 + #4 : Tài Liệu Khóa Học",
+              "duration": "1:47",
+              "preview": false
+            },
+            {
+              "id": 3,
+              "title": "#5. Demo kết quả đạt được",
               "duration": "06:07",
               "preview": false
             }
@@ -304,21 +393,60 @@
       "students": 110,
       "duration": "24giờ 13phút",
       "request": [
-        {"id": 0,"request_name": "Backend Developer muốn nâng cao kỹ năng với NestJS Microservices"},
-        {"id": 1,"request_name": "Fullstack Developer cần hiểu và triển khai kiến trúc microservices trong thực tế"},
-        {"id": 2,"request_name": "Sinh viên / Lập trình viên muốn học các công nghệ như Kafka, Keycloak, Redis, Stripe, Docker"},
-        {"id": 3,"request_name": "Người đang tìm hiểu Event-Driven Architecture và Saga Pattern"},
-        {"id": 4,"request_name": "Developer muốn triển khai hệ thống production-ready với logging & monitoring chuyên nghiệp"}
+        {
+          "id": 0,
+          "request_name": "Backend Developer muốn nâng cao kỹ năng với NestJS Microservices"
+        },
+        {
+          "id": 1,
+          "request_name": "Fullstack Developer cần hiểu và triển khai kiến trúc microservices trong thực tế"
+        },
+        {
+          "id": 2,
+          "request_name": "Sinh viên / Lập trình viên muốn học các công nghệ như Kafka, Keycloak, Redis, Stripe, Docker"
+        },
+        {
+          "id": 3,
+          "request_name": "Người đang tìm hiểu Event-Driven Architecture và Saga Pattern"
+        },
+        {
+          "id": 4,
+          "request_name": "Developer muốn triển khai hệ thống production-ready với logging & monitoring chuyên nghiệp"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Thiết kế và triển khai kiến trúc Microservices với NestJS và TypeScript"},
-        {"id": 1,"overview_name": "Nắm vững cách thiết kế và implement API Gateway Pattern (BFF)"},
-        {"id": 2,"overview_name": "Xây dựng và kết nối các service qua Apache Kafka theo mô hình event-driven"},
-        {"id": 3,"overview_name": "Áp dụng được các Design Patterns: Repository, DI, Factory"},
-        {"id": 4,"overview_name": "Implement được Error Handling, Logging, Validation trong microservices"},
-        {"id": 5,"overview_name": "Thiết kế database với MongoDB và PostgreSQL"},
-        {"id": 6,"overview_name": "Tích hợp Keycloak cho authentication và authorization"},
-        {"id": 7,"overview_name": "Thiết lập dashboard giám sát bằng Grafana"}
+        {
+          "id": 0,
+          "overview_name": "Thiết kế và triển khai kiến trúc Microservices với NestJS và TypeScript"
+        },
+        {
+          "id": 1,
+          "overview_name": "Nắm vững cách thiết kế và implement API Gateway Pattern (BFF)"
+        },
+        {
+          "id": 2,
+          "overview_name": "Xây dựng và kết nối các service qua Apache Kafka theo mô hình event-driven"
+        },
+        {
+          "id": 3,
+          "overview_name": "Áp dụng được các Design Patterns: Repository, DI, Factory"
+        },
+        {
+          "id": 4,
+          "overview_name": "Implement được Error Handling, Logging, Validation trong microservices"
+        },
+        {
+          "id": 5,
+          "overview_name": "Thiết kế database với MongoDB và PostgreSQL"
+        },
+        {
+          "id": 6,
+          "overview_name": "Tích hợp Keycloak cho authentication và authorization"
+        },
+        {
+          "id": 7,
+          "overview_name": "Thiết lập dashboard giám sát bằng Grafana"
+        }
       ],
       "sections": [
         {
@@ -327,9 +455,24 @@
           "lecture_count": 3,
           "duration": "46phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu khoá học","duration": "10:45","preview": false},
-            {"id": 1,"title": "Mua khoá học với giá ưu đãi như nào ?","duration": "01:24","preview": false},
-            {"id": 2,"title": "Lời cảm ơn","duration": "02:04","preview": false}
+            {
+              "id": 0,
+              "title": "Giới thiệu khoá học",
+              "duration": "10:45",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Mua khoá học với giá ưu đãi như nào ?",
+              "duration": "01:24",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Lời cảm ơn",
+              "duration": "02:04",
+              "preview": false
+            }
           ]
         },
         {
@@ -338,9 +481,24 @@
           "lecture_count": 3,
           "duration": "1giờ 7phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu tổng quan về Microservices & Monolithic","duration": "10:50","preview": false},
-            {"id": 1,"title": "Các kiểu giao tiếp trong Microservices","duration": "06:34","preview": false},
-            {"id": 2,"title": "Security trong Microservices","duration": "12:05","preview": false}
+            {
+              "id": 0,
+              "title": "Giới thiệu tổng quan về Microservices & Monolithic",
+              "duration": "10:50",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Các kiểu giao tiếp trong Microservices",
+              "duration": "06:34",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Security trong Microservices",
+              "duration": "12:05",
+              "preview": false
+            }
           ]
         },
         {
@@ -349,13 +507,28 @@
           "lecture_count": 3,
           "duration": "1giờ 7phút",
           "lectures": [
-            {"id": 0,"title": "Chuẩn bị môi trường phát triển dự án thực chiến","duration": "07:20","preview": false},
-            {"id": 1,"title": "Monorepo trong Microservices: Ưu nhược điểm & So sánh với Multirepo","duration": "11:30","preview": false},
-            {"id": 2,"title": "Nx Monorepo","duration": "07:09","preview": false}
+            {
+              "id": 0,
+              "title": "Chuẩn bị môi trường phát triển dự án thực chiến",
+              "duration": "07:20",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Monorepo trong Microservices: Ưu nhược điểm & So sánh với Multirepo",
+              "duration": "11:30",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Nx Monorepo",
+              "duration": "07:09",
+              "preview": false
+            }
           ]
         }
       ]
-    },  
+    },
     {
       "id": 2,
       "category_id": 1,
@@ -370,18 +543,48 @@
       "students": 458,
       "duration": "126giờ 2phút",
       "request": [
-        {"id": 0,"request_name": "Những bạn muốn trở thành lập trình viên Frontend"},
-        {"id": 1,"request_name": "Những sinh viên mới ra trường, hoặc người chuyển ngành muốn có kinh nghiệm thực tế, hoặc project để apply CV"}
+        {
+          "id": 0,
+          "request_name": "Những bạn muốn trở thành lập trình viên Frontend"
+        },
+        {
+          "id": 1,
+          "request_name": "Những sinh viên mới ra trường, hoặc người chuyển ngành muốn có kinh nghiệm thực tế, hoặc project để apply CV"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Nắm vững các kiến thức của ReactJS"},
-        {"id": 1,"overview_name": "Thành thạo sử dụng Redux (Redux thunk, Redux toolkit)"},
-        {"id": 2,"overview_name": "Nắm vững và thành thạo sử dụng NextJS 14 - NextAuth"},
-        {"id": 3,"overview_name": "Sử dụng thư viện Material UI để xây dựng giao diện nhanh hơn"},
-        {"id": 4,"overview_name": "Biết cách tối ưu code và tăng performance"},
-        {"id": 5,"overview_name": "Biết cách phân quyền cho hệ thống trong thực tế"},
-        {"id": 6,"overview_name": "Có một dự án chất lượng như dự án thực tế"},
-        {"id": 7,"overview_name": "Xây dựng dự với CI-CD như khi đi làm"}
+        {
+          "id": 0,
+          "overview_name": "Nắm vững các kiến thức của ReactJS"
+        },
+        {
+          "id": 1,
+          "overview_name": "Thành thạo sử dụng Redux (Redux thunk, Redux toolkit)"
+        },
+        {
+          "id": 2,
+          "overview_name": "Nắm vững và thành thạo sử dụng NextJS 14 - NextAuth"
+        },
+        {
+          "id": 3,
+          "overview_name": "Sử dụng thư viện Material UI để xây dựng giao diện nhanh hơn"
+        },
+        {
+          "id": 4,
+          "overview_name": "Biết cách tối ưu code và tăng performance"
+        },
+        {
+          "id": 5,
+          "overview_name": "Biết cách phân quyền cho hệ thống trong thực tế"
+        },
+        {
+          "id": 6,
+          "overview_name": "Có một dự án chất lượng như dự án thực tế"
+        },
+        {
+          "id": 7,
+          "overview_name": "Xây dựng dự với CI-CD như khi đi làm"
+        }
       ],
       "sections": [
         {
@@ -390,9 +593,24 @@
           "lecture_count": 3,
           "duration": "37phút",
           "lectures": [
-            {"id": 0,"title": "Demo kiến thức đạt được khi kết thúc khóa học","duration": "04:59","preview": false},
-            {"id": 1,"title": "Demo danh sách API trong dự án thực chiến","duration": "19:10","preview": false},
-            {"id": 2,"title": "Demo dự án thực chiến website bán hàng","duration": "12:50","preview": false}
+            {
+              "id": 0,
+              "title": "Demo kiến thức đạt được khi kết thúc khóa học",
+              "duration": "04:59",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Demo danh sách API trong dự án thực chiến",
+              "duration": "19:10",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Demo dự án thực chiến website bán hàng",
+              "duration": "12:50",
+              "preview": false
+            }
           ]
         },
         {
@@ -401,9 +619,24 @@
           "lecture_count": 3,
           "duration": "1giờ 39phút",
           "lectures": [
-            {"id": 0,"title": "Biến, kiểu dữ liệu và sự khác nhau giữa let, const, var trong javascript","duration": "15:36","preview": false},
-            {"id": 1,"title": "Toán tử so sánh, câu điều kiện, và kiểu dữ liệu undefined, null","duration": "08:50","preview": false},
-            {"id": 2,"title": "Hàm và tham số trong javascript","duration": "06:23","preview": false}
+            {
+              "id": 0,
+              "title": "Biến, kiểu dữ liệu và sự khác nhau giữa let, const, var trong javascript",
+              "duration": "15:36",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Toán tử so sánh, câu điều kiện, và kiểu dữ liệu undefined, null",
+              "duration": "08:50",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Hàm và tham số trong javascript",
+              "duration": "06:23",
+              "preview": false
+            }
           ]
         },
         {
@@ -412,9 +645,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "Khởi tạo dự án ReactJS và phân tích structure trong ReactJS","duration": "10:49","preview": false},
-            {"id": 1,"title": "JSX là gì? Hoạt động như nào?","duration": "04:25","preview": false},
-            {"id": 2,"title": "Dom và Virtual Dom là gì?","duration": "03:53","preview": false}
+            {
+              "id": 0,
+              "title": "Khởi tạo dự án ReactJS và phân tích structure trong ReactJS",
+              "duration": "10:49",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "JSX là gì? Hoạt động như nào?",
+              "duration": "04:25",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Dom và Virtual Dom là gì?",
+              "duration": "03:53",
+              "preview": false
+            }
           ]
         }
       ]
@@ -433,17 +681,44 @@
       "students": 1055,
       "duration": "44giờ 28phút",
       "request": [
-        {"id": 0,"request_name": "Các bạn theo đuổi lộ trình trở thành fullstack developer"},
-        {"id": 1,"request_name": "Cần học framework Nextjs để xây dựng frontend chuyên nghiệp"},
-        {"id": 2,"request_name": "Cần SEO website với React"}
+        {
+          "id": 0,
+          "request_name": "Các bạn theo đuổi lộ trình trở thành fullstack developer"
+        },
+        {
+          "id": 1,
+          "request_name": "Cần học framework Nextjs để xây dựng frontend chuyên nghiệp"
+        },
+        {
+          "id": 2,
+          "request_name": "Cần SEO website với React"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Làm Chủ React Toàn Diện Với Typescript"},
-        {"id": 1,"overview_name": "Xây dựng giao diện Admin React với Antd Design/Vite"},
-        {"id": 2,"overview_name": "Hiểu rõ cơ chế render React ở Client và Server"},
-        {"id": 3,"overview_name": "Rèn luyện tư duy phân tích, tích hợp thư viện javascript với React"},
-        {"id": 4,"overview_name": "Nắm vững kiến thức cốt lõi của NextJS và React"},
-        {"id": 5,"overview_name": "Thực hành NextJS kết hợp với MUI"}
+        {
+          "id": 0,
+          "overview_name": "Làm Chủ React Toàn Diện Với Typescript"
+        },
+        {
+          "id": 1,
+          "overview_name": "Xây dựng giao diện Admin React với Antd Design/Vite"
+        },
+        {
+          "id": 2,
+          "overview_name": "Hiểu rõ cơ chế render React ở Client và Server"
+        },
+        {
+          "id": 3,
+          "overview_name": "Rèn luyện tư duy phân tích, tích hợp thư viện javascript với React"
+        },
+        {
+          "id": 4,
+          "overview_name": "Nắm vững kiến thức cốt lõi của NextJS và React"
+        },
+        {
+          "id": 5,
+          "overview_name": "Thực hành NextJS kết hợp với MUI"
+        }
       ],
       "sections": [
         {
@@ -452,9 +727,24 @@
           "lecture_count": 3,
           "duration": "51phút",
           "lectures": [
-            {"id": 0,"title": "Demo Kết quả đạt được","duration": "24:38","preview": false},
-            {"id": 1,"title": "Hướng Dẫn Sử Dụng Udemy Dành Cho Người Mới Bắt Đầu","duration": "09:44","preview": false},
-            {"id": 2,"title": "Cách Hỗ Trợ/Support Trong Quá Trình Học (Bắt Buộc Xem)","duration": "16:42","preview": false}
+            {
+              "id": 0,
+              "title": "Demo Kết quả đạt được",
+              "duration": "24:38",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Hướng Dẫn Sử Dụng Udemy Dành Cho Người Mới Bắt Đầu",
+              "duration": "09:44",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Cách Hỗ Trợ/Support Trong Quá Trình Học (Bắt Buộc Xem)",
+              "duration": "16:42",
+              "preview": false
+            }
           ]
         },
         {
@@ -463,9 +753,24 @@
           "lecture_count": 3,
           "duration": "1giờ 29phút",
           "lectures": [
-            {"id": 0,"title": "Tài liệu của Next.js 16","duration": "00:02","preview": false},
-            {"id": 1,"title": "Tổng Quan Về Chapter","duration": "01:13","preview": false},
-            {"id": 2,"title": "Next.js 16 Có Gì Hot ?","duration": "09:57","preview": false}
+            {
+              "id": 0,
+              "title": "Tài liệu của Next.js 16",
+              "duration": "00:02",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Tổng Quan Về Chapter",
+              "duration": "01:13",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Next.js 16 Có Gì Hot ?",
+              "duration": "09:57",
+              "preview": false
+            }
           ]
         },
         {
@@ -474,9 +779,24 @@
           "lecture_count": 3,
           "duration": "19phút",
           "lectures": [
-            {"id": 0,"title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả","duration": "05:21","preview": false},
-            {"id": 1,"title": "#2. Tài liệu khóa học","duration": "00:01","preview": false},
-            {"id": 2,"title": "#3. Yêu cầu của khóa học","duration": "05:08","preview": false}
+            {
+              "id": 0,
+              "title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả",
+              "duration": "05:21",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "#2. Tài liệu khóa học",
+              "duration": "00:01",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "#3. Yêu cầu của khóa học",
+              "duration": "05:08",
+              "preview": false
+            }
           ]
         }
       ]
@@ -495,15 +815,36 @@
       "students": 1920,
       "duration": "20giờ 49phút",
       "request": [
-        {"id": 0,"request_name": "Tất cả những bạn mới bắt đầu, những bạn muốn học lập trình với React, đang muốn học và làm chủ React thì đây chính là khóa học các bạn tìm. React Ultimate, chỉ một là đủ."}
+        {
+          "id": 0,
+          "request_name": "Tất cả những bạn mới bắt đầu, những bạn muốn học lập trình với React, đang muốn học và làm chủ React thì đây chính là khóa học các bạn tìm. React Ultimate, chỉ một là đủ."
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "HỌC đi đôi với THỰC HÀNH, xây dựng ĐAM MÊ về lập trình với REACT"},
-        {"id": 1,"overview_name": "Tự tin LÀM CHỦ, NẮM VỮNG những KIẾN THỨC cơ bản, cốt lõi nhất của REACT"},
-        {"id": 2,"overview_name": "Có được TƯ DUY lập trình với React, biết cách SEARCH Google khi gặp lỗi"},
-        {"id": 3,"overview_name": "HIỂU và LÀM CHỦ React, XÂY DƯNG được các SẢN PHẨM website THỰC TẾ phục vụ mục đích học tập và đi làm"},
-        {"id": 4,"overview_name": "Hiểu rõ Lịch Sử Phát Triển của React và Công Nghệ sử dụng với React"},
-        {"id": 5,"overview_name": "Cập nhật kiến thức mới nhất với React 18 và React 19"}
+        {
+          "id": 0,
+          "overview_name": "HỌC đi đôi với THỰC HÀNH, xây dựng ĐAM MÊ về lập trình với REACT"
+        },
+        {
+          "id": 1,
+          "overview_name": "Tự tin LÀM CHỦ, NẮM VỮNG những KIẾN THỨC cơ bản, cốt lõi nhất của REACT"
+        },
+        {
+          "id": 2,
+          "overview_name": "Có được TƯ DUY lập trình với React, biết cách SEARCH Google khi gặp lỗi"
+        },
+        {
+          "id": 3,
+          "overview_name": "HIỂU và LÀM CHỦ React, XÂY DƯNG được các SẢN PHẨM website THỰC TẾ phục vụ mục đích học tập và đi làm"
+        },
+        {
+          "id": 4,
+          "overview_name": "Hiểu rõ Lịch Sử Phát Triển của React và Công Nghệ sử dụng với React"
+        },
+        {
+          "id": 5,
+          "overview_name": "Cập nhật kiến thức mới nhất với React 18 và React 19"
+        }
       ],
       "sections": [
         {
@@ -512,9 +853,24 @@
           "lecture_count": 3,
           "duration": "36phút",
           "lectures": [
-            {"id": 0,"title": "Demo kết quả đạt được sau khi kết thúc khóa học","duration": "03:41","preview": false},
-            {"id": 1,"title": "Tổng quan về các kiến thức sẽ học","duration": "05:32","preview": false},
-            {"id": 2,"title": "Hướng Dẫn Sử Dụng Udemy Dành Cho Người Mới Bắt Đầu","duration": "09:44","preview": false}
+            {
+              "id": 0,
+              "title": "Demo kết quả đạt được sau khi kết thúc khóa học",
+              "duration": "03:41",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Tổng quan về các kiến thức sẽ học",
+              "duration": "05:32",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Hướng Dẫn Sử Dụng Udemy Dành Cho Người Mới Bắt Đầu",
+              "duration": "09:44",
+              "preview": false
+            }
           ]
         },
         {
@@ -523,9 +879,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả","duration": "05:21","preview": false},
-            {"id": 1,"title": "#2. Hướng dẫn tải tài liệu khóa học","duration": "00:01","preview": false},
-            {"id": 2,"title": "#3. Yêu cầu để học được khóa học này","duration": "01:38","preview": false}
+            {
+              "id": 0,
+              "title": "#1. Hướng Dẫn Sử Dụng Khóa Học Hiệu Quả",
+              "duration": "05:21",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "#2. Hướng dẫn tải tài liệu khóa học",
+              "duration": "00:01",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "#3. Yêu cầu để học được khóa học này",
+              "duration": "01:38",
+              "preview": false
+            }
           ]
         },
         {
@@ -534,9 +905,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "#7. Cài đặt NodeJS","duration": "07:38","preview": false},
-            {"id": 1,"title": "#8. Cài đặt Visual Studio Code","duration": "01:30","preview": false},
-            {"id": 2,"title": "#9. Cấu hình Visual Studio Code","duration": "08:29","preview": false}
+            {
+              "id": 0,
+              "title": "#7. Cài đặt NodeJS",
+              "duration": "07:38",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "#8. Cài đặt Visual Studio Code",
+              "duration": "01:30",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "#9. Cấu hình Visual Studio Code",
+              "duration": "08:29",
+              "preview": false
+            }
           ]
         }
       ]
@@ -555,15 +941,36 @@
       "students": 293,
       "duration": "8giờ 35phút",
       "request": [
-        {"id": 0,"request_name": "Người tìm hiểu về phân tích dữ liệu, sinh viên, học viên và người làm nghiên cứu"} 
+        {
+          "id": 0,
+          "request_name": "Người tìm hiểu về phân tích dữ liệu, sinh viên, học viên và người làm nghiên cứu"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Các bước cần làm trong phân tích dữ liệu"},
-        {"id": 1,"overview_name": "Ngôn ngữ R cơ bản"},
-        {"id": 2,"overview_name": "Biến đổi dữ liệu"},
-        {"id": 3,"overview_name": "Phân tích thống kê mô tả"},
-        {"id": 4,"overview_name": "Phân tích thống kê suy luận: kiểm định t, phân tích ANOVA, phân tích tương quan"},
-        {"id": 5,"overview_name": "Vẽ đồ thị và biểu đồ"}
+        {
+          "id": 0,
+          "overview_name": "Các bước cần làm trong phân tích dữ liệu"
+        },
+        {
+          "id": 1,
+          "overview_name": "Ngôn ngữ R cơ bản"
+        },
+        {
+          "id": 2,
+          "overview_name": "Biến đổi dữ liệu"
+        },
+        {
+          "id": 3,
+          "overview_name": "Phân tích thống kê mô tả"
+        },
+        {
+          "id": 4,
+          "overview_name": "Phân tích thống kê suy luận: kiểm định t, phân tích ANOVA, phân tích tương quan"
+        },
+        {
+          "id": 5,
+          "overview_name": "Vẽ đồ thị và biểu đồ"
+        }
       ],
       "sections": [
         {
@@ -572,9 +979,24 @@
           "lecture_count": 3,
           "duration": "11phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu về bản thân","duration": "01:12","preview": false},
-            {"id": 1,"title": "Khóa học này dành cho ai?","duration": "01:02","preview": false},
-            {"id": 2,"title": "Tại sao bạn nên học khóa học này?","duration": "00:56","preview": false}
+            {
+              "id": 0,
+              "title": "Giới thiệu về bản thân",
+              "duration": "01:12",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Khóa học này dành cho ai?",
+              "duration": "01:02",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Tại sao bạn nên học khóa học này?",
+              "duration": "00:56",
+              "preview": false
+            }
           ]
         },
         {
@@ -583,9 +1005,24 @@
           "lecture_count": 3,
           "duration": "13phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu","duration": "00:31","preview": false},
-            {"id": 1,"title": "Dữ liệu là gì?","duration": "01:23","preview": false},
-            {"id": 2,"title": "Phân tích dữ liệu là gì?","duration": "01:04","preview": false}
+            {
+              "id": 0,
+              "title": "Giới thiệu",
+              "duration": "00:31",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Dữ liệu là gì?",
+              "duration": "01:23",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Phân tích dữ liệu là gì?",
+              "duration": "01:04",
+              "preview": false
+            }
           ]
         },
         {
@@ -594,9 +1031,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu","duration": "01:27","preview": false},
-            {"id": 1,"title": "Phần mềm R và RStudio là gì?","duration": "03:57","preview": false},
-            {"id": 2,"title": "Cài đặt phần mềm R và RStudio trên máy Mac","duration": "07:57","preview": false}
+            {
+              "id": 0,
+              "title": "Giới thiệu",
+              "duration": "01:27",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Phần mềm R và RStudio là gì?",
+              "duration": "03:57",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Cài đặt phần mềm R và RStudio trên máy Mac",
+              "duration": "07:57",
+              "preview": false
+            }
           ]
         }
       ]
@@ -615,17 +1067,44 @@
       "students": 1416,
       "duration": "5giờ 33phút",
       "request": [
-        {"id": 0,"request_name": "Người mới bắt đầu tìm hiểu về phân tích và trực quan hóa dữ liệu"},
-        {"id": 1,"request_name": "Sinh viên các trường đại học, nhất là khối ngành kinh tế, kinh doanh"},
-        {"id": 2,"request_name": "Nhân viên văn phòng có liên quan đến báo cáo, tổng hợp dữ liệu"},
-        {"id": 3,"request_name": "Chuyên viên Thống kê, chuyên viên Phân tích dữ liệu"} 
+        {
+          "id": 0,
+          "request_name": "Người mới bắt đầu tìm hiểu về phân tích và trực quan hóa dữ liệu"
+        },
+        {
+          "id": 1,
+          "request_name": "Sinh viên các trường đại học, nhất là khối ngành kinh tế, kinh doanh"
+        },
+        {
+          "id": 2,
+          "request_name": "Nhân viên văn phòng có liên quan đến báo cáo, tổng hợp dữ liệu"
+        },
+        {
+          "id": 3,
+          "request_name": "Chuyên viên Thống kê, chuyên viên Phân tích dữ liệu"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Phát triển tư duy phân tích và kỹ năng sử dụng dữ liệu hiệu quả"},
-        {"id": 1,"overview_name": "Làm chủ các thao tác xử lý, làm sạch và kết nối dữ liệu từ nhiều nguồn"},
-        {"id": 2,"overview_name": "Xây dựng các dashboard tương tác, chuyên nghiệp bằng Tableau."},
-        {"id": 3,"overview_name": "Biết cách kể chuyện bằng dữ liệu để truyền tải insight cho người xem"},
-        {"id": 4,"overview_name": "Sẵn sàng cho các vai trò liên quan đến phân tích hoặc trực quan hóa dữ liệu."} 
+        {
+          "id": 0,
+          "overview_name": "Phát triển tư duy phân tích và kỹ năng sử dụng dữ liệu hiệu quả"
+        },
+        {
+          "id": 1,
+          "overview_name": "Làm chủ các thao tác xử lý, làm sạch và kết nối dữ liệu từ nhiều nguồn"
+        },
+        {
+          "id": 2,
+          "overview_name": "Xây dựng các dashboard tương tác, chuyên nghiệp bằng Tableau."
+        },
+        {
+          "id": 3,
+          "overview_name": "Biết cách kể chuyện bằng dữ liệu để truyền tải insight cho người xem"
+        },
+        {
+          "id": 4,
+          "overview_name": "Sẵn sàng cho các vai trò liên quan đến phân tích hoặc trực quan hóa dữ liệu."
+        }
       ],
       "sections": [
         {
@@ -634,8 +1113,18 @@
           "lecture_count": 2,
           "duration": "36phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu về cách làm quen với Tableau","duration": "25:00","preview": false},
-            {"id": 1,"title": "Làm quen với Tableau (Thực hành)","duration": "11:21","preview": false} 
+            {
+              "id": 0,
+              "title": "Giới thiệu về cách làm quen với Tableau",
+              "duration": "25:00",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Làm quen với Tableau (Thực hành)",
+              "duration": "11:21",
+              "preview": false
+            }
           ]
         },
         {
@@ -644,18 +1133,38 @@
           "lecture_count": 2,
           "duration": "31phút",
           "lectures": [
-            {"id": 0,"title": "Kết nối và chuẩn bị dữ liệu (Data Preparation)","duration": "22:01","preview": false},
-            {"id": 1,"title": "Kết nối và chuẩn bị dữ liệu (Thực hành)","duration": "09:12","preview": false} 
+            {
+              "id": 0,
+              "title": "Kết nối và chuẩn bị dữ liệu (Data Preparation)",
+              "duration": "22:01",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Kết nối và chuẩn bị dữ liệu (Thực hành)",
+              "duration": "09:12",
+              "preview": false
+            }
           ]
         },
         {
           "id": 3,
           "chapter_title": "Trực quan hóa dữ liệu (các biểu đồ cơ bản)",
-          "lecture_count":2,
+          "lecture_count": 2,
           "duration": "33phút",
           "lectures": [
-            {"id": 0,"title": "Tạo các biểu đồ cơ bản","duration": "15:39","preview": false},
-            {"id": 1,"title": "Tạo các biểu đồ cơ bản (Thực hành)","duration": "17:15","preview": false} 
+            {
+              "id": 0,
+              "title": "Tạo các biểu đồ cơ bản",
+              "duration": "15:39",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Tạo các biểu đồ cơ bản (Thực hành)",
+              "duration": "17:15",
+              "preview": false
+            }
           ]
         }
       ]
@@ -674,13 +1183,28 @@
       "students": 247,
       "duration": "7giờ 31phút",
       "request": [
-        {"id": 0,"request_name": "Sinh viên, người mới học lập trình hoặc người muốn xây dựng website thực tế bằng Java."} 
+        {
+          "id": 0,
+          "request_name": "Sinh viên, người mới học lập trình hoặc người muốn xây dựng website thực tế bằng Java."
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Hiểu và triển khai mô hình MVC trong lập trình Java Web thực tế"},
-        {"id": 1,"overview_name": "Tạo giao diện website bằng HTML, CSS, Bootstrap kết hợp với JSP, EL và JSTL"},
-        {"id": 2,"overview_name": "Xây dựng backend với Servlet, Model, DAO, SQL Server và xử lý request/response"},
-        {"id": 3,"overview_name": "Kết hợp sức mạnh của AI (ChatGPT, Claude, Cursor AI...) để làm web hiệu quả và làm việc năng suất hơn"}
+        {
+          "id": 0,
+          "overview_name": "Hiểu và triển khai mô hình MVC trong lập trình Java Web thực tế"
+        },
+        {
+          "id": 1,
+          "overview_name": "Tạo giao diện website bằng HTML, CSS, Bootstrap kết hợp với JSP, EL và JSTL"
+        },
+        {
+          "id": 2,
+          "overview_name": "Xây dựng backend với Servlet, Model, DAO, SQL Server và xử lý request/response"
+        },
+        {
+          "id": 3,
+          "overview_name": "Kết hợp sức mạnh của AI (ChatGPT, Claude, Cursor AI...) để làm web hiệu quả và làm việc năng suất hơn"
+        }
       ],
       "sections": [
         {
@@ -689,9 +1213,24 @@
           "lecture_count": 3,
           "duration": "18phút",
           "lectures": [
-            {"id": 0,"title": "Giới thiệu về khóa học","duration": "01:26","preview": false},
-            {"id": 1,"title": "Tiện ích Từ điển ENVI - Tra cứu tiếng Anh ngay trong tài liệu","duration": "00:56","preview": false},
-            {"id": 2,"title": "Cài đặt Java Web: JDK, Tomcat, NetBeans","duration": "15:23","preview": false}
+            {
+              "id": 0,
+              "title": "Giới thiệu về khóa học",
+              "duration": "01:26",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Tiện ích Từ điển ENVI - Tra cứu tiếng Anh ngay trong tài liệu",
+              "duration": "00:56",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Cài đặt Java Web: JDK, Tomcat, NetBeans",
+              "duration": "15:23",
+              "preview": false
+            }
           ]
         },
         {
@@ -700,7 +1239,12 @@
           "lecture_count": 3,
           "duration": "3phút",
           "lectures": [
-            {"id": 0,"title": "Mô hình MVC","duration": "03:00","preview": false}
+            {
+              "id": 0,
+              "title": "Mô hình MVC",
+              "duration": "03:00",
+              "preview": false
+            }
           ]
         },
         {
@@ -709,9 +1253,24 @@
           "lecture_count": 3,
           "duration": "1giờ 10phút",
           "lectures": [
-            {"id": 0,"title": "HTML (HyperText Markup Language)","duration": "21:21","preview": false},
-            {"id": 1,"title": "JSP (Jakarta Server Pages)","duration": "19:37","preview": false},
-            {"id": 2,"title": "JSTL (Jakarta Standard Tag Library), EL (Expression Language)","duration": "29:06","preview": false}
+            {
+              "id": 0,
+              "title": "HTML (HyperText Markup Language)",
+              "duration": "21:21",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "JSP (Jakarta Server Pages)",
+              "duration": "19:37",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "JSTL (Jakarta Standard Tag Library), EL (Expression Language)",
+              "duration": "29:06",
+              "preview": false
+            }
           ]
         }
       ]
@@ -730,13 +1289,28 @@
       "students": 205,
       "duration": "4giờ 2phút",
       "request": [
-        {"id": 0,"request_name": "Lập trình viên Frontend mong muốn nâng cấp kỹ năng tối ưu"} 
+        {
+          "id": 0,
+          "request_name": "Lập trình viên Frontend mong muốn nâng cấp kỹ năng tối ưu"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Hiểu rõ các khái niệm cơ bản về tối ưu hóa Frontend"},
-        {"id": 1,"overview_name": "Xây dựng tư duy tối ưu"},
-        {"id": 2,"overview_name": "Biết cách sử dụng các kỹ thuật tối ưu phổ biến"},
-        {"id": 3,"overview_name": "Biết cách sử dụng các công cụ trong việc tối ưu"} 
+        {
+          "id": 0,
+          "overview_name": "Hiểu rõ các khái niệm cơ bản về tối ưu hóa Frontend"
+        },
+        {
+          "id": 1,
+          "overview_name": "Xây dựng tư duy tối ưu"
+        },
+        {
+          "id": 2,
+          "overview_name": "Biết cách sử dụng các kỹ thuật tối ưu phổ biến"
+        },
+        {
+          "id": 3,
+          "overview_name": "Biết cách sử dụng các công cụ trong việc tối ưu"
+        }
       ],
       "sections": [
         {
@@ -745,7 +1319,12 @@
           "lecture_count": 1,
           "duration": "1phút",
           "lectures": [
-            {"id": 0,"title": "Tổng quan khóa học","duration": "1:00","preview": false}
+            {
+              "id": 0,
+              "title": "Tổng quan khóa học",
+              "duration": "1:00",
+              "preview": false
+            }
           ]
         },
         {
@@ -754,9 +1333,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "","duration": "","preview": false},
-            {"id": 1,"title": "","duration": "","preview": false},
-            {"id": 2,"title": "","duration": "","preview": false}
+            {
+              "id": 0,
+              "title": "",
+              "duration": "",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "",
+              "duration": "",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "",
+              "duration": "",
+              "preview": false
+            }
           ]
         },
         {
@@ -765,9 +1359,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "Critical Rendering Path","duration": "17:40","preview": false},
-            {"id": 1,"title": "Blocking Resource - Render Blocking","duration": "06:36","preview": false},
-            {"id": 2,"title": "Blocking Resource - Parser Blocking","duration": "09:12","preview": false}
+            {
+              "id": 0,
+              "title": "Critical Rendering Path",
+              "duration": "17:40",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Blocking Resource - Render Blocking",
+              "duration": "06:36",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Blocking Resource - Parser Blocking",
+              "duration": "09:12",
+              "preview": false
+            }
           ]
         }
       ]
@@ -786,20 +1395,56 @@
       "students": 400,
       "duration": "74giờ 9phút",
       "request": [
-        {"id": 0,"request_name": "This course is for anyone who wants to learn about web development, regardless of previous experience"},
-        {"id": 1,"request_name": "It's perfect for complete beginners with zero experience"},
-        {"id": 2,"request_name": "It's also great for anyone who does have some experience in a few of the technologies(like HTML and CSS) but not all"},
-        {"id": 3,"request_name": "If you want to take ONE COURSE to learn everything you need to know about web development, take this course"}
+        {
+          "id": 0,
+          "request_name": "This course is for anyone who wants to learn about web development, regardless of previous experience"
+        },
+        {
+          "id": 1,
+          "request_name": "It's perfect for complete beginners with zero experience"
+        },
+        {
+          "id": 2,
+          "request_name": "It's also great for anyone who does have some experience in a few of the technologies(like HTML and CSS) but not all"
+        },
+        {
+          "id": 3,
+          "request_name": "If you want to take ONE COURSE to learn everything you need to know about web development, take this course"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "The ins and outs of HTML5, CSS3, and Modern JavaScript"},
-        {"id": 1,"overview_name": "Make REAL web applications using cutting-edge technologies"},
-        {"id": 2,"overview_name": "Create responsive, accessible, and beautiful layouts"},
-        {"id": 3,"overview_name": "Recognize and prevent common security exploits like SQL-Injection & XSS"},
-        {"id": 4,"overview_name": "Continue to learn and grow as a developer, long after the course ends"},
-        {"id": 5,"overview_name": "Create a blog application from scratch using Node, Express, and MongoDB."},
-        {"id": 6,"overview_name": "Create a complicated yelp-like application from scratch"},
-        {"id": 7,"overview_name": "Deploy your applications and work with cloud databases"}
+        {
+          "id": 0,
+          "overview_name": "The ins and outs of HTML5, CSS3, and Modern JavaScript"
+        },
+        {
+          "id": 1,
+          "overview_name": "Make REAL web applications using cutting-edge technologies"
+        },
+        {
+          "id": 2,
+          "overview_name": "Create responsive, accessible, and beautiful layouts"
+        },
+        {
+          "id": 3,
+          "overview_name": "Recognize and prevent common security exploits like SQL-Injection & XSS"
+        },
+        {
+          "id": 4,
+          "overview_name": "Continue to learn and grow as a developer, long after the course ends"
+        },
+        {
+          "id": 5,
+          "overview_name": "Create a blog application from scratch using Node, Express, and MongoDB."
+        },
+        {
+          "id": 6,
+          "overview_name": "Create a complicated yelp-like application from scratch"
+        },
+        {
+          "id": 7,
+          "overview_name": "Deploy your applications and work with cloud databases"
+        }
       ],
       "sections": [
         {
@@ -808,9 +1453,24 @@
           "lecture_count": 3,
           "duration": "31phút",
           "lectures": [
-            {"id": 0,"title": "Welcome To The Course!","duration": "03:47","preview": false},
-            {"id": 1,"title": "Joining The Community Chat & Groups","duration": "00:27","preview": false},
-            {"id": 2,"title": "Curriculum Walkthrough","duration": "04:12","preview": false}
+            {
+              "id": 0,
+              "title": "Welcome To The Course!",
+              "duration": "03:47",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Joining The Community Chat & Groups",
+              "duration": "00:27",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Curriculum Walkthrough",
+              "duration": "04:12",
+              "preview": false
+            }
           ]
         },
         {
@@ -819,9 +1479,24 @@
           "lecture_count": 3,
           "duration": "giờ phút",
           "lectures": [
-            {"id": 0,"title": "What Matters In This Section?","duration": "03:28","preview": false},
-            {"id": 1,"title": "The Internet in 5 Minutes","duration": "05:42","preview": false},
-            {"id": 2,"title": "Intro to the Web","duration": "06:01","preview": false}
+            {
+              "id": 0,
+              "title": "What Matters In This Section?",
+              "duration": "03:28",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "The Internet in 5 Minutes",
+              "duration": "05:42",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Intro to the Web",
+              "duration": "06:01",
+              "preview": false
+            }
           ]
         },
         {
@@ -830,9 +1505,24 @@
           "lecture_count": 3,
           "duration": "1giờ 3phút",
           "lectures": [
-            {"id": 0,"title": "What Matters In This Section","duration": "02:12","preview": false},
-            {"id": 1,"title": "Introduction to HTML","duration": "06:55","preview": false},
-            {"id": 2,"title": "Our Very First HTML Page","duration": "05:33","preview": false}
+            {
+              "id": 0,
+              "title": "What Matters In This Section",
+              "duration": "02:12",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "Introduction to HTML",
+              "duration": "06:55",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Our Very First HTML Page",
+              "duration": "05:33",
+              "preview": false
+            }
           ]
         }
       ]
@@ -851,12 +1541,24 @@
       "students": 239,
       "duration": "15giờ 43phút",
       "request": [
-        {"id": 0,"request_name": "You'll benefit from this course if you're looking to bridge the gap between what you currently know (HTML & CSS) and what hiring companies want you to know"}
+        {
+          "id": 0,
+          "request_name": "You'll benefit from this course if you're looking to bridge the gap between what you currently know (HTML & CSS) and what hiring companies want you to know"
+        }
       ],
       "overview": [
-        {"id": 0,"overview_name": "Build websites using the modern skills, tools, and best-practices that companies are looking for in developers"},
-        {"id": 1,"overview_name": "Write organized, well structured JavaScript and CSS that other developers can easily understand"},
-        {"id": 2,"overview_name": "Confidently apply for web developer jobs knowing you can jump into a dev team and immediately contribute to projects"}
+        {
+          "id": 0,
+          "overview_name": "Build websites using the modern skills, tools, and best-practices that companies are looking for in developers"
+        },
+        {
+          "id": 1,
+          "overview_name": "Write organized, well structured JavaScript and CSS that other developers can easily understand"
+        },
+        {
+          "id": 2,
+          "overview_name": "Confidently apply for web developer jobs knowing you can jump into a dev team and immediately contribute to projects"
+        }
       ],
       "sections": [
         {
@@ -865,7 +1567,12 @@
           "lecture_count": 1,
           "duration": "8phút",
           "lectures": [
-            {"id": 0,"title": "Course Overview","duration": "07:44","preview": false}
+            {
+              "id": 0,
+              "title": "Course Overview",
+              "duration": "07:44",
+              "preview": false
+            }
           ]
         },
         {
@@ -874,9 +1581,24 @@
           "lecture_count": 3,
           "duration": "54phút",
           "lectures": [
-            {"id": 0,"title": "What is Git?","duration": "09:16","preview": false},
-            {"id": 1,"title": "See Git in Action","duration": "14:57","preview": false},
-            {"id": 2,"title": "Important Note About Text Editing Software","duration": "01:08","preview": false}
+            {
+              "id": 0,
+              "title": "What is Git?",
+              "duration": "09:16",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "See Git in Action",
+              "duration": "14:57",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Important Note About Text Editing Software",
+              "duration": "01:08",
+              "preview": false
+            }
           ]
         },
         {
@@ -885,9 +1607,24 @@
           "lecture_count": 3,
           "duration": "44phút",
           "lectures": [
-            {"id": 0,"title": "The Need for Automation and Organization","duration": "07:14","preview": false},
-            {"id": 1,"title": "A Quick Note","duration": "00:44","preview": false},
-            {"id": 2,"title": "Node.js Introduction","duration": "19:56","preview": false}
+            {
+              "id": 0,
+              "title": "The Need for Automation and Organization",
+              "duration": "07:14",
+              "preview": false
+            },
+            {
+              "id": 1,
+              "title": "A Quick Note",
+              "duration": "00:44",
+              "preview": false
+            },
+            {
+              "id": 2,
+              "title": "Node.js Introduction",
+              "duration": "19:56",
+              "preview": false
+            }
           ]
         }
       ]

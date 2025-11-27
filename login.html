@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Flowbite -->
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4071fda5b5.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
@@ -61,14 +60,28 @@
                     <!-- Đăng ký -->
                         <p class="text-center text-sm text-gray-600">
                             Nếu bạn chưa có tài khoản? 
-                            <a href="#" class="text-blue-600 hover:underline">Đăng ký</a>
+                            <a href="./register.html" class="text-blue-600 hover:underline">Đăng ký</a>
                         </p>
                 </form>
             </div>
         </div>
     </main>
+    
+    <div id="toast-success" class="hidden fixed border border-green-500 top-10 right-5 z-50 flex items-center w-full max-w-sm p-4 text-body bg-[#ffffff] rounded-base shadow-xs border border-default" role="alert">
+        <div class="inline-flex items-center justify-center shrink-0 w-7 h-7 text-fg-success bg-success-soft rounded">
+            <svg class="w-5 h-5 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/></svg>
+            <span class="sr-only">Check icon</span>
+        </div>
+        <div class="ms-3 text-sm font-normal">Đăng ký thành công</div>
+        <button type="button" class="ms-auto flex items-center justify-center text-body hover:text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded text-sm h-8 w-8 focus:outline-none" data-dismiss-target="#toast-success" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/></svg>
+        </button>
+    </div>
+
     <!-- Flowbite -->
     <script src="./js/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- Flowbite JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>

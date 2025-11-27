@@ -82,7 +82,7 @@ function loadUserMenu() {
       </li>
 
       <li class="${menuItemClass}">
-        <a href="#">Đăng ký</a>
+        <a href="./register.html">Đăng ký</a>
       </li>
     `;
   }

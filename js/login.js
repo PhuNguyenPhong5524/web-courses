@@ -38,3 +38,20 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
 });
 
 
+window.addEventListener("DOMContentLoaded", () => {
+    const show = localStorage.getItem("showToast");
+
+    if (show === "true") {
+        const toastEl = document.getElementById("toast-success");
+        toastEl.classList.remove("hidden"); // hiện toast
+
+        // Tự ẩn sau 5 giây
+        setTimeout(() => {
+            toastEl.classList.add("hidden");
+        }, 2500);
+
+        // Xóa flag để không hiển thị lần sau
+        localStorage.removeItem("showToast");
+    }
+});
+

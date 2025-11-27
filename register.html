@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4071fda5b5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/logo.png">
+    <title>Đăng nhập - EduPress</title>
+</head>
+<body>
+    <main>
+        <div class="bgr_login flex items-center justify-center min-h-screen gap-[20px]">
+            
+            <!-- Left image -->
+            <div>
+                <img src="./images/img_register.png" alt="register" 
+                    class="w-[350px] h-[300px] transform transition-transform duration-500 ease-in-out animate-[bounce_5s_infinite]"
+                >
+            </div>
+
+            <!-- Register Form -->
+            <div>
+                <form id="registerForm" class="max-w-md w-[400px] mx-auto mt-10 bg-white p-8 rounded-lg shadow-md">
+                    
+                    <h3 class="text-[30px] font-semibold text-gray-900 mb-6 text-center">Đăng ký</h3>
+                    
+                    <!-- EMAIL -->
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="email123@gmail.com"
+                            required
+                            class="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg 
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                        />
+                    </div>
+
+                    <!-- USERNAME -->
+                    <div class="mb-4">
+                        <label for="username" class="block mb-2 text-sm font-medium text-gray-700">Tên người dùng</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            placeholder="Nguyễn Văn A"
+                            required
+                            class="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg 
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                        />
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="mb-4 relative">
+                        <label class="block mb-2 text-sm font-medium text-gray-700">Mật khẩu</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="••••••••" 
+                            required
+                            class="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg 
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                        />
+                        <i id="togglePass" 
+                        class="fa-solid fa-eye absolute right-3 top-[42px] cursor-pointer text-gray-500">
+                        </i>
+                    </div>
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="mb-6 relative">
+                        <label class="block mb-2 text-sm font-medium text-gray-700">Xác nhận mật khẩu</label>
+                        <input 
+                            type="password" 
+                            id="confirm_password" 
+                            placeholder="••••••••" 
+                            required
+                            class="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg 
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+                        />
+                        <i id="toggleConfirmPass" 
+                        class="fa-solid fa-eye absolute right-3 top-[42px] cursor-pointer text-gray-500">
+                        </i>
+                    </div>
+
+                    <!-- BUTTON -->
+                    <button type="submit"
+                        class="w-full py-2.5 bg-[#FF782D] text-white font-medium rounded-lg cursor-pointer 
+                        hover:opacity-80 hover:shadow-lg focus:ring-2 focus:ring-blue-500 focus:outline-none mb-4">
+                        Tạo tài khoản
+                    </button>
+
+                    <!-- Link Login -->
+                    <p class="text-center text-sm text-gray-600">
+                        Đã có tài khoản? 
+                        <a href="login.html" class="text-blue-600 hover:underline">Đăng nhập</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Flowbite -->
+    <script src="./js/register.js"></script>
+    <!-- Flowbite JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
