@@ -137,7 +137,7 @@ function changeBtnLayout(type) {
     btnGridView.classList.add('text-black', 'text-black');
     btnGridView.classList.remove('text-[#FF782D]', 'text-black');
   } else {
-    showCourses.classList.remove('flex', 'flex-col', 'gap-4');
+    showCourses.classList.remove('flex', 'flex-row', 'gap-4');
     showCourses.classList.add('grid', 'grid-cols-3', 'gap-4');
 
     // Từng card đổi sang dạng ngang
