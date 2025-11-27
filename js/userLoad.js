@@ -37,7 +37,7 @@ function loadUserMenu() {
           class="flex items-center gap-2"
         >
           <div class="flex items-center gap-2 pt-1">
-            <img src="/images/avatar.jpg" 
+            <img src="https://i.pinimg.com/1200x/b3/c2/77/b3c2779d6b6195793b72bf73e284b3e8.jpg" 
                  class="w-[30px] h-[30px] rounded-full object-cover" 
             />
           </div>
