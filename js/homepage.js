@@ -213,7 +213,7 @@ const renderSwiperCourses = async () => {
                         <div class="p-[20px] flex flex-col gap-[16px]">
                             <!-- Author -->
                                 <p class="text-[14px] font-medium text-gray-400">
-                                
+                                    ${provider.provider_name}
                                 </p>
                             <!-- Title -->
                                 <h4 class="text-[20px] pr-[20px] leading-[24px] font-semibold text-[#000000] group-hover:text-[#FF782D] line-clamp-2 cursor-pointer">

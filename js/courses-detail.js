@@ -70,7 +70,7 @@ const modal = document.getElementById('default-modal');
 const iframe = modal.querySelector('iframe');
 
 document.addEventListener('click', (e) => {
-    // Nếu click ra ngoài modal hoặc nút đóng
+    // Nếu click ra ngoài modal
     if (e.target === modal) {
         modal.classList.add('hidden'); // Ẩn modal
         iframe.src = iframe.src; // Reset src => dừng video
@@ -123,6 +123,72 @@ const showTabOverView = async () => {
 
 showTabOverView();
 
+
+// Hiển thị tab Yêu cầu học viên
+
+
+
+const showTabSection = async () => {
+    const listCourses = await showCourseDetail();
+    let tabSections = "";
+
+    listCourses.sections.forEach((section) => {
+        const sectionId = `accordion-collapse-body-${section.id}`;
+        const headingId = `accordion-collapse-heading-${section.id}`;
+
+        let lecturesHTML = "";
+        section.lectures.forEach((lec) => {
+            lecturesHTML += `
+                <div class="flex items-center justify-between mb-3">
+                    <p class="mb-2 text-body">
+                        <i class="fa-solid fa-video text-[#FF782D] mr-2"></i>
+                        ${lec.title}
+                    </p>
+                    <span>${lec.duration}</span>
+                </div>
+            `;
+        });
+
+        tabSections += `
+            <div>
+                <h2 id="${headingId}">
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium text-body bg-gray-200 border-b border-gray-300 hover:text-heading gap-3"
+                        data-accordion-target="#${sectionId}"
+                        aria-expanded="false"
+                        aria-controls="${sectionId}">
+                        <div class="flex items-center gap-3">
+                            <svg data-accordion-icon class="w-5 h-5 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m5 15 7-7 7 7" />
+                            </svg>
+                            <span class="uppercase font-bold">${section.chapter_title}</span>
+                        </div>
+                        <div>
+                            <span>${section.lecture_count} bài giảng</span>
+                            <i class="fa-regular fa-clock text-[#FF782D] ml-2"></i>
+                                               </button>
+                </h2>
+                <div id="${sectionId}" class="hidden border-b border-gray-300"
+                    aria-labelledby="${headingId}">
+                    <div class="p-4 md:p-5">
+                        ${lecturesHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    document.querySelector("#accordion-collapse").innerHTML = tabSections;
+};
+
+showTabSection();
+
+
+
+
 // Hiển thị tab Mô tả 
 
 const showTabDescription = async () => {
@@ -153,7 +219,81 @@ const showTabRequest = async () => {
 
 showTabRequest();
 
+// show thông tin khóa học
+const showInfoCourse = async () => {
+    const item = await showCourseDetail();
+    document.querySelector(".showInfoCourse").innerHTML = `
+        <div>
+            <h1 class="text-[38px] font-semibold">
+                ${item.course_title}
+            </h1>
+            <div class="flex items-center gap-4 mt-5">
+                <div>
+                <i class="text-[#FF782D] fa-solid fa-clock"></i>
+                <span class="ml-2">${item.duration}</span>  
+                </div>
+                <div>
+                    <i class="text-[#FF782D] fa-solid fa-graduation-cap"></i>
+                    <span class="ml-2">${item.students} học viên</span>
+                </div>
+                <div>
+                    <i class="text-[#FF782D] fa-solid fa-book"></i>
+                    <span class="ml-2">${item.total_sections} bài học</span>
+                </div>
+                <div>
+                    <i class="text-[#FF782D] fa-solid fa-signal"></i>
+                    <span class="ml-2">Tất cả mức độ</span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+showInfoCourse();
 
+// Hiển thị box giá, video, bài học
+const showBox = async () => {
+    const item = await showCourseDetail();
+    const boxeImage = document.querySelectorAll(".imageCour");
+    const showPrice = document.querySelectorAll(".showPrice");
+    // Hiển thị hình ảnh
+        boxeImage.forEach(img => {
+            img.innerHTML = `
+                <img src="${item.image_url}" alt="${item.course_title}"
+                    class="w-[400px] h-full rounded-md mb-3 object-cover transform transition-all ease-in-out duration-300 group-hover:scale-110"
+                >
+            `;
+        });
+    // Hiển thị giá
+    showPrice.forEach(sp => {
+        sp.innerHTML = `
+            ${ item.price === 0 
+                ? `<span class="text-green-400 font-semibold">Free</span>` 
+                : `${Number(item.price).toLocaleString('vi-VN')}`
+            }
+        `;
+    });
+};
+
+showBox();
+
+
+// Hiển thị video
+const showVideoCourse = async () => {
+    const item = await showCourseDetail();
+    document.querySelector(".video-container").innerHTML = `
+        <iframe class="w-[600px] h-[315px] rounded-md"
+            src="${item.video_url}"
+            title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            tabindex="-1">
+        </iframe>
+    `;
+        
+     
+}
+showVideoCourse();
 
 const showCoursesOfProvider = async () => {
   const [providers, courses] = await Promise.all(
@@ -278,3 +418,4 @@ const showCoursesOfProvider = async () => {
 };
 
 showCoursesOfProvider();
+

@@ -31,13 +31,13 @@
                             <li class="inline-flex items-center">
                                 <div class="flex items-center space-x-1.5">
                                     <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-                                    <span class="currentCate inline-flex items-center text-sm font-medium text-body-subtle">Phát triển web</span>
+                                    <span class="currentCate inline-flex items-center text-sm font-medium text-body-subtle"></span>
                                 </div>
                             </li>
                             <li aria-current="page">
                                 <div class="flex items-center space-x-1.5">
                                     <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/></svg>
-                                    <span class="currentTitle inline-flex items-center text-[#9D9D9D] text-sm font-medium text-body-subtle">NodeJS Pro - Tự Học từ số 0</span>
+                                    <span class="currentTitle inline-flex items-center text-[#9D9D9D] text-sm font-medium text-body-subtle"></span>
                                 </div>
                             </li>
                         </ol>
@@ -49,28 +49,8 @@
             <section class="w-full bg-[#000000] text-white py-10">
                 <div class="max-w-[1290px] mx-auto grid grid-cols-[2fr_1fr] gap-8 relative w-full">
                     <!-- Box Left -->
-                    <div class="w-full">
-                        <h1 class="text-[38px] font-semibold">
-                            NodeJS Pro - Tự Học từ số 0 (MVC, REST APIs, SQL/MongoDB)
-                        </h1>
-                        <div class="flex items-center gap-4 mt-5">
-                            <div>
-                            <i class="text-[#FF782D] fa-solid fa-clock"></i>
-                            <span class="ml-2">2 Weeks</span>  
-                            </div>
-                            <div>
-                                <i class="text-[#FF782D] fa-solid fa-graduation-cap"></i>
-                                <span class="ml-2">156 học viên</span>
-                            </div>
-                            <div>
-                                <i class="text-[#FF782D] fa-solid fa-book"></i>
-                                <span class="ml-2">16 bài học</span>
-                            </div>
-                            <div>
-                                <i class="text-[#FF782D] fa-solid fa-signal"></i>
-                                <span class="ml-2">Tất cả mức độ</span>
-                            </div>
-                        </div>
+                    <div class="showInfoCourse w-full">
+                        
                     </div>
 
                     <!-- Box Right -->
@@ -83,9 +63,9 @@
                             "
                         >
                             <div class="relative group overflow-hidden rounded-md h-auto">
-                                <img src="https://img-c.udemycdn.com/course/240x135/4947234_f0db_5.jpg" alt="thumb"
-                                    class="w-[400px] h-full rounded-md mb-3 object-cover transform transition-all ease-in-out duration-300 group-hover:scale-110"
-                                >
+                                <div class="imageCour">
+                                   
+                                </div>
                                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
                                     <button
                                         data-modal-target="default-modal" 
@@ -103,17 +83,27 @@
                             </div>
 
                             <div class="text-[30px] text-red-600 font-bold py-[10px]">
-                                1.349.000 
+                                <strong class="showPrice text-[30px] font-semibold"></strong> 
                                 <span class="text-[20px] underline align-super">đ</span>
                             </div>
-                            <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
+                            <button 
+                                class="
+                                    w-full bg-[#FF782D] text-white py-2 rounded-md mb-2
+                                    transform transition-all duration-300 ease-in-out hover:opacity-70 hover:scale-95
+                                "
+                            >
                                 Thêm giỏ hàng
                             </button>
-                            <button class="w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md">
+                            <button 
+                                class="
+                                    w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md
+                                    transform transition-all duration-300 ease-in-out hover:bg-[#FF782D] hover:text-[#ffffff] 
+                                "
+                            >
                                 Đăng ký khóa học
                             </button>
                             <p class="text-xs text-gray-500 mt-2">
-                                <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · 55.5 giờ video · Chứng nhận
+                                <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · Chứng nhận
                             </p>
 
                             <!-- Modal Video -->
@@ -124,14 +114,7 @@
                                             <div class="flex justify-between items-center flex-col">
                                                 <p class="text-[20px] text-[#000000] font-bold mb-[10px]">Xem trước khóa học</p> 
                                                 <div class="video-container">
-                                                    <iframe class="w-[600px] h-[315px] rounded-md"
-                                                        src="https://www.youtube.com/embed/edaPZoqNgSA?si=89uoUc_A2hBmGMBJ"
-                                                        title="YouTube video"
-                                                        frameborder="0"
-                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                        allowfullscreen
-                                                        tabindex="-1">
-                                                    </iframe>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -206,47 +189,10 @@
                                 <!-- Nội dung khóa học -->
                                     <div id="instructions" class="tab-content hidden bg-[#F5F5F5] rounded-b-[15px] px-4 py-[20px]">
                                         <div id="accordion-collapse" data-accordion="collapse" 
-                                            class="border border-gray-300 overflow-hidden shadow-xs"
+                                            class=" border border-gray-300 overflow-hidden shadow-xs"
                                         >
-                                            <!-- Box heading -->
-                                                <div>
-                                                    <h2 id="accordion-collapse-heading-1">
-                                                        <button type="button"
-                                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
-                                                                bg-gray-200 border-b border-gray-300 hover:text-heading gap-3"
-                                                            data-accordion-target="#accordion-collapse-body-1"
-                                                            aria-expanded="true"
-                                                            aria-controls="accordion-collapse-body-1"
-                                                        >
-                                                            <div class="flex items-center gap-3">
-                                                                <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
-                                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                                                    viewBox="0 0 24 24">
-                                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                                        stroke-width="2" d="m5 15 7-7 7 7" />
-                                                                </svg>
-                                                                <span class="uppercase font-bold ">Các tính năng hot</span>
-                                                            </div>
-                                                            <div>
-                                                                <span>6 bài giảng</span>
-                                                                <i class="fa-regular fa-clock text-[#FF782D] ml-2"></i>
-                                                                <span>30 phút</span>
-                                                            </div>
-                                                        </button>
-                                                    </h2>
-                                                    <div id="accordion-collapse-body-1" class="hidden border-b border-gray-300"
-                                                        aria-labelledby="accordion-collapse-heading-1">
-                                                        <div class="p-4 md:p-5">
-                                                            <div class="flex items-center justify-between mb-3">
-                                                                <p class="mb-2 text-body">
-                                                                    <i class="fa-solid fa-video text-[#FF782D] mr-2"></i>
-                                                                    Flowbite is an open-source library...
-                                                                </p>
-                                                                <span>02:30</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            
+                                                
                                         </div>
                                     </div>
                                 <!-- Mô tả -->
@@ -282,18 +228,28 @@
                                 opacity-0 pointer-events-none transition-all duration-500 border border-[0.5px] border-[#EAEAEA]
                             "
                         >
-                            <img src="https://img-c.udemycdn.com/course/240x135/4947234_f0db_5.jpg" alt="thumb"
-                                class="rounded-md mb-3 w-full object-cover"
+                            <div class="imageCour">
+                                   
+                            </div>
+                            <div class="text-lg text-red-600 font-bold mb-2"><strong class="showPrice text-[30px] font-semibold"></strong> ₫</div>
+                            <button 
+                                class="
+                                    w-full bg-[#FF782D] text-white py-2 rounded-md mb-2
+                                    transform transition-all duration-300 ease-in-out hover:opacity-70 hover:scale-95
+                                "
                             >
-                            <div class="text-lg font-bold mb-2">1.349.000 ₫</div>
-                            <button class="w-full bg-[#FF782D] text-white py-2 rounded-md mb-2">
                                 Thêm giỏ hàng
                             </button>
-                            <button class="w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md">
+                            <button 
+                                class="
+                                    w-full border border-[#FF782D] text-[#FF782D] py-2 rounded-md
+                                    transform transition-all duration-300 ease-in-out hover:bg-[#FF782D] hover:text-[#ffffff] 
+                                "
+                            >
                                 Đăng ký khóa học
                             </button>
                             <p class="text-xs text-gray-500 mt-2">
-                                <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · 55.5 giờ video · Chứng nhận
+                                <i class="fa-solid fa-circle-check text-[#FF782D]"></i> Truy cập trọn đời · Chứng nhận
                             </p>
                         </div>
                     </div>
