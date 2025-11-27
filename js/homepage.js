@@ -12,7 +12,7 @@ const courses = "http://localhost:3000/courses";
 
 const btnCourseDetail = (id) =>{
     localStorage.setItem('course_id', id);
-    window.location.href = "/page/user/courses-detail.html";
+    window.location.href = "./page/user/courses-detail.html";
 }
 
 const showCourse = async () => {
@@ -129,7 +129,7 @@ const apiCategories = "http://localhost:3000/categories";
 
 const btnOnclickCate = (id) => {
     localStorage.setItem("cate_id", id);
-    window.location.href = "/page/user/courses-category.html";
+    window.location.href = "./page/user/courses-category.html";
 }
 
 const showCategory = async () => {
