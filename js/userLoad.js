@@ -19,7 +19,7 @@ function loadUserMenu() {
   // Nếu đã đăng nhập
   if (user && user.id !== undefined && user.id !== null) {
     avatar.innerHTML = `
-      <img src="/images/avatar.jpg" 
+      <img src="https://i.pinimg.com/1200x/b3/c2/77/b3c2779d6b6195793b72bf73e284b3e8.jpg" 
            class="w-[30px] h-[30px] rounded-full" 
       />
     `;
