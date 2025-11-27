@@ -112,7 +112,7 @@ const showCourse = async () => {
                                     </span>
                                 </div>
                                 <div class="text-[16px] text-black/40 font-regular">
-                                    <a class="text-[#000000] hover:text-[#FF782D] hover:underline cursor-pointer" onclick="btnOnclickDetail(${item.id})">Chi tiết</a>
+                                    <a  onclick="btnCourseDetail(${item.id})" class="text-[#000000] hover:text-[#FF782D] hover:underline cursor-pointer">Chi tiết</a>
                                 </div>
                             </div>
                     </div>
